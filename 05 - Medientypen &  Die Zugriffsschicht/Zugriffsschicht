@@ -1,0 +1,30 @@
+Der Prozess, bei dem ein Nachrichtenformat in ein anderes Nachrichtenformat eingebettet wird, 
+wird als Einkapselung (=Encapsulation) bezeichnet. Die Entkapselung (=De-Encapsulation) erfolgt bei der Umkehrung dieses Prozesses durch den Empfänger, 
+wenn der Brief dem Umschlag entnommen wird. So wie ein Brief in einen Umschlag gesteckt (oder eingekapselt) wird, werden auch Computernachrichten eingekapselt. 
+Eine Nachricht, die über ein Computernetzwerk übertragen wird, muss bestimmte Formatierungsregeln einhalten, damit sie zugestellt und verarbeitet werden kann.
+
+Der Ethernet-Protokoll-Standard definiert viele Aspekte der Netzwerkkommunikation, einschließlich des Frame-Formats, der Frame-Größe, der zeitlichen Steuerung und der Kodierung. 
+Das Format für Ethernet-Frames gibt die Position der Ziel- und Quell-MAC-Adressen sowie zusätzliche Informationen an, einschließlich Präambel für Sequenzierung und Timing,
+Start Frame-Delimiter, Länge und Art des Frames und Frame-Prüfsequenz zur Erkennung von Übertragungsfehlern.
+
+
+
+Die Zugriffsschicht ist der Teil des Netzes, in dem Personen Zugang zu anderen Hosts und zu gemeinsam genutzten Dateien und Druckern erhalten. 
+Die Zugriffsebene stellt die erste Reihe von Netzwerkgeräten bereit, die Hosts mit dem kabelgebundenen Ethernet-Netzwerk verbinden.
+In einem Ethernet-Netzwerk kann jeder Host über ein Ethernet-Kabel direkt mit einem Netzwerkgerät der Zugriffsebene verbunden werden.
+Ethernet Hubs enthalten mehrere Ports, die verwendet werden, um Hosts mit dem Netzwerk zu verbinden.
+Über einen Ethernet-Hub kann immer nur eine Nachricht gleichzeitig gesendet werden. Wenn zwei oder mehr Nachrichten gleichzeitig gesendet werden, kommt es zu einer Kollision. 
+Da eine große Anzahl von Neuübertragungen das Netzwerk verstopfen und den Netzwerk-Traffic verlangsamen kann, gelten Hubs heutzutage als veraltet und wurden durch Ethernet-Switches ersetzt.
+
+Ein Ethernet-Switch ist ein Gerät, das auf der Schicht 2 verwendet wird. Wenn ein Host eine Nachricht 
+an einen anderen Host sendet, der an dasselbe Switch-Netzwerk angeschlossen ist, nimmt der Switch die Frames an und dekodiert sie, um den MAC-Adressenteil der Nachricht zu lesen. 
+Eine Tabelle auf dem Switch, die sogenannte MAC-Adresstabelle, enthält eine Liste aller aktiven Ports und die MAC-Adressen der Hosts, die mit ihnen verbunden sind. 
+Wenn eine Nachricht zwischen Hosts gesendet wird, prüft der Switch, ob die Ziel-MAC-Adresse in der Tabelle aufgeführt ist. Ist dies der Fall, stellt der Switch eine temporäre, 
+als Schaltung bezeichnete Verbindung zwischen Quell- und Zielport her. Ethernet-Switches ermöglichen außerdem das gleichzeitige Senden und Empfangen von Frames über dasselbe Ethernet-Kabel. 
+Dies verbessert die Leistung des Netzwerks, indem es Kollisionen vermeidet.
+
+Ein Switch erstellt die MAC-Adresstabelle, indem er die Quell-MAC-Adresse jedes Frames überprüft, 
+die zwischen Hosts gesendet wird. Wenn ein neuer Host eine Nachricht sendet oder auf eine Flooding-Nachricht reagiert, 
+lernt der Switch sofort dessen MAC-Adresse und den Port, an den dieser angeschlossen ist. Die Tabelle wird jedes Mal dynamisch aktualisiert, 
+wenn eine neue Quell-MAC-Adresse vom Switch gelesen wird.
+
