@@ -1,0 +1,49 @@
+-- Welche Komponenten werden unter dem Begriff Netzwerkmedien zusammengefasst?
+
+   kabel und funkwellen
+
+-- Wie viele eindeutige Werte sind mit einer einzigen binären Ziffer möglich?
+
+    2 ( 0 and 1 ) 
+
+-- Welche  Geräte gelten als Endgeräte? 
+
+    pc, drucker, smart home
+
+-- Welche Informationen werden möglicherweise beim Koppeln von Geräten über Bluetooth abgefragt?
+
+     (PIN) 
+
+
+-- Welche zwei Funkfrequenzbereiche werden in Heim-Wireless-LANs verwendet?
+
+      liegen im unlizenzierten   2,4-GHz-   und    5-GHz-     Frequenzbereich.
+
+-- Ein Benutzer möchte ein drahtloses Heimnetzwerk einrichten. Welche Art von Gerät muss der Anwender besitzen, um das drahtlose Netzwerk aufzubauen und mehreren Heimgeräten den Zugang zum Internet zu ermöglichen?
+
+       Ein Wireless-Router         verbindet mehrere Wireless-Geräte mit dem Netzwerk. Er bündelt die Anfragen für den Internetzugang von Heimgeräten zum Internet.
+
+
+-- Welches drahtlose Funkfrequenzband wird von IEEE 802.11b/g-Geräten verwendet?
+
+      802.11b/g/n/ad-Geräte arbeiten alle im 2,4-GHz-Bereich.
+
+
+-- Welches Merkmal ist charakteristisch für die MAC-Adressfilterung in Wireless-Netzwerken?
+   
+    Die MAC-Adressfilterung nutzt die MAC-Adresse, um zu identifizieren, welche Geräte sich mit dem Wireless-Netzwerk verbinden dürfen.
+
+
+-- Welche Technologie wird zur eindeutigen Identifizierung eines WLAN-Netzwerks verwendet?
+
+     Bei der Einrichtung eines Wireless Access Points oder Routers wird eine SSID konfiguriert, um das vom Gerät verwaltete WLAN eindeutig zu identifizieren.
+
+
+-- Welche Geräte gelten in einem Netzwerk als zwischengeschaltete Geräte?
+
+     Zwischengeschaltete Geräte stellen in einem Netzwerk eine Verbindung zu den Endgeräten her und übermitteln während der Datenkommunikation Datenpakete. 
+     (router,switch)
+
+
+-- Ein Kunde platziert in einem Geschäft sein Smartphone in der Nähe eines Bezahlterminals und der Betrag für den Einkauf wurde erfolgreich bezahlt. Welche Art von Wireless-Technologie wurde dabei verwendet?
+  NFC
