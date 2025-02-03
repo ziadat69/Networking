@@ -1,0 +1,34 @@
+Die Verknappung des IPv4-Adressbereichs ist der Grund für den Umstieg auf IPv6. IPv6 verfügt über einen größeren 128-Bit-Adressraum, der 340 Sextillionen mögliche Adressen bietet. 
+Als die IETF mit der Entwicklung eines Nachfolgers von IPv4 begann, nutzte sie die Gelegenheit, die Einschränkungen von IPv4 zu beheben und Verbesserungen vorzunehmen.
+Ein Beispiel ist ICMPv6, dessen Adressauflösung und automatische Adresskonfiguration in ICMPv4 nicht enthalten sind.
+
+Die Koexistenz von IPv4 und IPv6 und der Übergang zu IPv6 allein wird noch mehrere Jahre dauern. 
+Die IETF hat verschiedene Protokolle und Tools erstellt, die den Netzwerkadministratoren helfen, ihre Netzwerke auf IPv6 umzustellen. 
+Die Migrationstechniken lassen sich in drei Kategorien einteilen: Dual Stack, Tunneling und Translation. Auf Dual-Stack-Geräten laufen die IPv4-und IPv6-Protokolle gleichzeitig.
+Tunneling ist eine Methode, um ein IPv6-Paket über ein IPv4-Netzwerk zu transportieren. Das IPv6-Paket wird ähnlich wie bei anderen Datentypen in ein IPv4-Paket gepackt. 
+Translation ermöglicht es IPv6-fähigen Geräten, mit IPv4-fähigen Geräten zu kommunizieren, wobei eine Übersetzungstechnik ähnlich wie bei NAT für IPv4 verwendet wird. 
+Ein IPv6-Paket wird in ein IPv4-Paket übersetzt und ein IPv4-Paket wird in ein IPv6-Paket übersetzt.
+
+
+
+
+IPv6-Adressen sind 128 Bit lang und werden als Zeichenfolge von hexadezimalen Zahlenwerten geschrieben. Jeweils vier Bits werden durch eine einzige hexadezimale Ziffer dargestellt; insgesamt sind es also 32 Hexadezimalwerte. 
+Bei IPv6-Adressen wird die Groß-/Kleinschreibung nicht beachtet – sowohl Klein- als auch Großbuchstaben sind möglich. Ein Hextet in IPv6 entspricht einem Segment von 16 Bit oder vier hexadezimalen Ziffern. 
+Jedes “x” ist ein einzelnes Hextet, bestehend aus 16 Bit oder vier hexadezimalen Ziffern. Bevorzugtes Format bedeutet, dass Sie IPv6-Adressen mit allen 32 hexadezimalen Ziffern schreiben. Hier ist ein Beispiel - fe80: 0000: 0000: 0000: 0123: 4567: 89ab: cdef.
+
+Es gibt zwei Regeln, die dazu beitragen, die Anzahl der Ziffern zu verringern, die zur Darstellung einer IPv6-Adresse benötigt werden.
+
+Regel 1 – Das Weglassen führender Nullen. Sie können nur führende Nullen weglassen, keine nachgestellten Nullen.
+
+    01ab kann als 1ab wiedergegeben werden
+    09f0 kann als 9f0 dargestellt werden
+    0a00 kann als a00 dargestellt werden
+    00ab kann als ab wiedergegeben werden
+
+Regel 2 - Doppelter Doppelpunkt. Zwei Doppelpunkte (::) können jede einzelne oder zusammenhängende Zeichenfolge eines oder mehrerer 16-Bit-Hextets ersetzen, die ausschließlich aus Nullen bestehen. 
+Beispiel: 2001:db8:cafe:1:0:0:0:1 (führende Nullen weggelassen) könnte als 2001:db8:cafe:1::1 dargestellt werden. Der doppelte Doppelpunkt (::) wird anstelle der drei Hextets (0:0:0) verwendet, die nur Nullen enthalten. 
+Der doppelte Doppelpunkt (::) kann nur einmal innerhalb einer Adresse verwendet werden, sonst gäbe es mehr als eine mögliche Adresse. Wenn eine Adresse mehr als eine zusammenhängende Zeichenfolge von 0-Hextets enthält, empfiehlt es sich, den doppelten Doppelpunkt (::) für die längste Zeichenfolge zu verwenden.
+Wenn die Zeichenfolgen gleich sind, sollte die erste Zeichenfolge den Doppelpunkt (::) verwenden.
+
+
+
