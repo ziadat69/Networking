@@ -1,0 +1,62 @@
+Netzwerktypen
+
+
+Das Internet ist nicht im Besitz von Einzelpersonen oder Gruppen. 
+Das Internet ist eine weltweite Ansammlung miteinander verbundener Netze (Internetwork oder kurz Internet), die miteinander kooperieren,
+um Informationen unter Verwendung gemeinsamer Standards auszutauschen.
+Über Telefondrähte, Glasfaserkabel, drahtlose Übertragungen und Satellitenverbindungen 
+können Internetnutzer Informationen in verschiedenen Formen austauschen.
+
+Kleine Heimnetzwerke verbinden wenige Computer miteinander und mit dem Internet.
+Das SOHO-Netzwerk ermöglicht es Computern in einem Home-Office oder einem entfernten Büro, 
+eine Verbindung zu einem Unternehmensnetzwerk herzustellen oder auf zentralisierte, gemeinsam genutzte Ressourcen zuzugreifen. 
+Mittlere bis große Netzwerke, wie sie von Unternehmen und Schulen betrieben werden, können über viele Standorte mit Hunderten oder 
+Tausenden miteinander verbundenen Hosts verfügen. Das Internet ist ein Netzwerk aus Netzwerken, das weltweit Hunderte Millionen von Computern verbindet.
+
+Es gibt überall Geräte, mit denen Sie täglich zu tun haben und die ebenfalls mit dem Internet verbunden sind. 
+Dazu gehören mobile Geräte wie Smartphones, Tablets, Smartwatches und Smart Glasses. 
+Dinge in Ihrem Zuhause können mit dem Internet verbunden werden, z. B. ein Sicherheitssystem, Geräte, 
+Ihren Smart-TV und Ihre Spielekonsole. Außerhalb Ihres Zuhauses können intelligente Autos, RFID-Tags, 
+Sensoren und Aktoren und sogar medizinische Geräte angeschlossen werden.
+
+
+Datenübertragung
+
+
+Die folgenden Kategorien werden zur Klassifizierung der Arten von personenbezogenen Daten verwendet:
+
+    Freiwillige Daten - Diese werden von Einzelpersonen erstellt und ausdrücklich freigegeben, z. B. in Profilen sozialer Netzwerke. Zu dieser Art von Daten können Videodateien, Bilder, Text- oder Audiodateien gehören.
+    Beobachtete Daten - Diese werden durch Aufzeichnung der Handlungen von Personen erfasst, z. B. Standortdaten bei der Nutzung von Mobiltelefonen.
+    Abgeleitete Daten - Dies sind Daten wie z. B. eine Kreditwürdigkeitsprüfung, die auf der Analyse freiwilliger oder beobachteter Daten beruht.
+
+Der Begriff "Bit" ist eine Abkürzung von "Binary Digit", dem englischen Begriff für "Binärzahl", und stellt die kleinste Einheit von Daten dar. Jedes Bit kann nur einen von zwei möglichen Werten annehmen: 0 oder 1.
+
+Es gibt drei gängige Methoden der Signalübertragung, die in Netzwerken angewendet werden:
+
+    Elektrische Signale - Die Übertragung erfolgt durch die Bereitstellung von Daten in Form von elektrischen Impulsen über Kupferdraht.
+    Optische Signale - Die Übertragung erfolgt durch Umwandlung der elektrischen Signale in Lichtimpulse.
+    Drahtlose Signale - Die Übertragung erfolgt mit Hilfe von Infrarot-, Mikrowellen- oder Radiowellen über die Luft.
+
+
+
+Bandbreite und Datendurchsatz:
+
+Die Bandbreite drückt die Kapazität eines Mediums zur Übertragung von Daten aus. 
+Die digitale Bandbreite ist ein Maß dafür, wie viele Informationen in einer bestimmten Zeit von einem Ort an einen anderen übertragen werden können. 
+Die Bandbreite wird gewöhnlich als Anzahl von Bits angegeben, die (theoretisch) in einer Sekunde über die Medien gesendet werden können. 
+Folgende Angaben sind für die Bandbreite üblich:
+
+    Tausend Bits pro Sekunde (Kbit/s)
+    Millionen Bits pro Sekunde (Mbit/s)
+    Milliarden Bits pro Sekunde (Gbit/s)
+
+Üblicherweise stimmt der Datendurchsatz in der Regel jedoch nicht mit der angegebenen Bandbreite überein.
+ Viele Faktoren beeinflussen den Datendurchsatz. Dazu gehören:
+
+    Die über die Verbindung gesendete und empfangene Menge an Daten
+    Die Latenzzeit, die erzeugt wird durch die Anzahl von Netzwerkgeräten, die sich zwischen Quelle und Ziel befinden
+
+Die Latenzzeit bezieht sich auf die Zeitdauer, einschließlich Verzögerungen, die für die Übertragung von Daten von einem bestimmten Punkt zu einem anderen benötigt wird.
+
+
+
