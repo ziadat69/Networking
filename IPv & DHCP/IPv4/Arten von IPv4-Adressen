@@ -1,0 +1,23 @@
+Öffentliche IPv4-Adressen sind IP-Adressen, die weltweit zwischen ISP-Routern (Internet Service Provider) geroutet werden. 
+Allerdings können nicht alle verfügbaren IPv4-Adressen im Internet verwendet werden.
+Es gibt Adressblöcke, die als private Adressen bezeichnet und von den meisten Organisationen verwendet werden, um internen Hosts IPv4-Adressen zuzuweisen.
+Die meisten internen Netzwerke, von großen Unternehmen bis zu Heimnetzwerken, verwenden private IPv4-Adressen, um alle internen Geräte (Intranet) einschließlich Hosts und Router zu adressieren.
+Private Adressen sind jedoch nicht global routingfähig. Bevor der ISP dieses Paket weiterleiten kann, muss er die Quell-IPv4-Adresse, also eine private Adresse, in eine öffentliche IPv4-Adresse mit Network Address Translation (NAT) übersetzen.
+
+Loopback-Adressen (127.0.0.0 /8 oder 127.0.0.1 bis 127.255.255.254) werden üblicherweise nur als 127.0.0.1 bezeichnet, dabei handelt es sich um spezielle Adressen, die ein Host verwendet, um den Datenverkehr zu sich selbst zu leiten.
+
+Link-local-Adressen (169.254.0.0 /16 oder 169.254.0.1 bis 169.254.255.254) werden häufiger als APIPA-Adressen (Automatic Private IP Addressing) oder selbstzugewiesene Adressen bezeichnet.
+Sie werden von einem Windows-DHCP-Client verwendet, um sich selbst zu konfigurieren, falls keine DHCP-Server verfügbar sind.
+
+Im Jahr 1981 wurden Internet-IPv4-Adressen durch Adressierung auf der Basis von Klassen zugewiesen, wie in RFC 790 (https://tools.ietf.org/html/rfc790), Assigned Numbers, definiert. Kunden wurde eine Netzwerkadresse auf Basis einer von drei Klassen 
+(A, B oder C) zugewiesen. Die RFC teilte die Unicast-Bereiche in die folgenden spezifischen Klassen ein:
+
+    Klasse A (0.0.0.0/8 bis 127.0.0.0/8) - Konzipiert für die Unterstützung sehr großer Netzwerke mit mehr als 16 Millionen Host-Adressen.
+    Klasse B (128.0.0.0 /16 bis 191.255.0.0 /16) - Konzipiert, um die Anforderungen von mittelgroßen bis großen Netzwerken mit bis zu ca. 65.000 Hosts zu unterstützen.
+    Klasse C (192.0.0.0 /24 bis 223.255.255.0 /24) - Konzipiert für kleine Netzwerke mit maximal 254 Hosts. 
+
+Es gibt auch einen Klasse-D-Multicast-Block, bestehend aus dem Adressbereich 224.0.0.0 bis 239.0.0.0 und einen experimentellen Klasse-E-Adressblock mit den Adressen 240.0.0.0 bis 255.0.0.0.
+
+Öffentliche IPv4-Adressen sind IP-Adressen, die weltweit über das Internet geroutet werden. Öffentliche IPv4-Adressen müssen eindeutig sein. Sowohl IPv4- als auch IPv6-Adressen werden von der Internet Assigned Numbers Authority (IANA) verwaltet
+. Die IANA verwaltet Blöcke von IP-Adressen und weist sie den Regional Internet Registries (RIRs) zu. RIRs sind verantwortlich für die Zuweisung von IP-Adressen an ISPs, die IPv4-Adressblöcke an Unternehmen und kleinere ISPs liefern. 
+Organisationen können ihre Adressen auch direkt von einem RIR abrufen (vorbehaltlich der Richtlinien dieser RIR). 
