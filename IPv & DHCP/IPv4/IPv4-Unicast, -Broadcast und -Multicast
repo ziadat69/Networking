@@ -1,0 +1,13 @@
+Unicast-Übertragung bezieht sich auf ein Gerät, das eine Nachricht an ein anderes Gerät in Eins-zu-Eins-Kommunikation sendet. 
+Ein Unicast-Paket hat eine Ziel-IP-Adresse, die eine Unicast-Adresse ist, die an einen einzelnen Empfänger geht. 
+Eine Quell-IP-Adresse kann nur eine Unicast-Adresse sein, da das Paket nur aus einer einzigen Quelle stammen kann. 
+Dies ist unabhängig davon, ob die Ziel-IP-Adresse ein Unicast, Broadcast oder Multicast ist. IPv4-Unicast-Hostadressen liegen im Adressbereich von 1.1.1.1 bis 223.255.255.255.
+
+Broadcast-Übertragung bedeutet, dass ein Gerät eine Nachricht an alle Geräte in einem Netz sendet und zwar im Rahmen einer One-to-All-Kommunikation.
+Ein Broadcast-Paket beinhaltet eine Ziel-IPv4-Adresse, die nur aus Einsen (1s) im Host-Teil, oder aus 32 Einsen (1) besteht. 
+Ein Broadcast-Paket muss von allen Geräten in derselben Broadcast-Domäne verarbeitet werden. Eine Sendung kann gerichtet oder eingeschränkt sein. 
+Ein gerichteter Broadcast wird an alle Hosts in einem bestimmten Netzwerk gesendet. Ein eingeschränkter Broadcast wird an 255.255.255.255 gesendet.
+Router leiten standardmäßig keine Limited Broadcasts weiter.
+
+Eine Multicast-Übertragung reduziert den Datenverkehr, indem sie einem Host erlaubt, ein einzelnes Paket an eine ausgewählte Gruppe von Hosts zu senden, die Teil einer bestimmten Multicast-Gruppe sind.
+Ein Multicastpaket ist ein Paket mit einer Ziel-IP-Adresse, die eine Multicastadresse ist. Für IPv4 sind die Adressen 224.0.0.0 bis 239.255.255.255 als Multicast-Bereich reserviert. Jede Multicast-Gruppe wird durch eine einzige IPv4-Multicast-Zieladresse dargestellt. Wenn ein IPv4-Host eine Multicast-Gruppe abonniert, verarbeitet der Host Pakete, die an diese Multicast-Adresse adressiert sind und Pakete, die an die eindeutig zugewiesene Unicast-Adresse adressiert sind.
