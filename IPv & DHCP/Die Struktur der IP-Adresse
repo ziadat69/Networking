@@ -1,0 +1,7 @@
+Die logische 32-Bit-IPv4-Adresse ist hierarchisch und besteht aus zwei Teilen. 
+Als Beispiel wird hier ein Host mit der IPv4-Adresse 192.168.5.11 und der Subnetzmaske 255.255.255.0 angezeigt. 
+Die ersten drei Oktette (192.168.5) identifizieren den Netzwerkteil der Adresse und das letzte Oktett (11) den Host.
+Dies wird als hierarchische Adressierung bezeichnet, da der Netzwerkteil das Netzwerk anzeigt, in dem sich jede eindeutige Host-Adresse befindet.
+
+Router müssen nur wissen, wie sie jedes Netzwerk erreichen, anstatt den Standort jedes einzelnen Hosts zu kennen.
+Bei der IPv4-Adressierung können mehrere logische Netzwerke in einem physischen Netzwerk vorhanden sein, wenn der Netzwerkteil der logischen Netzwerk-Host-Adressen jeweils unterschiedlich ist.
