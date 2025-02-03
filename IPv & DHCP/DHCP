@@ -1,0 +1,28 @@
+Bei einer statischen Zuweisung muss der Netzwerkadministrator die Netzwerkinformationen für einen Host manuell konfigurieren. 
+Dies umfasst mindestens die IPv4-Adresse, die Subnetzmaske und das Default-Gateway des Hosts.
+Die statische Zuweisung von Adressierungsinformationen kann die Kontrolle der Netzwerkressourcen verbessern, es kann jedoch sehr zeitaufwendig sein, die Informationen zu jedem Host einzugeben. 
+Wenn die statische IPv4-Adressierung verwendet wird, ist es wichtig, eine genaue Liste zu führen, welche IPv4-Adressen welchen Geräten zugewiesen werden.
+
+IPv4-Adressen können mithilfe eines als DHCP bekannten Protokolls automatisch zugewiesen werden. 
+DHCP ist im Allgemeinen die bevorzugte Methode für die Zuweisung von IPv4-Adressen zu Hosts in großen Netzwerken, da es die Arbeitsauslastung des Netzwerk-Supportpersonals reduziert und Eingabefehler praktisch völlig ausschließt. 
+Ein weiterer Vorteil von DHCP besteht darin, dass die Adresse nicht dauerhaft an einen Host vergeben wird, sondern dieser sie nur für einen bestimmten Zeitraum „ausleiht“. Wird der Host ausgeschaltet oder vom Netz genommen, wird die Adresse zur weiteren Verwendung an den Pool zurückgegeben.
+
+Wenn Sie einen Bereich mit einem Wireless-Hotspot betreten, kontaktiert Ihr Laptop-DHCP-Client den lokalen DHCP-Server über eine Wireless-Verbindung. 
+Der DHCP-Server weist Ihrem Laptop eine IPv4-Adresse zu. Bei Heimnetzwerken kann sich der DHCP-Server beim ISP befinden und ein Host im Heimnetzwerk erhält seine IPv4-Konfiguration direkt vom ISP.
+Viele Heimnetzwerke und kleine Unternehmen verwenden einen Wireless-Router und ein Modem. In diesem Fall ist der Wireless-Router sowohl ein DHCP-Client als auch ein Server.
+
+--------------
+
+Der DHCP-Server ist mit einem Bereich oder Pool von IPv4-Adressen konfiguriert, 
+die DHCP-Clients zugewiesen werden können. Ein Client, der eine IPv4-Adresse benötigt, 
+sendet eine DHCP-Discover-Nachricht. Dies ist ein Broadcast mit der IPv4-Zieladresse 255.255.255.255 (32 Einsen) und 
+der MAC-Zieladresse FF-FF-FF-FF-FF-FF (48 Einsen). Alle Hosts im Netzwerk empfangenen diesen Broadcast-DHCP-Frame, 
+aber nur ein DHCP-Server antwortet. Der Server antwortet mit einer DHCP-Offer-Nachricht und schlägt eine IPv4-Adresse
+für den Client vor. Der Host sendet dann eine DHCP-Anfrage mit der Bitte, die vorgeschlagene IPv4-Adresse zu verwenden.
+\Der Server antwortet mit einer DHCP-Bestätigung.
+
+In Heimnetzwerken und kleinen Unternehmensnetzwerken stellt ein Wireless-Router DHCP-Services für lokale Netzwerk-Clients bereit. 
+Um einen drahtlosen Router für den Heimgebrauch zu konfigurieren, öffnen Sie die grafische Webschnittstelle des Routers, indem Sie den Browser öffnen und die Standard-IPv4-Adresse des Routers eingeben. 
+Die IPv4-Adresse 192.168.0.1 und die Subnetzmaske 255.255.255.0 sind die Standardwerte für die interne Router-Schnittstelle.
+Dies ist das Default-Gateway für alle Hosts im lokalen Netzwerk und auch die IPv4-Adresse des internen DHCP-Servers. 
+Bei den meisten Home-Wireless-Routern ist der DHCP-Server standardmäßig aktiviert.
