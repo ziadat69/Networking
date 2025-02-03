@@ -1,0 +1,8 @@
+In einem Ethernet-LAN verwenden die Geräte Broadcasts und ARP, um andere Geräte zu lokalisieren. ARP sendet Layer-2-Broadcasts an eine bekannte IPv4-Adresse im lokalen Netzwerk, um die zugehörige MAC-Adressezu ermitteln. 
+Geräte in Ethernet-LANs finden auch andere Geräte über Dienste. Ein Host erwirbt in der Regel seine IPv4-Adresskonfiguration mithilfe des Dynamic Host Configuration Protocol, der Broadcasts im lokalen Netzwerk sendet, um einen DHCP-Server zu finden. 
+Switches leiten Broadcasts über alle Schnittstellen weiter, mit Ausnahme der Schnittstelle, auf der der Broadcast empfangen wurde.
+
+Eine große Broadcast-Domäne ist ein Netzwerk, das eine Vielzahl von Hosts verbindet. Ein Problem mit großen Broadcast-Domänen besteht darin, dass aufgrund der zahlreichen Hosts übermäßig viele Broadcasts erzeugt werden und die Netzwerkleistung damit beeinträchtigt wird.
+Wird die Größe des Netzwerks reduziert, werden auch kleinere Broadcast-Domänen gebildet. Diese Vorgehensweise wird als Subnetting (Subnetzbildung) bezeichnet. Diese kleineren Netzwerkbereiche werden als Subnetze bezeichnet. Dies ist die Grundlage des Subnetzes Verwenden von Hostbits,
+um zusätzliche Subnetze zu erstellen. Durch die Subnetzbildung wird der gesamte Netzwerkverkehr reduziert und die Netzwerkleistung wird verbessert. Sie hilft Administratoren bei der Umsetzung von Sicherheitsrichtlinien, z. B. welche Subnetze miteinander kommunizieren dürfen und welche nicht. 
+Dadurch wird die Anzahl der Geräte reduziert, die von abnormalem Broadcast-Verkehr aufgrund von Fehlkonfigurationen, Hardware-/Softwareproblemen oder böswilligen Absichten betroffen sind.
