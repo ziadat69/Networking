@@ -1,0 +1,32 @@
+Protokolle sind erforderlich, damit Computer ordnungsgemäß über das Netzwerk kommunizieren können. Dazu gehören Nachrichtenformat, Nachrichtengröße, Timing, Kodierung, Kapselung und Nachrichtenmuster.
+
+o  Nachrichtenformat - Wenn eine Nachricht gesendet wird, muss sie ein bestimmtes Format oder eine bestimmte Struktur aufweisen.
+o Nachrichtengröße - Die Regeln für die Größe der über das Netz übertragenen Daten sind sehr streng. Je nach verwendetem Kanal können sie sich auch unterscheiden.
+o Timing - Das Timing bestimmt die Geschwindigkeit, mit der die Bits über das Netz übertragen werden. Außerdem beeinflusst es, wann ein individueller Host Daten senden kann, sowie die Gesamtmenge an Daten, die in einer einzigen Übertragung gesendet werden kann.
+o  Kodierung - Nachrichten, die über das Netz gesendet werden, werden vom sendenden Host zunächst in Bits umgewandelt. Jedes Bit wird in eine Abfolge von Klängen, Lichtwellen oder elektrischen Impulsen umgewandelt, je nachdem, über welches Netzwerkmedium die Bits übertragen werden.
+o  Kapselung - Jede in einem Netz übertragene Nachricht muss einen Header enthalten, der Adressierungsinformationen zur Identifizierung des Quell- und Zielhosts enthält. Datenkapselung ist das Verfahren, mit dem diese Informationen den Daten hinzugefügt werden, aus denen die Nachricht besteht.
+o Nachrichtenmuster - Einige Nachrichten erfordern eine Bestätigung, bevor die nächste Nachricht gesendet werden kann. Diese Art von Anfrage/Antwort-Muster ist ein häufiger Aspekt vieler Netzwerkprotokolle. Es gibt jedoch auch andere Arten von Nachrichten, die einfach über das Netz gestreamt werden können, ohne dass kontrolliert werden muss, ob sie ihr Ziel erreichen.
+
+
+
+-- 
+Protokolle sind die Regeln, die die Kommunikation regeln. Erfolgreiche Kommunikation zwischen Hosts erfordert eine Interaktion zwischen mehreren Protokollen. Protokolle umfassen HTTP, TCP, IP und Ethernet. Diese Protokolle werden in der Software und der Hardware in jedem Host und Netzwerkgerät implementiert.
+
+Die Interaktion zwischen den verschiedenen Protokollen auf einem Gerät kann wie in der Abbildung als Protokoll-Stack dargestellt werden. Ein Stack veranschaulicht die Protokolle als Ebenenhierarchie, wobei jedes höhere Protokoll abhängig von den Services der Protokolle auf den darunterliegenden Ebenen ist. Die funktionelle Trennung ermöglicht es jeder Ebene im Stack, unabhängig von den anderen zu operieren.
+
+Die TCP/IP-Protokolle, die für die Internetkommunikation verwendet werden, folgen der Struktur dieses Modells:
+
+  o Anwendungsschicht - Sie präsentiert dem Benutzer Daten und übernimmt zusätzlich die Kodierung und die Dialogsteuerung.
+  o Transportschicht - Sie unterstützt die Kommunikation zwischen unterschiedlichen Geräten über verschiedene Netzwerke.
+  o Internetschicht - Sie bestimmt den besten Weg durch das Netzwerk.
+  o Netzzugangsschicht - Sie steuert die Hardwaregeräte und -medien, aus denen das Netzwerk besteht.
+
+OSI-Modell
+
+    7 - Anwendung - Die Anwendungsschicht (Application Layer) enthält die Protokolle, die für die Kommunikation zwischen Prozessen verwendet werden.
+    6 - Darstellung - Die Darstellungsschicht (Presentation Layer) sorgt für eine einheitliche Darstellung der Daten, die zwischen den Diensten der Anwendungsschicht ausgetauscht werden.
+    5 - Sitzung - Die Sitzungsschicht (Session Layer) stellt der Darstellungsschicht Dienste zur Verfügung, um die Dialogsteuerung zu übernehmen und den Datenaustausch zu verwalten.
+    4 - Transport - Die Transportschicht (Transport Layer) definiert Dienste für die Segmentierung, die Übertragung und die Zusammensetzung der Daten für die einzelnen Kommunikationsverbindungen der Endgeräte.
+    3 - Vermittlung - Die Vermittlungsschicht (Network Layer) stellt Dienste für den Austausch der einzelnen Datenblöcke über das Netzwerk zwischen eindeutig festgelegten Endgeräten bereit.
+    2 - Sicherungsschicht - Die Protokolle der Sicherungsschicht (Data Link Layer) legen Methoden für den Austausch von Daten-Frames über ein gemeinsames Medium fest.
+    1 - Bitübertragung - Die Normen und Protokolle der Bitübertragungsschicht (Physical Layer) beschreiben die mechanischen, elektrischen, funktionalen und verfahrenstechnischen Mittel, um eine physische Verbindung für die Bitübertragung zwischen Netzwerkgeräten zu aktivieren, aufrechtzuerhalten und wieder zu deaktivieren. 
