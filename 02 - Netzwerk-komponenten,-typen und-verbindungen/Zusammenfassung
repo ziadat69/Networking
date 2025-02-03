@@ -1,0 +1,46 @@
+-- Clients und Server:
+
+Alle mit einem Netzwerk verbundenen Computer, die direkt an der Netzwerkkommunikation beteiligt sind, werden als Hosts bezeichnet. 
+Hosts können Nachrichten im Netzwerk senden und empfangen. In modernen Netzwerken können Computer-Hosts als Client, als Server oder beides fungieren. 
+Die auf dem Computer installierte Software bestimmt, welche Rolle der Computer spielt.
+
+Die Software für Client und Server läuft normalerweise auf unterschiedlichen Computern, 
+aber es ist auch möglich, dass auf einem Computer gleichzeitig Client- und Serversoftware ausgeführt werden. 
+In SOHO-Umgebungen fungieren viele Computer als Client und als Server im Netzwerk. Diese Art von Netzwerk wird als P2P-Netzwerk bezeichnet. 
+In größeren Unternehmen ist es aufgrund des Potenzials für hohen Netzwerkverkehr oft erforderlich, dedizierte Server zu haben, um die Anzahl der Serviceanfragen zu unterstützen.
+P2P-Netzwerke sind einfach einzurichten, weniger komplex, kostengünstiger und können für einfache Aufgaben wie die Übertragung von Dateien und die gemeinsame Nutzung von Druckern verwendet werden. 
+Es gibt jedoch keine zentrale Verwaltung. Sie bieten weniger Sicherheit, sind nicht skalierbar und können langsamer arbeiten.
+
+
+-- Netzwerkkomponenten
+
+Es gibt Symbole, die für verschiedene Arten von Netzwerkgeräten stehen. 
+Die Netzwerkinfrastruktur ist die Grundlage des Netzwerks. 
+Sie bietet den stabilen und zuverlässigen Übertragungsweg, über den unsere Kommunikation stattfinden kann. 
+Die Netzwerkinfrastruktur umfasst drei Kategorien von Hardwarekomponenten: Endgeräte, Zwischengeschaltete Geräte und Netzwerkmedien. 
+Hardware bezeichnet häufig die sichtbaren Komponenten der Netzwerkplattform wie Laptops, PCs, Switches, Router, Wireless-Access-Points oder die Verkabelung, 
+die für den Anschluss der Geräte verwendet wird. Zu den nicht sichtbaren Komponenten zählen Wireless-Medien.
+
+Endgeräte oder Hosts bilden die Schnittstelle zwischen Benutzern und dem zugrunde liegenden Kommunikationsnetz. Einige Beispiele für Endgeräte sind:
+
+    Computer (Workstations, Laptops, Fileserver, Webserver)
+    Netzwerkdrucker
+    Telefone und Telekonferenzenausrüstung
+    Sicherheitskameras
+    Mobile Geräte (wie Smartphones, Tablets, PDAs und drahtlose Debit-/Kreditkartenleser und Barcode-Scanner)
+
+
+-- ISP-Verbindungsmöglichkeiten
+
+
+Ein Internet Service Provider (ISP) stellt die Verbindung zwischen dem Heimnetzwerk und dem Internet her. 
+Ein ISP kann der lokale Kabelanbieter, ein Festnetztelefonanbieter, das Mobilfunknetz sein, das Ihren Smartphone-Dienst bereitstellt, oder ein unabhängiger Anbieter, der Bandbreite in der physischen Netzwerkinfrastruktur eines anderen Unternehmens mietet. 
+Ein ISP verbindet sich mit anderen ISPs, um ein Netzwerk aus Verbindungen zu errichten, mit dem Benutzer überall auf der Welt verbunden werden. 
+ISPs sind hierarchisch miteinander verbunden, was sicherstellt, dass der Internetverkehr im Allgemeinen den kürzesten Weg von der Quelle zum Ziel nimmt.
+
+Der Verbund von ISPs, der das Rückgrat des Internets bildet, ist ein komplexes Netz aus Glasfaserkabeln mit teuren Netzwerk-Switches und Routern, die den Informationsfluss zwischen Quell- und Zielhosts lenken.
+
+Für Privatbenutzer ist die Verbindung mit dem ISP relativ unkompliziert. Die gängigste Anschlussmöglichkeit besteht aus der Verwendung eines WLAN-Routers zur Verbindung mit dem ISP.
+Der Router enthält einen Switch zur Verbindung kabelgebundener Hosts und einen WLAN-Access-Point zur Verbindung von drahtlosen Geräten. Der Router stellt auch Client-IP-Adressinformationen und Sicherheit für interne Hosts bereit.
+Die zwei häufigsten Methoden sind Kabel und DSL. Weitere Optionen sind Mobilfunk, Satellit und Einwahltelefon.
+
