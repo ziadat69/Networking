@@ -1,0 +1,24 @@
+-- Welche Art von Netzwerk wird durch zwei Computer definiert, die beide Ressourcenanfragen senden und empfangen können?
+
+Peer-to-Peer-Netzwerks
+
+
+--  Begriff beschreibt die Funktion eines ISP?
+
+in ISP ist für die Bereitstellung der Verbindung zwischen einem privaten Netzwerk, z. B. einem Heim- oder Unternehmensnetzwerk, und dem Internet verantwortlich.
+
+
+-- Welches Gerät ist ein zwischengeschaltetes Netzwerkgerät?
+
+Ein zwischengeschaltetes Gerät sendet Netzwerknachrichten an ein endgültiges Ziel.
+Beispiele für zwischengeschaltete Geräte sind eine Firewall, ein Router, ein Switch, ein Multilayer-Switch und ein Wireless-Router.
+
+
+-- Welcher Begriff beschreibt ein Netzwerkgerät, das hauptsächlich Informationen für andere Geräte bereitstellt?
+
+Server sind Geräte mit installierter Software, über die sie Informationen wie Webseiten oder E-Mails bereitstellen können.
+
+
+-- Was zeichnet eine Peer-to-Peer-Anwendung aus?
+
+Jedes Gerät, das die Anwendung verwendet, stellt eine Benutzerschnittstelle bereit und führt einen Hintergrunddienst aus.
