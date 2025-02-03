@@ -1,0 +1,48 @@
+-- Was macht ein Layer 2-Switch, wenn sich die Ziel-MAC-Adresse eines empfangenen Frames nicht in der MAC-Tabelle befindet?
+
+    Er sendet den Frame auf allen Ports außer dem Port, an dem der Frame empfangen wurde.
+
+-- Welches Netzwerkgerät sendet Daten an ein bestimmtes Ziel, basierend auf den Informationen in der MAC-Adresstabelle?
+
+
+    Switch
+
+
+-- Welche Adressinformationen werden von einem Switch zur Erstellung seiner MAC-Adresstabelle benötigt?
+
+    Quell-MAC-Adresse 
+
+-- Was ist der Zweck des FCS-Felds in einem Frame?
+
+    Das FCS-Feld in einem Frame wird verwendet, um Fehler bei der Übertragung und beim Empfang eines Frames zu erkennen
+
+-- Was ist eine Funktion eines Layer-2-Switch?
+
+    Ein Switch erstellt eine MAC-Adresstabelle mit MAC-Adressen und den zugehörigen Portnummern, indem er die in den eingehenden Frames gefundene Quell-MAC-Adresse untersucht. 
+
+
+
+-- Welche Informationen verwendet ein Switch, um die Informationen der MAC-Adresstabelle aktuell zu halten?
+
+    verwendet der Switch die MAC-Quelladresse der eingehenden Pakete und den Port, an dem die Pakete eingehen
+
+
+Welcher Prozess wird verwendet, um eine Nachricht in eine andere Nachricht für die Übertragung von der Quelle zum Ziel zu platzieren?
+
+   Kapselung
+
+
+-- Welche drei Felder befinden sich in einem 802.3 Ethernet-Frame? 
+
+   Ziel- und Quelladresse, Länge, Daten und FCS.
+
+-- Was macht ein Host in einem Ethernet-Netzwerk, wenn er einen Frame mit einer Unicast-Ziel-MAC-Adresse empfängt, die nicht mit seiner eigenen MAC-Adresse übereinstimmt?
+
+   verwirft das Gerät den Frame
+
+
+-- Welche Aussage über Weiterleitungsentscheidungen für Ethernet-Switch-Frames ist korrekt?
+
+
+   Die Entscheidungen über die Weiterleitung von Frames basieren auf den Zuordnungen von MAC-Adressen und Ports in der MAC-Adresstabelle.
+
