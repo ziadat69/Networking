@@ -1,0 +1,17 @@
+Netzwerk-Medientypen
+Die Kommunikation wird in einem Netzwerk durch Medien übertragen. Das Medium stellt den physischen Kanal dar, über den die Nachricht von der Quelle zum Ziel übertragen wird.
+
+Moderne Netze verwenden hauptsächlich drei Arten von Medien, um Geräte miteinander zu verbinden:
+
+    Metalldrähte in Kabeln - Daten werden in elektrische Impulse gewandelt.
+    Glas- oder Kunststofffasern in Kabeln (Glasfaserkabel) - Daten werden in Lichtimpulse gewandelt.
+    Drahtlose Übertragung - Daten werden durch Modulation spezifischer Frequenzen von elektromagnetischen Wellen übetragen. 
+
+Die vier Hauptkriterien bei der Auswahl von Netzwerkmedien sind:
+
+    Was ist die maximale Entfernung, über die das Medium ein Signal erfolgreich übertragen kann?
+    In welcher Umgebung sollte das Medium vorzugsweise installiert werden?
+    Wie hoch ist die Datenmenge und mit welcher Bandbreite muss sie übertragen werden?
+    Wie hoch sind die Kosten für die Installation der Medien? 
+
+Die drei gängigsten Netzwerkkabel sind Twisted-Pair-, Koax- und Glasfaserkabel. Bei der Ethernet-Technologie werden in der Regel Twisted-Pair-Kabel verwendet, um die Geräte miteinander zu verbinden. Ein Koaxialkabel ist die von Kabelfernsehanbietern verwendete Kupferkabelart. Außerdem werden sie für die Verbindung der verschiedenen Komponenten von Satellitenkommunikationssystemen verwendet. Glasfaserkabel können aus Glas oder Kunststoff bestehen und haben etwa den Durchmesser eines menschlichen Haares. Sie können digitale Informationen mit sehr hoher Geschwindigkeit über große Entfernungen übertragen. Da sie Licht anstelle von Elektrizität verwenden, wird das Signal nicht durch elektrische Interferenz beeinträchtigt.
