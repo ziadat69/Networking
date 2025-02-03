@@ -1,0 +1,48 @@
+-- Was ist das Internet?
+
+ein Netzwerk aus Netzwerken, Jeder Benutzer verbindet sich mit dem Internet über ein physisches Kabel oder über drahtlose Medien.
+Hinter diesem Netz von Netzen verbirgt sich ein sehr reales Rückgrat von Verbindungen (Backbone),
+
+
+-- Welche Kategorie von Netzwerkkomponenten umfasst Drähte und Kabel, die in einem kabelgebundenen Netzwerk verwendet werden?
+
+Als Netzmedien werden die Kabel und Drähte bezeichnet, 
+die in kabelgebundenen Netzen verwendet werden, sowie die Funkwellen, die in drahtlosen Netzen zum Einsatz kommen.
+
+
+-- Mit welcher Art von Gerät können physische Bewegungen erzeugt werden?
+
+Aktoren
+
+-- Welche Technologien werden für die Signalübertragung in einem Netzwerk verwendet?
+
+Radiowellen 
+elektrischen Impulsen 
+Lichtimpulse.
+
+-- Welche Art von vernetztem Gerät wird an Objekten angebracht, um sie zu verfolgen und zu überwachen?
+
+RFID (Radio Frequency Identification), nutzt elektromagnetische Felder, um Objekte zu identifizieren und zu verfolgen.
+
+-- Aus wie vielen Bits besteht ein Byte?
+
+ 8 Bits.
+
+
+-- Welche zwei Zahlen sind mögliche Werte für ein Bit? (Wählen Sie zwei Antwortmöglichkeiten aus.)
+
+ 0 und 1.
+
+
+-- Welche Einheit wird verwendet, um Tausend Bits pro Sekunde anzugeben?
+     (Kbit/s) 
+     Die Befehlsbandbreite wird wie folgt gemessen:
+
+      o  Tausende von Bits pro Sekunde (Kbit/s) oder Kilobits pro Sekunde
+      o  Millionen von Bits pro Sekunde (Mbit/s) oder Megabits pro Sekunde
+      o  Milliarden von Bits pro Sekunde (Gbit/s) oder Gigabits pro Sekunde
+      o  Billionen von Bits pro Sekunde (Tbit/s) oder Terabits pro Sekunde
+
+
+
+
