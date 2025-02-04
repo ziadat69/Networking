@@ -1,0 +1,59 @@
+Wenn Netzwerke wachsen, ist es oftmals notwendig, ein Zugriffsebenen-Netzwerk in mehrere solcher Netzwerke zu unterteilen. Es gibt viele Möglichkeiten, Netzwerke basierend auf unterschiedlichen Kriterien aufzuteilen:
+
+    Eingrenzung von Broadcasts - Router in der Verteilungsebene können Broadcasts auf das lokale Netz beschränken, in dem sie empfangen werden müssen.
+    Sicherheitsanforderungen - Router in der Verteilungsebene können bestimmte Gruppen von Computern, auf denen sich vertrauliche Informationen befinden, trennen und schützen.
+    Physikalische Standorte - Router in der Verteilungsebene können verwendet werden, um lokale Netzwerke an verschiedenen Standorten eines Unternehmens, die geografisch voneinander getrennt sind, miteinander zu verbinden.
+    Logische Gruppierung - Router in der Verteilungsebene können verwendet werden, um Benutzer logisch zu gruppieren, z. B. Abteilungen innerhalb eines Unternehmens, die gemeinsame Bedürfnisse haben oder für den Zugang zu Ressourcen.
+
+Die Verteilungsebene verbindet diese unabhängigen lokalen Netzwerke und kontrolliert den Traffic zwischen ihnen. Sie ist verantwortlich dafür, sicherzustellen, dass der Traffic zwischen Hosts im lokalen Netzwerk lokal bleibt.
+
+Ein Router ist ein Netzwerkgerät, das mehrere Ebene-3-IP-Netzwerke verbindet. Auf der Verteilungsebene des Netzwerks leiten Router den Traffic weiter und führen weitere für einen effizienten Betrieb des Netzwerks kritische Funktionen durch.
+Router sind, genau wie Switches, in der Lage, die Nachrichten zu decodieren und lesen, die an sie gesendet werden. Anders als Switches, bei denen die Entscheidung, ob sie etwas weiterleiten, auf der MAC-Adresse der Ebene 2 basiert, 
+treffen Router die Weiterleitungsentscheidung basierend auf der IP-Adresse der Ebene 3.
+
+Immer wenn der Netzwerkteil der IP-Adressen von Quell- und Ziel-Host nicht übereinstimmen, muss ein Router verwendet werden, um die Nachricht weiterzuleiten. 
+
+
+
+_________________
+
+
+Jeder Port bzw. jede Schnittstelle an einem Router ist mit einem anderen lokalen Netzwerk verbunden. Jeder Router enthält eine Tabelle aller lokal verbundenen Netzwerke sowie der hierfür verwendeten Schnittstellen.
+
+Wenn ein Router einen Frame empfängt, decodiert er ihn, um an das Paket zu gelangen, das die Ziel-IP-Adresse enthält.
+Er vergleicht den Netzwerkteil der Ziel-IP-Adresse mit den Netzwerken, die in der Routing-Tabelle aufgeführt sind. Wenn die Ziel-Netzwerkadresse in der Tabelle ist, 
+kapselt der Router das Paket in einen neuen Frame, um es zu versenden. Der Router sendet den neuen Frame von der dem Pfad zugeordneten Schnittstelle zum Zielnetzwerk. Das Weiterleiten der Pakete zu ihrem Zielnetzwerk wird als Routing bezeichnet.
+
+Ein Router leitet ein Paket an einen von zwei Orten weiter: ein direkt verbundenes Netzwerk, das den tatsächlichen Ziel-Host enthält, oder einen anderen Router auf 
+dem Pfad, um den Zielhost zu erreichen. Wenn ein Router den Frame kapselt, um ihn über eine geroutete Schnittstelle weiterzuleiten, muss er eine Ziel-MAC-Adresse 
+enthalten. Wenn der Router das Paket über eine geroutete Schnittstelle an einen anderen Router weiterleiten muss, verwendet er die MAC-Adresse des angeschlossenen Routers. Router rufen diese MAC-Adressen aus ARP-Tabellen ab.
+
+Ein Host erhält die IPv4-Adresse des Routers durch die Default-Gateway-Adresse, die in seinen TCP/IP-Einstellungen konfiguriert ist. Die Default-Gateway-Adresse ist
+die Adresse der Router-Schnittstelle, die mit demselben lokalen Netzwerk wie der Quell-Host verbunden ist. Alle Hosts im lokalen Netzwerk verwenden die 
+Default-Gateway-Adresse, um Nachrichten zum Router zu senden.
+
+Routing-Tabellen enthalten die Adressen von Netzwerken und den besten Pfad, um diese Netzwerke zu erreichen. Einträge in der Routing-Tabelle können auf 
+zwei Arten angelegt werden: sie werden entweder dynamisch durch Informationen von anderen Routern im Netzwerk aktualisiert oder von einem Netzwerkadministrator 
+manuell eingegeben.
+
+
+_______________________
+
+
+Der Begriff Lokale Netzwerke (LAN) beschreibt ein lokales Netzwerk oder eine Gruppe untereinander verbundener lokaler 
+Netzwerke unter der Kontrolle desselben Administrators. Alle lokalen Netze innerhalb eines LANs stehen unter einer einzigen administrativen Kontrolle
+. Weitere gemeinsame Merkmale von LANs sind, 
+dass sie in der Regel Ethernet- oder drahtlose Protokolle verwenden und hohe Datenraten unterstützen.
+
+Innerhalb eines LAN ist es möglich, alle Hosts in einem einzigen lokalen Netz unterzubringen oder sie auf mehrere Netze aufzuteilen, 
+die durch ein Gerät der Verteilungsebene verbunden sind.
+
+Die Platzierung aller Host in einem einzelnen lokalen Netzwerk ermöglicht, dass sie von allen anderen Hosts gesehen werden.
+Dies liegt daran, dass es eine Broadcast-Domain gibt und Hosts ARP nutzen, um sich gegenseitig zu finden.
+
+Die Platzierung zusätzlicher Hosts in einem Remote-Netz verringert die Auswirkungen des Netzwerkverkehrs.
+Jedoch sind Hosts im einen Netzwerk ohne den Einsatz von Routing nicht in der Lage, mit Hosts im anderen Netzwerk zu kommunizieren.
+Router erhöhen die Komplexität der Netzwerkkonfiguration und können Latenz (Verzögerungen) verursachen, wenn Pakete von einem lokalen Netzwerk zum anderen gesendet werden.
+
+
+
