@@ -1,0 +1,27 @@
+Jeder Host in einem Netzwerk muss den Router als Gateway in andere Netzwerke verwenden. 
+Deshalb muss jeder Host die IPv4-Adresse der Schnittstelle des mit dem Netzwerk verbundenen Routers kennen, an die er angeschlossen ist. 
+Diese Adresse wird als die Standardgateway-Adresse bezeichnet.
+Die Adresse kann entweder statisch direkt am Host konfiguriert werden oder dynamisch über DHCP bezogen werden.
+
+Der Wireless-Router fungiert als DHCP-Server für alle lokalen Hosts, die entweder per Ethernet-Kabel oder drahtlos mit ihm verbunden sind. 
+Diese lokalen Hosts befinden sich also in einem internen oder inneren Netzwerk. Wenn ein Wireless-Router mit dem ISP verbunden ist, 
+fungiert er als DHCP-Client, um die richtige externe IPv4-Netzwerkadresse für die Internet-Schnittstelle zu erhalten.
+ISPs stellen in der Regel eine ins Internet routbare Adresse zur Verfügung, über die die mit dem Wireless-Router verbundenen Hosts Zugang zum Internet haben. 
+Der Wireless-Router dient als Grenze zwischen dem lokalen internen Netzwerk und dem externen Internet.
+
+______
+
+NAT
+
+
+Der Wireless-Router empfängt eine öffentliche Adresse vom ISP, mit der er Pakete im Internet senden und empfangen kann.
+Im Gegenzug stellt er lokalen Netzwerk-Clients private Adressen zur Verfügung.
+
+Das Verfahren zur Umwandlung privater Adressen in Adressen, die über das Internet geroutet werden können, wird NAT genannt. 
+Bei NAT wird eine private (lokale) Quell-IPv4-Adresse in eine öffentliche (globale) Adresse umgesetzt. Für eingehende Pakete verläuft der Vorgang umgekehrt. 
+Der WLAN-Router ist in der Lage, mithilfe von NAT viele interne IPv4-Adressen in eine gemeinsame öffentliche Adresse zu übersetzen.
+
+Nur Pakete, die für andere Netzwerke bestimmt sind, müssen übersetzt werden. 
+Diese Pakete müssen das Gateway passieren, wo der Wireless-Router die private IPv4-Adresse des Quellhosts durch seine eigene öffentliche IPv4-Adresse ersetzt.
+
+
