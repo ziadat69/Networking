@@ -1,0 +1,9 @@
+Das DNS bietet Hosts die Möglichkeit, die IP-Adresse eines bestimmten Servers anzufordern. DNS-Namen werden im Internet in spezifischen Top-Level-Gruppen, 
+die als Domains bezeichnet werden, registriert und organisiert. Einige der gängigsten Top-Level-Domains im Internet sind .com, .edu und .net.
+
+Wenn der DNS-Server die Anfrage eines Hosts empfängt, überprüft er seine Tabelle, um die diesem Webserver zugeordnete IP-Adresse zu ermitteln.
+Wenn der lokale DNS-Server keinen Eintrag für den angeforderten Namen hat, fragt er einen weiteren DNS-Server innerhalb der Domain an. 
+Wenn der DNS-Server die IP-Adresse herausfindet, wird diese Information an den Client zurückgesendet.
+
+
+
