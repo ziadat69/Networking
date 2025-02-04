@@ -1,0 +1,24 @@
+-- Welche Informationen werden von Routern verwendet, um ein Datenpaket zum Ziel weiterzuleiten?
+  
+    Ziel-IP-Adresse
+
+-- Welche Auswirkungen hat es auf die Kommunikation, wenn das Default-Gateway auf dem Host falsch konfiguriert ist?
+
+    Der Host kann mit anderen Hosts im lokalen Netz kommunizieren, aber nicht mit Hosts in entfernten Netzen.
+
+-- Welche Funktion hat ein Router in einem Netzwerk?
+
+    Auswählen des Pfades zu den Zielnetzwerken
+
+-- Welche Adresse sollte für ein Client-Gerät als Default-Gateway-Adresse konfiguriert werden?
+
+    die IPv4-Adresse der Router-Schnittstelle, die mit demselben LAN verbunden ist
+
+-- Was ist der Vorteil eines Routers in einem IP-Netzwerk?
+
+ Da Router Broadcasts nicht weiterleiten, können sie Broadcasts für das lokale Netzwerk isoliert halten.
+
+-- Welche Aktion unternimmt der Router, wenn er in seiner Routing-Tabelle keine Route zum Zielnetzwerk findet?
+
+  Es verwirft das Paket.
+
