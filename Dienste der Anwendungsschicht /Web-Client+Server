@@ -1,0 +1,11 @@
+Wenn ein Web-Client die IP-Adresse eines Webservers empfängt, 
+verwendet der Client-Browser diese IP-Adresse und Port 80, um Web-Services anzufordern. 
+Diese Anfrage wird per HTTP an den Server gesendet. 
+Das HTTP-Protokoll ist kein sicheres Protokoll; Informationen können von anderen Benutzern leicht abgefangen werden, 
+wenn Daten über das Netz gesendet werden. Um die Sicherheit der Daten zu gewährleisten, kann HTTP mit sicheren Transportprotokollen verwendet werden. 
+Anfragen für Secure HTTP werden an Port 443 gesendet. Diese Anfragen verwenden https in der Adresse der Website im Browser und anstatt von http.
+
+Wenn der Server eine Anfrage über Port 80 empfängt, antwortet der Server auf die Client-Anfrage und sendet die Webseite an den Client.
+Der Inhalt einer Webseite wird mit HTML erstellt. Die HTML-Codierung teilt dem Browser mit, wie die Webseite formatiert werden soll und welche Grafiken und Schriftarten zu verwenden sind.
+
+Es gibt viele verschiedene Webserver und Webclients. Das HTTP-Protokoll und die HTML-Standards ermöglichen es diesen Servern und Clients von vielen unterschiedlichen Herstellern, nahtlos zusammenzuarbeiten.
