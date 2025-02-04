@@ -1,0 +1,15 @@
+Jeder E-Mail-Server empfängt und speichert E-Mails für Benutzer, die über ein konfiguriertes Postfach auf dem E-Mail-Server verfügen. Jeder Benutzer mit einer Mailbox muss einen E-Mail-Client verwenden, 
+um auf den Mail-Server zuzugreifen und diese Nachrichten zu lesen. Viele Internet-Messaging-Systeme verwenden einen webbasierten Client für den Zugriff auf E-Mails,
+darunter Microsoft 365, Yahoo und Gmail. Zu den für die E-Mail-Verarbeitung verwendeten Anwendungsprotokollen gehören SMTP, POP3 und IMAP4.
+
+SMTP wird von einem E-Mail-Client verwendet, um Nachrichten an seinen lokalen E-Mail-Server zu senden. Der lokale Server entscheidet dann, ob die Nachricht für eine lokale Mailbox oder für eine 
+Mailbox auf einem anderen Server bestimmt ist. Wenn der Server die Nachricht an einen anderen Server senden muss, wird zwischen diesen beiden Servern SMTP verwendet. SMTP-Anfragen werden an Port 25 gesendet. Ein Server, 
+der POP-Clients unterstützt, empfängt und speichert die Nachrichten, die an seine Benutzer adressiert sind. Wenn der Client sich mit dem E-Mail-Server verbindet, werden die Nachrichten auf den Client heruntergeladen. Standardmäßig 
+werden Nachrichten nicht auf dem Server behalten, nachdem der Client auf sie zugegriffen hat. Clients kontaktieren POP3-Server auf Port 110.
+
+Ein Server, der IMAP-Clients unterstützt, empfängt und speichert ebenfalls Nachrichten, die an seine Benutzer adressiert sind. Anders als POP belässt IMAP die Nachrichten jedoch in den Mailboxen auf dem Server, es sei denn, sie werden vom Benutzer gelöscht. 
+Die aktuelle Version von IMAP ist IMAP4, das Port 143 auf Client-Anfragen überwacht.
+
+Textnachrichten können als Sofortnachrichten, Direktnachrichten, private Nachrichten und Chat-Nachrichten bezeichnet werden. Instant Messaging ermöglicht es Benutzern, über das Internet in Echtzeit zu chatten. Der Zugriff auf die meisten Instant Messaging-Dienste erfolgt über einen webbasierten Client, 
+der in eine Social Media- oder Informationswebsite eingebunden ist. Diese Clients verbinden sich normalerweise nur mit anderen Benutzern derselben Website.
+Ein Internet-Telefonie-Client verwendet eine Peer-to-Peer-Technologie, die derjenigen von Instant Messaging ähnelt. IP-Telefonie benutzt VoIP, welches analoge Sprachsignale in digitale Daten umwandelt. Die Sprachdaten werden in IP-Pakete gekapselt, die den Anruf durch das Netzwerk übertragen.
