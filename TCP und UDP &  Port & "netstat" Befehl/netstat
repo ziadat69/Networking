@@ -1,0 +1,5 @@
+Unbekannte TCP-Verbindungen können eine ernsthafte Sicherheitsbedrohung darstellen. Sie können darauf hinweisen, dass ein Gerät oder eine Person mit dem lokalen Host verbunden ist.
+In manchen Fällen müssen Sie wissen, welche aktiven TCP-Verbindungen offen sind und auf einem Host im Netzwerk laufen. Netstat ist ein wichtiges Netzwerk-Dienstprogramm, mit dem diese Verbindungen überprüft werden können. 
+Geben Sie, wie unten gezeigt, den Befehl netstat im Windows Eingabefenster ein, um die verwendeten Protokolle, die lokalen Adressen und Portnummern, die fremden Adressen und Portnummern sowie den Verbindungsstatus aufzulisten.
+
+Standardmäßig versucht der Befehl netstat, IP-Adressen in Domänennamen und Port-Nummern in Well-Known-Anwendungen aufzulösen. Die Option -n kann verwendet werden, um IP-Adressen und Portnummern in numerischer Form anzuzeigen.
