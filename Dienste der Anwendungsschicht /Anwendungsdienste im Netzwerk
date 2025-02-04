@@ -1,0 +1,18 @@
+Der Begriff Server bezieht sich auf einen Host, auf dem eine Softwareanwendung ausgeführt wird, die Informationen oder Dienste für andere mit dem Netzwerk verbundene Hosts bereitstellt, 
+z. B. einen Webserver. Als Client-Software dient beispielsweise ein Webbrowser wie Chrome oder Firefox. Auf einem einzelnen Computer können auch verschiedene Typen von Client-Software ausgeführt werden.
+Ein entscheidender Faktor für das Funktionieren dieser komplexen Interaktionen ist, dass sie alle gemeinsame Standards und Protokolle verwenden.
+
+Die Haupteigenschaft von Client/Server-Systemen ist, dass der Client eine Anfrage an einen Server sendet und der Server antwortet, indem er eine Funktion ausführt, etwa das angeforderte Dokument zurück zum Client zu senden. 
+Die Kombination aus Webbrowser und Webserver ist wohl der am häufigsten verwendete Fall eines Client/Server-Systems.
+
+Ein URI ist eine Zeichenkette, die eine bestimmte Netzwerkressource identifiziert. Die Teile eines URI sind Protokoll/Schema, Hostname, Pfad- und Dateiname und Extension. URI weist zwei Besonderheiten auf:
+
+    URN - Eine URN identifiziert nur den Namensbereich der Ressource ohne Bezug zum Protokoll.
+    URL - Definiert den Speicherort einer bestimmten Ressource im Netz. HTTP- oder HTTPS-URLs werden in der Regel mit Webbrowsern verwendet. Andere Protokolle wie FTP, SFTP, SSH und weitere können mittels einer URL verwendet werden.
+
+
+___________
+
+Zu den von den meisten Menschen am häufigsten genutzten Internetdiensten gehören Internet-Suchen, Social-Media-Seiten, Video- und Audio-Streaming, Online-Shopping-Seiten, E-Mail und Messaging. Jeder dieser Services basiert auf Protokollen der TCP/IP-Protokollfamilie, um die Informationen zwischen den Clients und Servern zuverlässig übertragen zu können.
+Zu den gängigen Services gehören: DNS, SSH, SMTP, POP, IMAP, DHCP, HTTP und FTP.
+
