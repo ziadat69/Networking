@@ -1,0 +1,18 @@
+-- Was ist eine Funktion des ARP-Protokolls?
+
+Auflösung von IPv4-Adressen in MAC-Adressen
+
+-- Welche Zieladresse wird in einer ARP-Anforderung verwendet?
+
+   FFFF.FFFF.FFFF
+
+
+-- Welche Aussage beschreibt die Behandlung von ARP-Anfragen auf dem lokalen Link?
+
+   Sie werden von jedem Gerät im lokalen Netzwerk empfangen und verarbeitet.
+
+-- Welche wichtigen Informationen werden im Ethernet-Frame-Header von einem Layer-2-Gerät untersucht, um die Daten weiterzuleiten?
+
+   Ziel-MAC-Adresse
+
+-- Welche Aussage beschreibt ein Merkmal von MAC-Adressen?
