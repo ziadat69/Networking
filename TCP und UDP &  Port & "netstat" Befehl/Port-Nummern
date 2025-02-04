@@ -1,0 +1,25 @@
+Wenn eine Nachricht über TCP oder UDP übertragen wird, werden die angeforderten Protokolle und Services durch eine Port-Nummer identifiziert. 
+Ein Port ist ein numerischer Identifikator innerhalb jedes Segments, der verwendet wird, um spezifische Konversationen zwischen einem Client und 
+einem Server nachzuverfolgen. Jede Nachricht, die ein Host sendet, enthält sowohl einen Quell- als auch einen Zielport.
+
+Wenn eine Nachricht durch einen Server empfangen wird, muss der Server feststellen können, welcher Service vom Client angefordert wird. 
+Clients sind so vorkonfiguriert, dass sie für jeden Service einen Zielport verwenden, der im Internet registriert ist.
+
+Ports werden durch eine Organisation namens Internet Corporation for Assigned Names and Numbers (ICANN) zugewiesen und verwaltet. Ports sind in drei Kategorien eingeteilt, ihre Nummern liegen zwischen 1 und 65,535:
+
+    -- Bekannte Ports (Well-known Ports) - Zielports, die häufigen Netzwerkanwendungen zugeordnet sind, werden als bekannte Ports bezeichnet. Diese Ports 
+haben Nummern zwischen 1 und 1023.
+    -- Registrierte Ports - Die Ports 1024 bis 49151 können als Quell- oder Zielports verwendet werden. Sie können von Organisationen verwendet werden, um bestimmte Anwendungen wie IM-Anwendungen zu registrieren.
+    -- Private Ports - Die Ports 49152 bis 65535 werden oft als Quellports verwendet. Diese Ports können durch jede Anwendung verwendet werden.
+
+Die Quellport-Nummer wird dynamisch durch den Sender generiert, um eine Konversation zwischen zwei Geräten zu identifizieren. 
+Dieser Prozess ermöglicht die gleichzeitige Durchführung mehrerer Konversationen. Ein Gerät kann also häufig mehrere HTTP-Dienstanforderungen gleichzeitig an einen Webserver senden. 
+Jede einzelne HTTP-Konversation wird auf Basis des Quellports nachverfolgt.
+
+Der Client fügt eine Zielport-Nummer in das Segment ein, um den Zielserver darüber zu informieren, welcher Dienst angefordert wird. 
+Ein Server kann mehr als einen Dienst gleichzeitig bereitstellen. Beispielsweise kann er Webdienste auf Port 80 zur Verfügung stellen und gleichzeitig eine FTP-Verbindung auf Port 21 herstellen.
+
+Unbekannte TCP-Verbindungen können eine ernsthafte Sicherheitsbedrohung darstellen. Sie können darauf hinweisen, dass ein Gerät oder eine Person mit dem lokalen Host verbunden ist. 
+In manchen Fällen müssen Sie wissen, welche aktiven TCP-Verbindungen offen sind und auf einem Host im Netzwerk laufen. 
+Netstat ist ein wichtiges Netzwerk-Dienstprogramm, mit dem diese Verbindungen überprüft werden können. Mit dem Befehl netstat können Sie die verwendeten Protokolle,
+die lokalen Adressen und Portnummern, die fremden Adressen und Portnummern sowie den Verbindungsstatus auflisten.
