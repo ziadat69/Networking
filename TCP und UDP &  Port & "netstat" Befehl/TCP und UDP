@@ -1,0 +1,9 @@
+UDP ist ein „Best Effort“-Übertragungssystem, das keine Empfangsquittung erfordert. UDP wird bevorzugt für Anwendungen wie das Streaming von 
+Audio und Voice-over-IP (VoIP) verwendet. Bestätigungen würden die Übertragung verlangsamen und Neuübertragungen sind unerwünscht. 
+Pakete durchlaufen einen Pfad von der Quelle zu einem Ziel. Einige Pakete können verloren gehen, was in der Regel nicht bemerkt wird.
+
+TCP-Pakete durchlaufen einen Pfad von der Quelle zum Ziel. Allerdings hat jedes Paket eine Sequenznummer. 
+TCP teilt eine Nachricht in kleine Stücke auf, die als Segmente bezeichnet werden. Die Segmente werden fortlaufend nummeriert und an den IP-Prozess weitergeleitet,
+um zu Paketen zusammengefasst zu werden. TCP verfolgt die Anzahl von Segmenten, die von einer spezifischen Anwendung an einen spezifischen Host gesendet wurden.
+Wenn der Sender nicht innerhalb einer bestimmten Zeit eine Quittierung empfängt, geht er davon aus, dass die Segmente verloren gegangen sind und überträgt sie erneut. 
+Nur der Teil der Nachricht, der verloren geht, wird erneut gesendet, nicht die gesamte Nachricht.
