@@ -1,0 +1,40 @@
+-- Ein Computer muss ein Paket an einen Zielhost im selben LAN senden. Wie wird das Paket gesendet?
+
+    Befindet sich der Zielhost im selben LAN wie der Quellhost, ist kein Default-Gateway erforderlich.
+
+-- Welches Netzwerkgerät wird in der Regel verwendet, um NAT in einer Unternehmensumgebung durchzuführen?
+
+  Router
+
+-- Welches Merkmal trifft auf das Standardgateway eines Hostcomputers zu?
+
+   die Default-Gateway-Adresse ist die Adresse der Router-Schnittstelle, die mit demselben lokalen Netzwerk wie der Quell-Host verbunden ist.
+
+-- Wozu dient die Konfiguration einer Standardgateway-Adresse auf einem Host?
+
+   Damit ein Host oder ein Gerät mit Hosts oder Geräten in anderen Netzwerken kommunizieren kann, muss eine Default-Gateway-Adresse konfiguriert werden,
+   damit der Host bzw. das Gerät Daten an Remote-Netzwerke senden kann.
+
+-- Inwiefern wird die Kommunikation beeinträchtigt, wenn das Standardgateway auf einem Host falsch konfiguriert wird?
+
+   Der Host kann nicht mit Hosts in Remote-Netzwerken kommunizieren.
+
+
+--  Welche drei IPv4-Netzwerkadressen sind private IP-Adressen? (Wählen Sie drei Antwortmöglichkeiten aus.)
+
+     10.0.0.0
+     172.16.0.0
+     192.168.0.0
+
+-- Welchen Zweck erfüllt NAT?
+
+     Übersetzung von privaten IP-Adressen in eine öffentliche registrierte IP-Adresse
+
+-- Welche Art von Adressen werden in der Standardkonfiguration eines WLAN-Routers über DHCP an Geräte vergeben?
+
+     Standardmäßig geben Wireless-Home-Router private IPv4-Adressen an Geräte im Heimnetzwerk aus.
+     Diese Adressen liegen in der Regel im reservierten Bereich 192.168.0.0.
+
+
+
+
