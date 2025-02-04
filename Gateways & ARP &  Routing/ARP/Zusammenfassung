@@ -1,0 +1,31 @@
+Eine Nachricht kann auch eine Ziel-MAC-Adresse enthalten. Mit der Adressauflösung(ARP) 
+kann ein Host eine Broadcast-Nachricht an eine eindeutige MAC-Adresse senden, die von allen Hosts erkannt wird.
+Die Broadcast-MAC-Adresse ist eine 48 Bit lange Adresse, die ausschließlich aus Einsen besteht. 
+MAC-Adressen werden in hexadezimaler Notation dargestellt. 
+Die Broadcast-MAC-Adresse in Hexadezimalschreibweise ist FF:FF:FF:FF:FF:FF.
+Jedes F in der Hexadezimalschreibweise steht für vier Einsen in der binären Adresse.
+
+Wenn ein Host eine Broadcast-Nachricht sendet, leiten Switches die Nachricht 
+an jeden verbundenen Host im selben lokalen Netzwerk weiter. 
+Aus diesem Grund wird ein lokales Netzwerk, 
+also ein Netzwerk mit einem oder mehreren Ethernet-Switches, auch als Broadcast-Domain bezeichnet.
+
+Wenn zu viele Hosts mit derselben Broadcast-Domain verbunden sind,
+kann der Traffic Überhand nehmen. Die Anzahl der Hosts und die Traffic-Menge,
+die im lokalen Netzwerk unterstützt werden kann, wird durch die Fähigkeiten der zur Verbindung verwendeten Switches beschränkt. 
+Um die Leistung zu verbessern, müssen Sie möglicherweise ein lokales Netzwerk in mehrere Netzwerke oder Broadcast-Domänen aufteilen.
+Zur Aufteilung des Netzwerks in mehrere Broadcast-Domains werden Router verwendet.
+
+In einem lokalen Ethernet-Netzwerk akzeptiert eine Netzwerkkarte einen Frame nur,
+wenn die Zieladresse entweder die Broadcast-MAC-Adresse ist oder der MAC-Adresse der Netzwerkkarte entspricht.
+Die meisten Netzwerkanwendungen verlassen sich auf die logische Ziel-IP-Adresse, um den Standort der Server und Clients zu identifizieren.
+Wie bestimmt der sendende Host, welche Ziel-MAC-Adresse er im Frame platzieren soll? Der sendende Host kann ARP verwenden, um die MAC-Adressen jedes beliebigen Hosts im selben lokalen Netzwerk herauszufinden.
+
+ARP verwendet einen dreistufigen Prozess, um die MAC-Adresse eines Hosts im lokalen Netzwerk zu erkennen und zu speichern, wenn nur die IPv4-Adresse des Hosts bekannt ist:
+
+    Der Quell-Host erstellt und sendet einen Frame, der an eine Broadcast-MAC-Adresse adressiert ist. Der Frame enthält eine Nachricht mit der IPv4-Adresse des beabsichtigten Ziel-Hosts.
+    Jeder Host im Netzwerk empfängt den Broadcast-Frame und vergleicht die IPv4-Adresse in der Nachricht mit seiner konfigurierten IPv4-Adresse. Der Host mit der passenden IPv4-Adresse 
+sendet seine MAC-Adresse zurück zum ursprünglichen Quell-Host.
+    Der Quell-Host empfängt die Nachricht und speichert die MAC-Adresse und die IPv4-Adressinformationen in einer Tabelle, die als ARP-Tabelle bezeichnet wird. 
+
+IPv6 verwendet eine ähnliche Methode, die als Neighbor Discovery (Ermittlung von Netznachbarn) bezeichnet wird. 
