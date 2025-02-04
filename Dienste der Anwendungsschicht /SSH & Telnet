@@ -1,0 +1,10 @@
+Telnet bietet ein Standardverfahren zur Emulierung von textbasierten Terminalgeräten über das Datennetzwerk. Sowohl das Protokoll selbst als auch die Client-Software, die das Protokoll ausführt, werden häufig als Telnet bezeichnet. 
+Telnet-Server lauschen am TCP-Port 23 auf Client-Anfragen. Eine Verbindung über Telnet wird als Virtual Terminal-Sitzung (VTY) bzw. Verbindung bezeichnet. Anstatt ein physisches Gerät für die Verbindung mit dem Server zu verwenden,
+erstellt Telnet mithilfe von Software ein virtuelles Gerät, das die gleichen Funktionen wie eine Terminalsitzung mit Zugriff auf das CLI des Servers bietet.
+
+Telnet gilt nicht als sicheres Protokoll.
+Das Telnet-Protokoll kann zwar einen Benutzer zur Anmeldung auffordern, es unterstützt jedoch keine Übertragung von verschlüsselten Daten. 
+Alle während Telnet-Sitzungen ausgetauschten Daten werden als Klartext durch das Netzwerk transportiert. Dies bedeutet, dass die Daten abgefangen und einfach mitgelesen werden können.
+
+SSH stellt die Struktur für sichere Remote-Anmeldung und andere sichere Netzwerk-Services zur Verfügung. Darüber hinaus bietet es eine sicherere Authentifizierung als Telnet und unterstützt die Übertragung von Sitzungsdaten mit Verschlüsselung. 
+Netzwerkexperten sollten, wann immer möglich, SSH anstelle von Telnet verwenden.
