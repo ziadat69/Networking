@@ -1,0 +1,18 @@
+Befehle zur Fehlerbehebung
+Es gibt eine Reihe von Software-Dienstprogrammen, die bei der Ermittlung von Netzwerkproblemen helfen können. Die meisten dieser Dienstprogramme werden vom Betriebssystem als CLI-Befehle bereitgestellt.
+
+Zu den verfügbaren Dienstprogrammen zählen:
+
+   -- ipconfig - Zeigt IP-Konfigurationsinformationen an.
+   --  ping - Testet Verbindungen zu anderen IP-Hosts.
+   --  netstat - Zeigt Netzwerkverbindungen an.
+   -- tracert - Zeigt die Route zum Ziel an.
+   --  nslookup - Fragt direkt den Nameserver nach Informationen über eine Zieldomäne ab. 
+
+Der Befehl ipconfig wird verwendet, um die aktuellen IP-Konfigurationsinformationen für einen Host anzuzeigen. Wenn Sie diesen Befehl an der Eingabeaufforderung eingeben, werden die grundlegenden Konfigurationsinformationen angezeigt, einschließlich IP-Adresse, Subnetzmaske und Default-Gateway.
+
+Der Befehl ipconfig /all zeigt zusätzliche Informationen an, darunter die MAC-Adresse, die IP-Adressen des Default-Gateways und die DNS-Server. Er zeigt auch an, ob DHCP aktiviert ist, die Adresse des DHCP-Servers und die Lease-Informationen.
+
+Wenn IP-Adressierungsinformationen dynamisch zugewiesen werden, gibt der Befehl ipconfig /release die aktuellen DHCP-Bindungen frei. ipconfig /renew fordert neue Konfigurationsinformationen vom DHCP-Server an. Ein Host kann fehlerhafte oder veraltete IP-Konfigurationsinformationen enthalten und die einfache Aktualisierung dieser Informationen ist alles, was zur Wiederherstellung der Verbindung erforderlich ist.
+
+Das wahrscheinlich am häufigsten verwendete Netzwerkdienstprogramm ist Ping. Die meisten IP-fähigen Geräte unterstützen eine Form des ping-Befehls, um zu testen, ob Netzwerkgeräte über das IP-Netz erreichbar sind oder nicht. Wenn ein Ping an eine IP-Adresse gesendet wird, wird ein als Echo-Anfrage bezeichnetes Paket durch das Netzwerk an die angegebene IP-Adresse gesendet. Wenn der Ziel-Host die Echo-Anfrage empfängt, antwortet er mit einem als Echo-Antwort bezeichneten Paket. Wenn die Quelle die Echo-Antwort empfängt, wird die Konnektivität anhand der Antwort von der spezifischen IP-Adresse überprüft.
