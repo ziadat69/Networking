@@ -1,0 +1,25 @@
+IPv4  
+Eine IPv4-Adresse ist eine 32-Bit-Adressfolge, die in einen Netzwerk- und einen Hostteil unterteilt ist.
+Bei der Bestimmung und Festlegung, welcher Teil die Netzwerkadresse und welcher der Hostanteil ist, muss der 32-Bit-Fluss berücksichtigt werden.
+Die Bits des Netzwerkanteils in der Adresse müssen für alle Geräte im gleichen Netzwerk übereinstimmen. 
+Die Bits des Hostanteils in der Adresse müssen einzigartig sein, um einen bestimmten Host im Netzwerk zu identifizieren.
+Wenn zwei Hosts denselben Bitmuster im Netzwerkteil der 32-Bit-Adresse haben, befinden sich diese Hosts im selben Netzwerk.
+
+Die IPv4-Subnetzmaske ist ein 32-Bit-Wert, der den Netzwerkteil der Adresse vom Hostteil trennt. Wenn einer Maschine eine IPv4-Adresse zugewiesen wird, 
+wird die Subnetzmaske verwendet, um das Netzwerk zu bestimmen, dem das Gerät angehört. Die Netzwerkadresse repräsentiert alle Geräte im selben Netzwerk.
+
+Eine alternative Methode zur Bestimmung der Subnetzmaske ist die sogenannte Präfixlänge. 
+Die Präfixlänge gibt die Anzahl der auf 1 gesetzten Bits in der Subnetzmaske an. Sie wird in "Slash-Notation" geschrieben, wobei (/) gefolgt von der Anzahl der auf 1 
+gesetzten Bits angezeigt wird.
+Zum Beispiel wird 192.168.10.10 255.255.255.0 als 192.168.10.10/24 geschrieben.
+
+Zur Bestimmung der Netzwerkadresse wird eine logische UND-Operation verwendet. Die logische UND-Operation vergleicht jeweils zwei Bits.
+Beachte, dass nur bei einer UND-Operation zwischen 1 und 1 das Ergebnis 1 ist. Jede andere Kombination ergibt 0.
+
+    1 UND 1 = 1  
+    0 UND 1 = 0  
+    1 UND 0 = 0  
+    0 UND 0 = 0
+
+Um die Netzwerkadresse für einen IPv4-Host zu bestimmen, wird die logische UND-Operation Bit für Bit zwischen der IPv4-Adresse und der Subnetzmaske angewendet.
+Das Ergebnis dieser UND-Operation zwischen der Adresse und der Subnetzmaske ergibt die Netzwerkadresse.
