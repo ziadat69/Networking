@@ -1,0 +1,47 @@
+Es gibt kein offizielles Standardprotokoll für lokale Netzwerke, 
+aber mit der Zeit hat sich eine Technologie – Ethernet – mehr als alle anderen Technologien durchgesetzt.
+Die Ethernet-Protokolle definieren, wie Daten formatiert und über kabelgebundene Netzwerke gesendet werden. Die Ethernet-Standards betreffen die Schichten 1 und 2 des OSI-Modells.
+Ethernet hat sich als praktischer Standard etabliert, was bedeutet, dass es die Technologie ist, die in nahezu allen kabelgebundenen lokalen Netzwerken verwendet wird.
+
+Das Institute of Electrical and Electronics Engineers (IEEE) verwaltet die Netzwerkstandards, einschließlich der Ethernet- und drahtlosen Netzwerke.
+Jedes Technikstandard erhält eine Nummer, die auf das Komitee hinweist, das für die Zulassung und Pflege des Standards verantwortlich ist.
+Der Ethernet-Standard 802.3 hat sich im Laufe der Zeit verbessert.
+
+Ethernet-Adapter können Frames an allen Ports (außer dem Port, von dem sie empfangen wurden) versenden. 
+Jeder Host, der dieses Frame empfängt, prüft die Ziel-MAC-Adresse und vergleicht sie mit der eigenen MAC-Adresse. 
+Es ist die Ethernet NIC-Karte, die die MAC-Adresse überprüft und vergleicht. 
+Wenn die Adresse nicht mit der des Hosts übereinstimmt, wird der Rest des Frames ignoriert.
+Wenn sie übereinstimmt, empfängt dieser Host den Rest des Frames und die darin enthaltene Nachricht.
+
+Eine Ethernet MAC-Adresse besteht aus einem 48-Bit-Binärwert. Es wird die Hexadezimaldarstellung verwendet, 
+um eine Ethernet-Adresse zu kennzeichnen, da eine einzelne Hexadezimalziffer vier Bits darstellt. 
+Daher kann eine 48-Bit-MAC-Adresse in nur 12 Hexadezimalwerten dargestellt werden.
+
+Die MAC-Adresse für unicast ist eine eindeutige Adresse, die verwendet wird, wenn ein Frame von einem einzelnen Sender zu einem einzelnen Zielgerät gesendet wird. 
+Der Prozess, den der Quellhost verwendet, um die Ziel-MAC-Adresse, die einer IPv4-Adresse zugeordnet ist, zu bestimmen, ist ARP. Der Prozess, den der Quellhost verwendet, um die Ziel-MAC-Adresse zu einer IPv6-Adresse zu finden,
+ist ND (Neighbor Discovery).
+
+Ethernet-Broadcast-Merkmale:
+
+    Es enthält eine Ziel-MAC-Adresse von FF-FF-FF-FF-FF-FF im Hexadezimalformat (48-Bit-Binäradresse).
+    Es wird an alle Ethernet-Switch-Ports gesendet, mit Ausnahme des eingehenden Ports.
+    Es wird nicht von einem Router weitergeleitet.
+
+Ethernet-Multicast-Merkmale:
+
+    Es gibt eine Ziel-MAC-Adresse von 01-00-5E, wenn die Daten mit einem IPv4-Multicast-Paket eingekapselt sind, und eine Ziel-MAC-Adresse von 33-33, wenn die Daten mit einem IPv6-Multicast-Paket eingekapselt sind.
+    Es gibt andere MAC-Adressen, die für Multicast-Ziele reserviert sind, wenn die eingekapselten Daten keine IP-Pakete sind, wie STP und LLDP.
+    Es wird an alle Ethernet-Switch-Ports gesendet, mit Ausnahme des eingehenden Ports, es sei denn, der Switch ist für das Überwachen von Multicast konfiguriert.
+    Es wird nicht von einem Router weitergeleitet, es sei denn, der Router ist für die Weiterleitung von Multicast-Paketen konfiguriert.
+
+Der Layer-2-Switch verwendet MAC-Adressen der Schicht 2, um Weiterleitungsentscheidungen zu treffen. Er ist sich der Daten (Protokolle) im Datenbereich des Frames nicht bewusst. Ein Ethernet-Switch prüft seine MAC-Adressentabelle, 
+um für jedes Frame eine Weiterleitungsentscheidung zu treffen. Diese Tabelle wird manchmal auch als CAM (Content Addressable Memory) bezeichnet.
+
+Ein Switch erstellt seine MAC-Adresstabelle dynamisch, indem er die Quell-MAC-Adresse von Frames prüft, die er an seinen Ports empfängt. Der Switch leitet Frames dann weiter, indem er nach einer Übereinstimmung der Ziel-MAC-Adresse im Frame mit einem Eintrag in seiner MAC-Adressentabelle sucht. 
+Wenn die Ziel-MAC-Adresse eine Unicast-Adresse ist, sucht der Switch nach einer Übereinstimmung der Ziel-MAC-Adresse im MAC-Adressentabellen-Eintrag. Wenn die Adresse in der Tabelle vorhanden ist, leitet der Switch das Frame an den entsprechenden Port weiter. Wenn die Adresse jedoch nicht in
+der Tabelle gefunden wird, wird das Frame an alle Ports weitergeleitet, mit Ausnahme des Eingangsports. Dies wird als unbekannter Unicast-Broadcast bezeichnet.
+
+Wenn der Switch Frames von verschiedenen Geräten empfängt, kann er seine MAC-Adressentabelle füllen, indem er die Quell-MAC-Adresse jedes empfangenen Frames prüft. Wenn der MAC-Adressentabellen des Switches die Ziel-MAC-Adresse enthält, kann der Switch das Frame filtern und es an den entsprechenden Port weiterleiten. 
+Ein Switch kann mehrere MAC-Adressen mit demselben Port verknüpfen, was häufig vorkommt, wenn ein Switch mit einem anderen Switch verbunden ist. Der Switch hat für jedes Frame, das er empfängt, einen separaten Eintrag in seiner MAC-Adressentabelle, der die MAC-Adresse der Quelle beschreibt.
+
+Wenn ein Gerät eine IP-Adresse in einem entfernten Netzwerk hat, kann es das Ethernet-Frame nicht direkt an das Zielgerät senden. Stattdessen wird das Ethernet-Frame an die MAC-Adresse des Standard-Gateways, dem Router, gesendet.
