@@ -1,0 +1,24 @@
+UDP (User Datagram Protocol):
+UDP ist ein verbindungsloses Protokoll und bietet keine Garantie für Zuverlässigkeit oder Flusskontrolle. Es erfordert keine feste Verbindung und verfolgt keine Informationen über gesendete oder empfangene Daten zwischen Client und Server. UDP ist als „Best-Effort-Delivery“-Protokoll bekannt, da keine Bestätigung des Empfangs der Daten am Ziel erfolgt. Daher wird UDP bevorzugt für Anwendungen wie VoIP, bei denen Wiederholung und Bestätigung die Echtzeitübertragung stören würden.
+
+UDP ist auch für einfache Anwendungsanforderungen geeignet, bei denen Datenmengen minimal sind und schnell erneut übertragen werden können.
+
+Eigenschaften von UDP:
+
+    Keine Wiederholung verlorener Segmente.
+    Keine Erstellung einer Sitzung.
+    Keine Rückmeldung an den Sender über den Zustand der Ressourcen.
+
+Unterschiede zwischen TCP und UDP:
+
+    TCP: Verbindungsorientiert, zuverlässig, gewährleistet die Reihenfolge der Pakete und führt Flusskontrolle durch. Wird für Anwendungen verwendet, bei denen die Reihenfolge und Integrität der Daten entscheidend sind (z. B. Webbrowser, E-Mail, Datenbanken).
+    UDP: Verbindungslos, ohne Zuverlässigkeit oder Flusskontrolle. Wird häufig für Echtzeitanwendungen wie Live-Video-Streaming oder Voice-over-IP (VoIP) verwendet, bei denen eine schnelle Übertragung wichtiger ist als die garantierte Zustellung.
+
+UDP-Header: Der UDP-Header ist einfacher als der TCP-Header und besteht nur aus vier Feldern und benötigt 8 Bytes (64 Bit):
+
+    Quellport: Ein 16-Bit-Feld, das den Quellport des sendenden Anwendungsprogramms angibt.
+    Zielport: Ein 16-Bit-Feld, das den Zielport des empfangenden Anwendungsprogramms angibt.
+    Länge: Ein 16-Bit-Feld, das die Länge des UDP-Datenfeldes (Header + Daten) angibt.
+    Prüfziffer: Ein 16-Bit-Feld zur Überprüfung von Fehlern im Header und den Daten.
+
+Zusammenfassend: TCP bietet Zuverlässigkeit und Flusskontrolle, was es für Anwendungen geeignet macht, die eine fehlerfreie Datenübertragung und eine richtige Reihenfolge der Pakete erfordern. UDP hingegen ist für Anwendungen geeignet, die Geschwindigkeit über Zuverlässigkeit stellen, da es einfach und ohne Verbindungsaufbau oder Bestätigung arbeitet.
