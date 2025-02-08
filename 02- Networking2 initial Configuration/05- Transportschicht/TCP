@@ -1,0 +1,86 @@
+**Zusätzliche Funktionen von TCP**
+
+Neben den grundlegenden Funktionen der Datenfragmentierung und -zusammenfügung bietet TCP auch folgende Dienste:
+
+1. **Verbindungsaufbau**: TCP ist ein verbindungsorientiertes Protokoll, das eine dauerhafte Verbindung (oder Sitzung) zwischen den Quell- und Zielgeräten 
+aushandelt und aufbaut, bevor es Datenverkehr weiterleitet. Durch den Verbindungsaufbau können
+Geräte den Datenverkehr, der zu einem bestimmten Zeitpunkt übertragen werden kann, aushandeln 
+und die Kommunikationsdaten zwischen den Geräten effektiv verwalten.
+   
+2. **Zuverlässige Lieferung**: Aus verschiedenen Gründen kann es vorkommen, dass ein Segment 
+beschädigt oder verloren geht, während es über das Netzwerk übertragen wird. Das TCP-Protokoll stellt sicher, 
+dass jedes Segment, das vom Quellgerät gesendet wird, das Zielgerät erreicht.
+
+3. **Lieferung in der richtigen Reihenfolge**: Da Netzwerke mehrere Pfade mit unterschiedlichen 
+Übertragungsgeschwindigkeiten bieten können, können Daten in falscher Reihenfolge ankommen. 
+TCP gewährleistet durch Sequenznummern und Nummerierung der Segmente, dass die Segmente in 
+der richtigen Reihenfolge wieder zusammengesetzt werden.
+
+4. **Flusskontrolle**: Hosts im Netzwerk haben begrenzte Ressourcen (z. B. Speicher und Rechenleistung). 
+Wenn TCP erkennt, dass die Ressourcen überlastet sind, kann es das sendende Gerät auffordern, 
+die Datenübertragungsrate zu verringern. Dies wird durch die Steuerung der Menge an Daten erreicht, 
+die das Quellgerät sendet. Flusskontrolle kann verhindern, dass Daten neu gesendet werden müssen, 
+wenn die Ressourcen des Zielhosts überlastet sind.
+
+TCP ist ein **zustandsbehaftetes** Protokoll, was bedeutet, dass es den Zustand der Sitzung verfolgt. 
+Um den Zustand der Sitzung zu verwalten, zeichnet TCP gesendete und bestätigte Daten auf. 
+Eine Sitzung beginnt mit dem Verbindungsaufbau und endet mit dem Verbindungsabbau.
+
+### Die zehn Felder im TCP-Header sind:
+
+1. **Quellport**: Ein 16-Bit-Feld, das das Quellanwendungsprogramm durch eine Portnummer identifiziert.
+2. **Zielport**: Ein 16-Bit-Feld, das das Zielanwendungsprogramm durch eine Portnummer identifiziert.
+3. **Sequenznummer**: Ein 32-Bit-Feld, das für die Datenzusammenführung verwendet wird.
+4. **Anerkennungsnummer**: Ein 32-Bit-Feld, das den Empfang von Daten anzeigt und die erwartete nächste Byte-Nummer vom Quellgerät anzeigt.
+5. **Kopfzeilenlänge**: Ein 4-Bit-Feld, das als "Datenoffset" bezeichnet wird und die Länge des TCP-Headers angibt.
+6. **Reserviert**: Ein 6-Bit-Feld, das für zukünftige Verwendung reserviert ist.
+7. **Steuerbits**: Ein 6-Bit-Feld, das Steuerflags oder Flags enthält, die den Zweck und die Funktion des TCP-Segments angeben.
+8. **Fenstergröße**: Ein 16-Bit-Feld, das angibt, wie viele Bytes gleichzeitig akzeptiert werden können.
+9. **Prüfziffer**: Ein 16-Bit-Feld zur Fehlerprüfung des Headers und der Daten im Segment.
+10. **Dringlichkeitszeiger**: Ein 16-Bit-Feld, das angibt, ob die enthaltenen Daten dringend sind.
+
+TCP ist ein gutes Beispiel dafür, wie verschiedene Schichten des **TCP/IP-Protokollstapels** spezifische Aufgaben übernehmen. 
+TCP verwaltet alle Aufgaben im Zusammenhang mit der Segmentierung von Datenströmen, der Gewährleistung von Zuverlässigkeit,
+der Flusskontrolle und der Reihenfolge der Segmente und befreit die Anwendung von der Notwendigkeit, 
+diese Aufgaben selbst zu verwalten. Protokolle wie **HTTP**, **FTP**, **SMTP** und **SSH** 
+können einfach einen Datenstrom an die Transportschicht übergeben und TCP-Dienste nutzen.
+
+TCP wird für bestimmte Anwendungen bevorzugt, da es im Gegensatz zu UDP die verlorenen Pakete erneut sendet und sicherstellt, dass die Pakete in der richtigen Reihenfolge geliefert werden. TCP hilft auch, den Datenfluss zu regulieren, sodass die Geräte nicht überlastet werden.
+
+### Sequenznummern und ACK-Nummern
+
+Jedes Segment im TCP-Header wird mit einer Sequenznummer versehen, um sicherzustellen, dass alle Segmente in der richtigen Reihenfolge beim Ziel ankommen. Die Sequenznummer repräsentiert das erste Byte der Daten in einem TCP-Segment. Zu Beginn der Sitzung wird die Initial Sequence Number (ISN) festgelegt, die den Startwert für die zu sendenden Bytes darstellt. 
+Während der Sitzung wird die Sequenznummer für jedes gesendete Byte erhöht, 
+um die einzelnen Segmente eindeutig zu kennzeichnen und zu bestätigen. Verlorene Segmente können so identifiziert werden.
+
+Die **Sequenznummer** und die **ACK-Nummer** werden zusammen verwendet, 
+um den Empfang von Datenbytes in den gesendeten Segmenten zu bestätigen. Die Sequenznummer 
+SEQ gibt das erste Byte der zu sendenden Daten im Segment an. Die ACK-Nummer ist die erwartete nächste Byte-Nummer, 
+die vom Empfänger erhalten werden soll. Diese ACK-Nummer wird zurück an den Quellhost gesendet, um den Empfang zu bestätigen, 
+und als **voraussichtliche Bestätigung** bezeichnet.
+
+### Flusskontrolle
+
+TCP bietet auch spezielle Mechanismen für die **Flusskontrolle**. Flusskontrolle bezieht sich auf die Menge an Daten, 
+die das Zielgerät zuverlässig empfangen und verarbeiten kann. Sie hilft, die Zuverlässigkeit von TCP zu gewährleisten, 
+indem sie den Datenübertragungsraten zwischen Quelle und Ziel anpasst. Der TCP-Header enthält ein 16-Bit-Feld, 
+das als **Fenstergröße** bezeichnet wird.
+
+Die **Fenstergröße** gibt an, wie viele Bytes gesendet werden können, bevor eine Bestätigung erwartet wird.
+Die ACK-Nummer zeigt die erwartete nächste Byte-Nummer. Die anfängliche Fenstergröße wird beim Verbindungsaufbau während
+des **Three-Way Handshakes** vereinbart. Das Quellgerät muss die Anzahl der gesendeten Bytes auf Grundlage 
+der Fenstergröße des Zielgeräts begrenzen. Weitere Daten können nur dann gesendet werden, wenn eine Bestätigung für 
+die empfangenen Bytes eingegangen ist.
+
+### Maximum Segment Size (MSS)
+
+Die **MSS** ist Teil des Optionsfelds im TCP-Header und gibt die größte Menge an Daten (in Bytes) an, 
+die ein Gerät in einem einzelnen TCP-Segment verarbeiten kann. 
+Die MSS umfasst nicht den TCP-Header und wird in der Regel während der **Three-Way Handshake** vereinbart.
+
+### Umgang mit Staus
+
+Wenn Staus auftreten, werden verlorene TCP-Segmente erneut vom Quellgerät gesendet.
+Wenn jedoch keine geeignete Möglichkeit für die erneute Übertragung besteht, 
+kann die erneute Übertragung von TCP-Segmenten den Stau noch verschärfen.
+Um Staus zu vermeiden und zu kontrollieren, verwendet TCP verschiedene Algorithmen, Timer und Mechanismen zur Staukontrolle.
