@@ -1,0 +1,46 @@
+**DNS**
+
+In Datennetzwerken werden Geräte mit numerischen IP-Adressen bezeichnet, 
+um Daten zu senden und zu empfangen. Domainnamen wurden entwickelt, um diese numerische Adresse in einen einfachen, unterscheidbaren Namen umzuwandeln. 
+Das DNS-Protokoll (Domain Name System) bietet einen automatischen Dienst, der Ressourcen-Namen der entsprechenden Netzwerknummer zuordnet.
+DNS-Kommunikationen verwenden ein einziges Format, das als Nachrichtentyp bezeichnet wird. Dieses Nachrichtensystem wird für alle Arten von Client-Anfragen,
+Server-Antworten, Fehlermeldungen und den Austausch von Ressourcen-Datensätzen zwischen Servern genutzt.
+
+Ein DNS-Server speichert verschiedene Arten von Ressourcensätzen, die zur Namensauflösung verwendet werden. Diese Sätze beinhalten den Namen des Datensatzes,
+seine Adresse und den Typ. DNS verwendet dasselbe Nachrichtenformat auch zwischen den Servern, bestehend aus einer Anfrage, einer Antwort, 
+einer Autorisierung und zusätzlichen Informationen für alle Arten von Client-Anfragen und Server-Antworten, Fehlermeldungen und den Austausch von Ressourcensätzen.
+
+DNS verwendet Domainnamen, um eine hierarchische Struktur zu bilden. Der Namensraum ist in Zonen unterteilt. 
+Jeder DNS-Server behält eine bestimmte Datenbank und ist nur für die Verwaltung von Namenszuordnungen zu IP-Adressen in seinem eigenen Teilbereich der 
+DNS-Struktur verantwortlich. Wenn ein DNS-Server eine Anfrage zur Übersetzung eines Namens empfängt, der nicht innerhalb seiner eigenen Zone existiert, 
+leitet der Server die Anfrage an einen anderen DNS-Server weiter, der für den entsprechenden Bereich zuständig ist. 
+DNS-Server sind skalierbar, da die Namensauflösung auf mehrere Server verteilt werden kann.
+
+Betriebssysteme verfügen über ein Hilfsprogramm namens **nslookup**, das es dem Benutzer ermöglicht, manuell DNS-Server zu fragen, um einen bestimmten Hostnamen aufzulösen.
+Dieses Tool wird auch verwendet, um Probleme bei der Namensauflösung zu diagnostizieren und den aktuellen Status der DNS-Server zu überprüfen.
+Beim Ausführen des **nslookup**-Befehls wird der standardmäßig konfigurierte DNS-Server des Hosts angezeigt.
+Der Benutzer kann einen Hostnamen oder Domainnamen in der nslookup-Eingabeaufforderung eingeben.
+
+**DHCP**
+In größeren Netzwerken wird DHCP (Dynamic Host Configuration Protocol) bevorzugt, um Adressen zuzuweisen. 
+Anstatt für jede Verbindung eine statische Adresse zu verwenden, ist es effizienter, IPv4-Adressen automatisch mit DHCP zu vergeben.
+DHCP kann IP-Adressen für einen konfigurierbaren Zeitraum, der als Lease-Time bezeichnet wird, zuweisen. 
+Wenn der Lease-Zeitraum abläuft oder der DHCP-Server eine **DHCPRELEASE**-Nachricht erhält, wird die Adresse zurück in den DHCP-Pool gegeben, 
+um wiederverwendet zu werden. Benutzer können sich frei von einem Standort zum anderen bewegen und Netzwerkverbindungen mit DHCP wiederherstellen.
+
+**DHCPv6** bietet ähnliche Dienste für IPv6-Clients. Ein wesentlicher Unterschied besteht darin, dass DHCPv6 keine Adresse für das Standard-Gateway bereitstellt. 
+Diese kann nur dynamisch durch eine Router Advertisement Message (Nachricht des Routers) erhalten werden.
+
+Wenn ein IPv4-Gerät eingeschaltet wird, DHCP aktiviert ist oder sich mit einem Netzwerk verbindet, sendet der Client eine **DHCPDISCOVER**-Nachricht, 
+um verfügbare DHCP-Server im Netzwerk zu finden.
+
+Der DHCP-Server antwortet mit einer **DHCPOFFER**-Nachricht, die dem Client ein Leasing-Angebot unterbreitet. Der Client sendet dann eine **DHCPREQUEST**-Nachricht, 
+in der er den spezifischen Server und das Leasing-Angebot akzeptiert.
+
+Vorausgesetzt, dass die IPv4-Adresse, die der Client angefordert hat oder vom Server angeboten wurde, noch verfügbar ist, 
+sendet der Server eine **DHCPACK**-Nachricht, die dem Client bestätigt, dass das Leasing erfolgreich abgeschlossen wurde. Wenn das Angebot nicht mehr gültig ist, 
+antwortet der Server mit einer **DHCPNAK**-Nachricht. Nach Erhalt einer **DHCPNAK**-Nachricht muss der Client den Vorgang wiederholen, 
+indem er eine neue **DHCPDISCOVER**-Nachricht sendet.
+
+**DHCPv6** verwendet eine ähnliche Gruppe von Nachrichten wie **DHCPv4**, einschließlich der Nachrichten: **SOLICIT**, **ADVERTISE**, 
+**INFORMATION REQUEST** und **REPLY**.
