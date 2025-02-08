@@ -1,0 +1,40 @@
+Um ein Paket an einen anderen Host im gleichen IPv4-Netzwerk zu senden, muss der Host sowohl die IPv4-Adresse als auch die MAC-Adresse des Zielgeräts kennen. 
+Die IPv4-Zieladresse des Geräts ist entweder bekannt oder wurde durch den Gerätenamen aufgelöst. Die MAC-Adressen müssen jedoch entdeckt werden.
+Der Host verwendet ARP (Address Resolution Protocol), um die MAC-Adresse des Zielgeräts zu bestimmen, wenn die IPv4-Adresse bekannt ist. 
+ARP bietet zwei grundlegende Funktionen: die Auflösung von IPv4-Adressen in MAC-Adressen und die Pflege einer Tabelle von IPv4-zu-MAC-Adressen-Zuordnungen.
+
+Das sendende Gerät sucht in der ARP-Protokoll-Tabelle nach der entsprechenden IPv4-Adresse und MAC-Adresse:
+
+Wenn die Ziel-IPv4-Adresse des Pakets im gleichen Netzwerk wie die Quell-IPv4-Adresse des Geräts liegt, sucht das Gerät in der ARP-Tabelle nach der Ziel-IPv4-Adresse.
+Wenn die Ziel-IPv4-Adresse sich in einem anderen Netzwerk als die Quell-IPv4-Adresse befindet, sucht das Gerät nach der IPv4-Adresse des Standard-Gateways in der ARP-Tabelle.
+
+Jeder Eintrag oder jede Zeile in der ARP-Tabelle verknüpft eine IPv4-Adresse mit einer MAC-Adresse. Diese Beziehung nennen wir eine "Mapping". ARP-Nachrichten werden direkt
+innerhalb eines Ethernet-Rahmens übertragen. Der IPv4-Header ist nicht enthalten. Die ARP-Anforderung wird in einem Ethernet-Rahmen mit folgenden Informationen im Header übertragen:
+
+  Ziel-MAC-Adresse: Dies ist die Broadcast-Adresse FF-FF-FF-FF-FF-FF, die alle NICs (Netzwerkadapter) auf dem Ethernet-Netzwerk zwingt, die ARP-Anforderung zu akzeptieren und zu verarbeiten.
+  Quell-MAC-Adresse: Dies ist die MAC-Adresse des sendenden Geräts, das die ARP-Anforderung stellt.
+  Typ: ARP-Nachrichten haben den Typ 0x806, der der empfangenden NIC mitteilt, dass die Nutzdaten des Rahmens an den ARP-Prozess weitergeleitet werden müssen.
+
+Da ARP-Anforderungen Broadcasts sind, werden sie von allen Ethernet-Switch-Ports, mit Ausnahme des Empfangsports, übertragen. Nur das Gerät, 
+dessen IPv4-Adresse mit der Ziel-IPv4-Adresse in der ARP-Anforderung übereinstimmt, wird mit einer ARP-Antwort reagieren. Nachdem das Gerät die ARP-Antwort erhalten hat, 
+wird es die IPv4- und MAC-Adressen in seine ARP-Tabelle eintragen.
+
+Wenn die Ziel-IPv4-Adresse nicht im gleichen Netzwerk wie die Quell-IPv4-Adresse des Geräts liegt, muss das sendende Gerät das Paket an das Standard-Gateway senden.
+Dies ist die Schnittstelle des lokalen Routers. Wenn ein Gerät eine IPv4-Adresse im Netzwerk eines anderen Geräts hat, wird das Paket in einen Ethernet-Rahmen verpackt, 
+wobei die Ziel-MAC-Adresse des Routers verwendet wird. Die IPv4-Adresse des Standard-Gateways wird in den IPv4-Konfigurationen der Hosts gespeichert. 
+Wenn das Zielgerät nicht im gleichen Netzwerk ist, prüft der Host seine ARP-Tabelle, um nach einem Eintrag für das Standard-Gateway zu suchen. 
+Falls kein Eintrag vorhanden ist, wird ein ARP-Prozess gestartet, um die MAC-Adresse des Standard-Gateways zu ermitteln.
+
+Jedes Gerät hat einen ARP-Cache-Timer, der dafür sorgt, dass ARP-Einträge nach einer bestimmten Zeit gelöscht werden, wenn sie nicht verwendet wurden. 
+Die Zeitspanne variiert je nach Betriebssystem. Mit Befehlen können einige oder alle Einträge in der ARP-Tabelle manuell entfernt werden.
+
+Auf einem Cisco-Router wird der Befehl show ip arp verwendet, um die ARP-Tabelle anzuzeigen. Auf einem Windows 10-Computer wird der Befehl arp –a verwendet,
+um die ARP-Tabelle anzuzeigen.
+
+Da ARP-Anfragen Broadcasts sind, werden sie von jedem Gerät im lokalen Netzwerk empfangen und verarbeitet. Wenn viele Geräte gleichzeitig auf Netzwerkdienste zugreifen,
+kann es zu einem kurzen Leistungsabfall kommen. In einigen Fällen kann die Verwendung des ARP-Protokolls (Address Resolution Protocol) potenzielle Sicherheitsrisiken mit 
+sich bringen.
+
+Ein Angreifer kann ARP-Spoofing betreiben, um einen ARP Cache Poisoning-Angriff durchzuführen. Dabei gibt der Angreifer eine ARP-Antwort für eine IPv4-Adresse zurück, 
+die einem anderen Gerät gehört, wie z. B. dem Standard-Gateway. Der Angreifer sendet seine eigene MAC-Adresse an das Gerät, das die ARP-Anfrage gestellt hat. 
+Das Gerät fügt dann die falsche MAC-Adresse in seine ARP-Tabelle ein und sendet die Pakete an den Angreifer.
