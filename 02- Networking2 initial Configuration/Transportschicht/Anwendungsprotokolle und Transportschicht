@@ -1,0 +1,51 @@
+**Anwendungsprotokolle und Transportschicht**
+
+Anwendungsprotokolle helfen dabei, Daten zwischen Anwendungen, die auf Quell- und Zielhosts ausgeführt werden, auszutauschen.
+Die Transportschicht ist für die logische Kommunikation zwischen Anwendungen auf verschiedenen Hosts verantwortlich. 
+Sie umfasst zwei Protokolle: das Transmission Control Protocol (TCP) und das User Datagram Protocol (UDP).
+
+1. **Verfolgung einzelner Gespräche**: In der Transportschicht wird jede Datenmenge, die zwischen einer Quell- und Zielanwendung übertragen wird, als Gespräch betrachtet und separat verfolgt. 
+     Die Transportschicht ist dafür verantwortlich, diese verschiedenen Gespräche zu verwalten und zu überwachen.]
+
+2. **Datenfragmentierung und -zusammenfügung**: Es liegt in der Verantwortung der Transportschicht, Anwendungsdaten in geeignete Blockgrößen zu unterteilen. 
+    Abhängig vom verwendeten Transportschichtprotokoll werden diese Blöcke als Segmente (bei TCP) oder Datenagramme (bei UDP) bezeichnet.
+
+3. **Hinzufügen von Kopfzeileninformationen**: Das Transportschichtprotokoll fügt auch Kopfzeileninformationen hinzu, 
+     die binäre Daten enthalten, die in verschiedene Felder für jedes Datenpaket organisiert sind.
+
+4. **Bestimmung von Anwendungen**: Die Transportschicht muss in der Lage sein, mehrere Verbindungen zu verwalten und zu trennen, 
+                                   die unterschiedliche Transportanforderungen haben.
+
+5. **Multiplexing von Gesprächen**: 
+                        Der Datenverkehr für bestimmte Arten von Daten (z. B. Video-Streaming) kann die gesamte 
+                        verfügbare Bandbreite beanspruchen, wenn er über das Netzwerk als ein durchgehender Datenstrom übertragen wird.
+            Die Transportschicht verwendet Fragmentierung und Multiplexing, um es verschiedenen Verbindungen zu ermöglichen, gleichzeitig 
+                        über dasselbe Netzwerk zu kommunizieren.
+
+Die Transportschicht bestimmt, wie Nachrichten zwischen Hosts übertragen werden, und ist dafür verantwortlich,
+die Zuverlässigkeitsanforderungen für das Gespräch zu verwalten. Sie umfasst sowohl TCP als auch UDP.
+
+**TCP (Transmission Control Protocol)** bietet Zuverlässigkeit und Flusskontrolle durch folgende Grundoperationen:
+
+- **Nummerierung und Verfolgung von Datenpaketen**, die von einer bestimmten Anwendung an einen bestimmten Host gesendet werden
+- **Bestätigung empfangener Daten**
+- **Wiederholung von Daten**, deren Empfang nach einer festgelegten Zeitspanne nicht bestätigt wurde
+- **Datenreihenfolge**, falls die Daten in falscher Reihenfolge ankommen
+- **Effektive Datenübertragung** mit einer vom Empfänger akzeptierten Rate
+
+Um die Gesprächsinformationen zu verwalten und zu verfolgen, muss TCP zuerst eine Verbindung zwischen dem Sender und dem Empfänger 
+herstellen. Daher wird TCP als ein **Verbindungsorientiertes Protokoll** bezeichnet.
+
+**UDP (User Datagram Protocol)** ist ein verbindungsloses Protokoll. Da UDP keine Zuverlässigkeit oder Flusskontrolle bietet, 
+erfordert es keine feste Verbindung. UDP wird auch als **zustandsloses Protokoll** bezeichnet, da es keine Informationen über gesendete
+oder empfangene Daten zwischen Client und Server verfolgt. Es ist bekannt als ein **Best-Effort-Delivery-Protokoll**, weil 
+es keine Bestätigung darüber gibt, ob die Daten erfolgreich am Zielort angekommen sind. 
+Im Fall von UDP gibt es keine speziellen Transportschichtoperationen, um den Sender über den erfolgreichen Versand zu informieren.
+UDP wird bevorzugt für Anwendungen wie **VoIP (Voice over IP)**, bei denen Übertragungsverzögerungen und Wiederholungsversuche die 
+Qualität des Sprachdialogs beeinträchtigen könnten. UDP wird auch von Anwendungsprotokollen verwendet, die kleine Datenmengen enthalten
+und bei denen eine schnelle Wiederholung der Daten notwendig ist.
+
+Für andere Anwendungen, bei denen es wichtig ist, dass alle Daten korrekt und in der richtigen Reihenfolge ankommen
+, wird **TCP** als Transportprotokoll verwendet. Zum Beispiel erfordern Anwendungen wie **Datenbanken**, **Webbrowser** 
+und **E-Mail-Clients**, dass alle gesendeten Daten in ihrer ursprünglichen Form am Ziel ankommen. 
+Fehlende Daten könnten die Verbindung beschädigen, sie unvollständig machen oder unleserlich erscheinen lassen.
