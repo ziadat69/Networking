@@ -1,0 +1,102 @@
+**Dokumentation von Netzwerken** ist entscheidend für die **Wartung**, **Sicherheit** und **Fehlerbehebung** von Netzwerken.
+Die Dokumentation kann physische und logische Netzwerkdiagramme, schriftliche Dokumente und **Leistungsbenchmarks** umfassen.
+
+### Netzwerkstrukturen, die dokumentiert werden können:
+
+Es gibt **neun Netzwerkstrukturen**, die dokumentiert werden können. Dazu gehören:
+- **Personal Area Network (PAN)** – Ein persönliches Netzwerk, wie z.B. Bluetooth.
+
+- **Local Area Network (LAN)** – Ein Netzwerk, das in einem begrenzten geografischen Bereich, wie einem Büro oder Gebäude, funktioniert.
+
+- **Virtual Local Area Network (VLAN)** – Ein virtuelles Netzwerk, das innerhalb eines physischen Netzwerks erstellt wird, um logische Trennungen zu ermöglichen.
+
+- **Wireless Local Area Network (WLAN)** – Ein drahtloses Netzwerk, das in einem kleinen Bereich arbeitet.
+
+- **Wireless Mesh Network (WMN)** – Ein Netzwerk aus drahtlosen Geräten, die miteinander kommunizieren und Daten weiterleiten.
+
+- **Campus Area Network (CAN)** – Ein Netzwerk, das ein gesamtes Campusgebiet abdeckt, wie z.B. Universitäten oder große Firmengelände.
+
+- **Metropolitan Area Network (MAN)** – Ein Netzwerk, das eine größere geografische Fläche als ein LAN abdeckt, wie z.B. eine ganze Stadt.
+
+- **Wide Area Network (WAN)** – Ein Netzwerk, das große geografische Entfernungen abdeckt, häufig zwischen Städten oder Ländern.
+
+- **Virtual Private Network (VPN)** – Ein sicheres Netzwerk, das über ein öffentliches Netzwerk hinweg läuft, um private Kommunikation zu ermöglichen.
+
+__________________________________________________
+
+### Physische und logische Netzwerkdiagramme:
+
+- **Physisches Netzwerkdiagramm**: Dokumentiert die **physischen Standorte** der Geräte und ihre **Verbindungen**. Es zeigt, wie Geräte miteinander verbunden sind, und umfasst Details zu Verkabelung, Switches, Routern und anderen Hardware-Komponenten.
+  
+- **Logisches Netzwerkdiagramm**: Enthält **IP-Adressen**, **Geräteinformationen** (z.B. Ports, IP-Adressen), **Routing-Details** und **Sicherheitsrichtlinien**. Es beschreibt, wie das Netzwerk konzipiert ist und wie Daten im Netzwerk fließen.
+
+- Weitere Informationen, wie z.B. **Cloud-Dienste**, **Routing-Politiken** und **Remote Access Policies**, können ebenfalls in die Netzwerkdiagramme aufgenommen werden.
+
+__________________________________________________
+
+### Cloud-Dienste:
+
+- **SaaS (Software as a Service)**: Software, die über das Internet bereitgestellt wird, wie Google Docs oder Microsoft 365.
+- **PaaS (Platform as a Service)**: Eine Plattform, die Entwicklern die Entwicklung und Bereitstellung von Anwendungen ermöglicht, z.B. Google App Engine.
+- **IaaS (Infrastructure as a Service)**: Bereitstellung von Infrastruktur wie Servern, Netzwerken und Speicher über das Internet, z.B. Amazon Web Services (AWS).
+- **XaaS (Anything as a Service)**: Bezieht sich auf alle Arten von Diensten, die über das Internet angeboten werden, wie **DaaS** (Desktop as a Service), **DRaaS** (Disaster Recovery as a Service), **CaaS** (Communication as a Service) und **MaaS** (Monitoring as a Service).
+
+__________________________________________________
+
+### Drahtlose Netzwerkstandards:
+
+Die **drahtlosen Netzwerkstandards** definieren die **Betriebsmerkmale** für drahtlose Kommunikation, einschließlich **Signalstärken**, **Datenraten** und **Energieeffizienz**. 
+
+Diese Standards gehören zur **IEEE 802.11**-Reihe von drahtlosen Ethernet-Standards und umfassen:
+- **802.11b**, **802.11g**, **802.11n**, **802.11ac**.
+
+- Diese Standards operieren im **nicht lizenzierten Funkfrequenzbereich**.
+- **Lizensierte Funkfrequenzen** werden von der **Federal Communications Commission (FCC)** kontrolliert, die Lizenzen an Radio- und Mobilfunkunternehmen vergibt.
+
+__________________________________________________
+
+### Geräte-Dokumentation:
+
+Die **Gerätedokumentation** variiert je nach Gerätetyp. Häufig umfasst sie:
+- **Betriebssystem und Software** des Geräts
+
+- **Lizenzinformationen**
+
+- **Interface-Status** und **Adressierung** (wie IP-Adressen)
+
+- **Routing-Protokolle** und andere netzwerkspezifische Details.
+
+__________________________________________________
+### Netzwerk-Benchmarks:
+
+**Netzwerk-Benchmarks** sind eine Reihe von Leistungskennzahlen, die während verschiedener Nutzungsphasen des Netzwerks erfasst werden. 
+Sie helfen dabei, die **richtigen Netzwerkparameter** zu verstehen, damit **Leistungsprobleme** oder **Sicherheitsprobleme** erkannt werden können,
+wenn die Leistung signifikant von den vorher festgelegten Benchmarks abweicht.
+
+__________________________________________________
+
+### Cisco Discovery Protocol (CDP):
+
+Das **Cisco Discovery Protocol (CDP)** ist ein **Cisco-spezifisches Protokoll**, das auf Cisco-Netzwerkgeräten läuft.
+Es sendet **CDP-Ankündigungen** an benachbarte Geräte, die direkt verbunden sind. Diese Ankündigungen enthalten Informationen wie:
+- **Gerätename**
+- **Port-Identifikation**
+- **Geräteplattform**
+- **Softwareversionen**
+- **IP-Adressen**
+__________________________________________________
+
+Mit den **IOS-Kommandos** 
+`show cdp neighbors` und `show cdp neighbors detail`
+
+können die über CDP erhaltenen Informationen angezeigt werden.
+CDP wird verwendet, um **Netzwerkinformationen** zu ermitteln und hilft dabei, **Netzwerkstrukturen** zu erkennen.
+
+---
+
+### Fazit:
+
+Die **Netzwerkdokumentation** ist von wesentlicher Bedeutung für die ordnungsgemäße Verwaltung und Fehlerbehebung von Netzwerken. 
+Sie umfasst eine Vielzahl von Diagrammen und Informationen über die Netzwerkarchitektur, 
+die verwendeten Protokolle und die Geräteeinstellungen.
+Ebenso sind Cloud-Dienste und drahtlose Standards ein wichtiger Bestandteil der Netzwerksicherheit und -verwaltung.
