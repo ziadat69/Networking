@@ -1,0 +1,31 @@
+**Drahtlose Netzwerke** sind verschiedenen Bedrohungen ausgesetzt,
+darunter **Datenabfang**, **Drahtlose Eindringlinge**, **DoS-Angriffe** und **Rogue Access Points (APs)**. 
+DoS-Angriffe können durch fehlerhaft konfigurierte Geräte, böswillige Benutzerinterferenzen oder unbeabsichtigte Störungen verursacht werden.
+Rogue APs können von Angreifern verwendet werden, um MAC-Adressen zu erfassen, Datenpakete abzufangen, auf Netzwerkressourcen zuzugreifen oder
+**Man-in-the-Middle**-Angriffe (MitM) durchzuführen, bei denen der Angreifer zwischen zwei legitimen Entitäten platziert wird,
+um die Daten, die zwischen ihnen fließen, zu lesen oder zu verändern.
+
+### Sicherheitsmaßnahmen für Drahtlose Netzwerke:
+- **SSID Cloaking**: Das SSID-Beacon-Signal wird deaktiviert, um die Identifikation des Netzwerks zu verhindern.
+
+- **MAC-Adressenfilterung**: Ein Administrator kann den drahtlosen Zugriff basierend auf der MAC-Adresse von]
+                             Geräten zulassen oder verweigern.
+
+### Authentifizierungsmechanismen:
+- **Open System Authentication** sollte nur verwendet werden, wenn keine Sicherheitsanforderungen bestehen.
+- **Shared Key Authentication** nutzt Mechanismen wie **WEP**, **WPA**, **WPA2** und **WPA3** zur Authentifizierung und 
+                                Verschlüsselung von Daten zwischen einem drahtlosen Client und einem Access Point (AP). 
+                    WEP und WPA gelten als veraltet und unsicher. **WPA2** ist das Mindestmaß, während **WPA3** bevorzugt wird, 
+                    Wenn verfügbar.
+
+### Verschlüsselung:
+- **WPA2** verwendet den **Temporal Key Integrity Protocol** (TKIP) oder den **Advanced Encryption Standard** (AES), 
+           um Daten zu verschlüsseln und vor Abhörung zu schützen.
+- **WPA3** ist die empfohlene Authentifizierungsmethode und beinhaltet Optionen wie **WPA3-Personal**, **WPA3-Enterprise**, 
+     **Open Networks** und **IoT Onboarding**. Für öffentliche Netzwerke verwendet 
+      WPA3 den **Opportunistic Wireless Encryption** (OWE), um den gesamten drahtlosen Datenverkehr zu verschlüsseln.
+
+### IoT Onboarding:
+- WPA3 verwendet das **Device Provisioning Protocol** (DPP), um IoT-Geräte sicher in das Netzwerk einzubinden.
+
+---
