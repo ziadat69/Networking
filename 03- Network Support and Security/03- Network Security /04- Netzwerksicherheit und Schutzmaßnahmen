@@ -1,0 +1,27 @@
+**Zusammenfassung für GitHub: Netzwerksicherheit und Schutzmaßnahmen**
+
+1. **Schutz des Netzwerkperimeters**  
+   - Verschiedene Geräte sind erforderlich, um den Netzwerkperimeter vor unbefugtem externen Zugriff zu schützen, wie z.B.
+      **VPN-fähige Router**, **Next-Generation Firewalls**, **IPS-Appliances** und **AAA-Server**.
+   
+2. **Sicherung des internen LANs**  
+   - Die Absicherung des internen LANs ist genauso wichtig wie der Schutz des externen Netzwerkperimeters. 
+
+      **Endpunkte** und die **Netzwerkinfrastruktur** benötigen ebenfalls Schutz.
+
+3. **Arten von Antimalware-Programmen**  
+   - **Signaturbasierte**, **Heuristik-basierte** und **Verhaltensbasierte** Antimalware-Programme schützen Systeme vor Bedrohungen.
+
+4. **Host-basierte Antivirus- und Firewall-Schutzmaßnahmen**  
+   - **Agent-basierte Antivirus-Software** läuft auf jedem geschützten Gerät.  
+   - **Agentlose Antivirus-Software** scannt Hosts von einem zentralen System aus.  
+   - **Host-basierte Firewalls** beschränken eingehende und ausgehende Verbindungen auf Verbindungen, 
+         die von dem jeweiligen Host initiiert wurden. Beispiele: **Windows Defender Firewall** und **iptables** (Linux).
+
+5. **Schutz von Endpunkten in einem grenzenlosen Netzwerk**  
+   - Schutztechniken auf Netzwerk- und Host-Ebene umfassen Geräte und Systeme wie **Cisco Secure Endpoint**, 
+      **Cisco Secure Email**, **Cisco Umbrella**, und **Network Admission Control (NAC)**-Systeme. 
+       Diese arbeiten zusammen, um die **Enterprise-Sicherheit** zu gewährleisten.
+
+Diese Maßnahmen bieten eine umfassende Strategie, um sowohl den Netzwerkperimeter als 
+auch interne Systeme vor Bedrohungen und Angriffen zu schützen.
