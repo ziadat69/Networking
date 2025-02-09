@@ -1,0 +1,46 @@
+**Sicherheitskonfiguration und Schutzmaßnahmen für Betriebssysteme**
+
+1.  > **Systematische Herangehensweise an Sicherheitsüberwachung**  
+
+   - Ein strukturierter Plan ist erforderlich, um Sicherheitsüberwachungsverfahren zu etablieren, Software-Updates zu bewerten und Updates zu installieren.  
+   - Baselines helfen, Systemkompromisse zu erkennen, wenn die Leistung signifikant von der Basislinie abweicht.
+
+2.  > **Fileless Malware-Angriffe** 
+
+   - Fileless Malware ist schwer zu erkennen, hinterlässt keine Spuren und kann Skripte wie Python, Bash oder Visual Basic for Applications (VBA) nutzen.
+
+3.  > **Proaktive Patch-Verwaltung**  
+
+   - Software sollte regelmäßig gepatcht werden, um Sicherheitslücken zu schließen.  
+   - Betriebssysteme prüfen regelmäßig auf Patches, aber Administratoren sollten diese vor der Installation evaluieren.  
+   - Automatisierte Patch-Management-Systeme bieten Kontrolle über den Zeitpunkt der Updates und Berichte über den Status der Systeme und Patches.
+
+4.  > **Endpoint-Schutz auf Hosts**  
+
+   - **Host-basierte Firewalls** blockieren eingehenden und ausgehenden Datenverkehr.  
+   - **Host Intrusion Detection Systems (HIDS)** überwachen Systeme und Sicherheitsereignisse.  
+   - **Host Intrusion Prevention Systems (HIPS)** erkennen schadhafte Aktivitäten und können Alarme senden, die Verbindung zurücksetzen und/oder Pakete blockieren.  
+   - **Endpoint Detection and Response (EDR)** ist eine Sicherheitslösung, die Daten von Endgeräten kontinuierlich überwacht und sammelt.  
+   - **Data Loss Prevention (DLP)** sorgt dafür, dass vertrauliche Daten nicht verloren gehen oder von unbefugten Benutzern verwendet werden.
+
+5. >  **Next-Generation Firewalls (NGFW)**  
+   - NGFW kombinieren traditionelle Firewalls mit weiteren Funktionen zur Filterung von Netzwerkgeräten.
+
+6. > **Datenschutz durch Verschlüsselung**  
+   - **Windows Encrypting File System (EFS)** ermöglicht die Verschlüsselung von Dateien oder gesamten Laufwerken (Full-Disk Encryption – FDE) mit BitLocker.  
+   - BitLocker erfordert ein Trusted Platform Module (TPM) im BIOS.  
+   - **BitLocker To Go** verschlüsselt wechselbare Laufwerke.
+
+7. > **Boot-Integrität und sicheres Booten**  
+
+   - **Secure Boot** stellt sicher, dass ein Gerät mit vertrauenswürdiger Software startet, um Änderungen am System während des Startvorgangs zu verhindern.
+
+8.  > **Apple-Systemschutz und Sicherheit**  
+
+   - Apple bietet Hardware- und macOS-Sicherheitsfunktionen, wie einen speziellen Sicherheitsprozessor und Hardware-verschlüsselte Daten.  
+   - **FileVault** schützt gespeicherte Daten mit AES-Verschlüsselung und **Apple Data Protection** bietet Sicherheitsfeatures für die Datenverarbeitung.  
+   - Weitere Sicherheitsfunktionen umfassen **Find My Device**, **XProtect** Antimalware-Technologie, **Malware Removal Tool (MRT)** und **Gatekeeper**, der nur authentische Software zulässt.
+
+9. > **Physische Sicherheitsmaßnahmen für Geräte** 
+
+   - Physische Schutzmaßnahmen umfassen die Kontrolle des Zugriffs auf Geräte, Verwendung von Kabelschlössern, Türschlössern mit Schlüssel oder Code und die Inventarisierung von Geräten mit RFID (Radiofrequenz-Identifikation).
