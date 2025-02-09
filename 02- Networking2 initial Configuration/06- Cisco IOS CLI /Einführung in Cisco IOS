@@ -1,0 +1,65 @@
+**Navigation zwischen Cisco IOS Befehlen**
+
+Im Cisco IOS können Sie zwischen verschiedenen Befehlsmodi wechseln, um Geräte zu konfigurieren oder zu überwachen. Hier sind die grundlegenden Befehle und Schritte, um durch die verschiedenen Modi zu navigieren:
+
+1. **Benutzermodus EXEC**  
+   Nach dem Start des Geräts wird der Standardprompt im Benutzermodus EXEC angezeigt, der folgendermaßen aussieht:
+   ```
+   Router>
+   ```
+   In diesem Modus können nur grundlegende Befehle zur Überwachung des Geräts ausgeführt werden.
+
+2. **Privilegierter EXEC-Modus**  
+   Um in den privilegierten EXEC-Modus zu wechseln, geben Sie den Befehl ein:
+   ```
+   enable
+   ```
+   Der Prompt ändert sich und zeigt nun:
+   ```
+   Router#
+   ```
+   In diesem Modus können Sie erweiterte Befehle ausführen, um das Gerät zu konfigurieren oder zusätzliche Systemoperationen zu überwachen.
+
+3. **Globaler Konfigurationsmodus**  
+   Um in den globalen Konfigurationsmodus zu wechseln, verwenden Sie den Befehl:
+   ```
+   configure terminal
+   ```
+   Der Prompt ändert sich und zeigt nun:
+   ```
+   Router(config)#
+   ```
+   In diesem Modus können Sie die Konfiguration des Routers oder Switches bearbeiten.
+
+4. **Zurück zum vorherigen Modus**  
+   Um aus dem Konfigurationsmodus zurück zum privilegierten EXEC-Modus zu wechseln,
+    können Sie eine der folgenden Methoden verwenden:
+   - **exit**  
+   - **end**  
+   - **Ctrl+Z**  
+
+5. **Spezifische Gerätekonfiguration**  
+   Um bestimmte Gerätekonfigurationen wie Konsolenanschlüsse oder VTY-Linien zu konfigurieren, 
+     verwenden Sie die folgenden Befehle:
+  
+- Zum Wechseln in den Konsolenmodus:
+     ```
+     line console 0
+     ```
+  
+- Zum Wechseln in den VTY-Linienmodus:
+     ```
+     line vty 0 15
+     ```
+  
+- Zum Wechseln zu einer VLAN-Interface-Konfiguration:
+     ```
+     interface vlan 1
+     ```
+
+**Zusammenfassung der Navigation:**
+
+- **enable**:  Wechsel in den privilegierten EXEC-Modus.
+- **disable**: Zurück in den Benutzermodus EXEC.
+- **configure terminal**: Wechsel in den globalen Konfigurationsmodus.
+- **exit**, **end**, **Ctrl+Z**: Verlassen des Konfigurationsmodus und Rückkehr zum privilegierten EXEC-Modus.
