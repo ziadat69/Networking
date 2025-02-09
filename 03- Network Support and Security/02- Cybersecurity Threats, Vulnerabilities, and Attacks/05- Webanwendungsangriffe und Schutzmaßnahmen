@@ -1,0 +1,44 @@
+**Webanwendungsangriffe und Schutzmaßnahmen - GitHub Zusammenfassung**
+
+- **Cross-Site Scripting (XSS):** Ein häufiger Angriff auf Webanwendungen, bei dem bösartiger Code in eine legitime Webseite eingefügt wird. Der Browser des Opfers führt den Code aus, was Malware herunterlädt, zu einer schädlichen Webseite umleitet oder Informationen stiehlt.
+  
+- **Injection-Angriffe:** Angreifer fügen fehlerhafte Daten oder Befehle in Benutzereingabefelder ein, um Systeme auszunutzen. Besonders häufig sind diese Angriffe gegen Datenbanken, wie z.B. XML- und SQL-Injektionen, die Datenbanken korrumpieren oder sensible Informationen wie Benutzerdaten offenbaren können.  
+  - **DLL-Injektionen:** Schadhafter Code wird in Dynamic Link Libraries (DLLs) eingefügt, die bei ihrer Verwendung durch Anwendungen ausgeführt werden.  
+  - **LDAP-Injektionen:** Angreifer missbrauchen Eingabefehler, um auf LDAP-Servern Abfragen auszuführen und so sensible Kontoinformationen zu erhalten.
+
+- **Remote Code Execution (RCE):** Ein Angreifer nutzt Sicherheitslücken in Anwendungen aus, um Befehle mit den Rechten des Benutzers auszuführen, der die Anwendung auf dem Zielgerät betreibt.
+
+- **Weitere Anwendungangriffe:**  
+
+  - Cross-Site Request Forgery (CSRF)  
+  - Race-Condition-Angriffe  
+  - Angriffe auf Benutzerinputs  
+  - Fehlerbehandlung-Angriffe  
+  - API-Angriffe  
+  - Replay-Angriffe  
+  - Directory Traversal-Angriffe  
+  - Ressourcenauslastungsangriffe
+
+**Schutzmaßnahmen:**  
+
+- Schreiben von sicherem Code und Validierung aller Benutzereingaben.
+- Verwendung von Sicherheitstest-Tools während der Entwicklung und vor der Bereitstellung.
+- Regelmäßige Aktualisierung aller Software, einschließlich Betriebssystemen.
+
+---
+
+**Spam und Phishing-Angriffe - GitHub Zusammenfassung**
+
+- **Spam:** Unerwünschte E-Mails, die meist lästig sind, aber auch schädlich sein können. Nutzer sollten lernen, Spam zu identifizieren.
+  
+- **Phishing und Spear-Phishing:** Angriffe, die vorgeben, von legitimen Quellen zu kommen, aber dazu auffordern, Dateien herunterzuladen oder vertrauliche Informationen zu übermitteln.  
+
+  - **Spear-Phishing:** Direkter Angriff auf spezifische Personen.  
+  - **Vishing:** Angriffe, die über Sprachmitteilungen erfolgen.  
+  - **Pharming:** Benutzer werden auf gefälschte Versionen legitimer Websites umgeleitet.  
+  - **Whaling:** Phishing, das sich gezielt an hochrangige Persönlichkeiten richtet (z.B. Führungskräfte, Politiker).
+
+**Schutzmaßnahmen:**  
+- Einsatz von Spam-Filtern.  
+- Antivirus-Software bereitstellen.  
+- Schulung der Benutzer über Netzwerksicherheit.
