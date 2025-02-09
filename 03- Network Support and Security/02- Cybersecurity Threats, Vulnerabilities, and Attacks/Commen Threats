@@ -1,0 +1,37 @@
+Hier ist eine Zusammenfassung für GitHub in Deutsch:
+
+- **Bedrohungsbereich:** Ein Bereich, den Angreifer ausnutzen können, 
+um auf Systeme zuzugreifen, wie physischer Zugriff, Hacking von WLANs, Bluetooth und NFC,
+Malware-Übertragung über tragbare Medien oder Cloud-Umgebungen.
+  
+- **Arten von Bedrohungen:**  
+  - **Interne Bedrohungen:** Kommen von aktuellen oder ehemaligen Mitarbeitern.
+
+  - **Externe Bedrohungen:** Kommen von Angreifern, entweder Amateur- oder Profiangreifern.
+
+  - **Benutzerbedrohungen:** Mangelndes Sicherheitsbewusstsein, unsichere Downloads, unbefugte Webseitenbesuche 
+       oder absichtliche Zerstörung von Systemen und Daten.
+
+  - **Gerätebedrohungen:** Unbefugter Zugriff, Malware-Downloads und veraltete Software.
+  
+- **Netzwerkbedrohungen:**  
+  - Unbefugter Zugriff auf Geräte und Systeme, Schwachstellen in Betriebssystemen und Sicherheitslücken in falsch konfigurierten Firewalls.
+  
+- **Cloud-Bedrohungen:** Unbefugter Zugriff auf Cloud-Ressourcen, Netzwerk-Scans, Port-Scanning und Softwarefehler.
+  
+- **Bedrohungen für Anwendungen:**  
+  - Unbefugter Zugriff, Serverausfälle, Sicherheitslücken in Betriebssystemen, Datenverlust und Sicherheitslücken in Webanwendungen.
+  
+- **Komplexe Bedrohungen:**  
+  - **APT (Advanced Persistent Threats):** Langfristige Angriffe mit fortschrittlichen Taktiken und Malware.
+  - **Algorithmische Angriffe:** Angriffe, die die Programmlogik ausnutzen.
+  
+- **Backdoors und Rootkits:**  
+  - Backdoors wie Netbus ermöglichen unbefugten Zugriff auf Systeme. Rootkits verschaffen sich Zugang und erhöhen Privilegien, um Spuren zu verwischen.
+  
+- **Ressourcen und Tools:**  
+  - **CVE-Datenbank:** Bekanntmachung von Schwachstellen.
+  - **Dark Web:** Austausch von Sicherheitslücken und gestohlenen Daten.
+  - **IOC (Indicators of Compromise):** Merkmale von Angriffen, die helfen, Ausnutzungen zu erkennen.
+
+Diese Zusammenfassung bietet einen Überblick über Bedrohungen in der IT-Sicherheit, einschließlich verschiedener Angriffsvektoren und Ressourcen zur Bedrohungsanalyse.
