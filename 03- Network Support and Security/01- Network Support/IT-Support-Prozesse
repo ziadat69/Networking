@@ -1,0 +1,47 @@
+
+### **Sicherheitsrichtlinien und IT-Support-Prozesse**
+
+1. **Sicherheitsrichtlinien**
+
+   - **Ziele**: Sicherstellung der Netzwerksicherheit durch Richtlinien zu Benutzerauthentifizierung, Passwortkomplexität, und Fernzugriffsanforderungen.
+   - **Standardarbeitsanweisungen (SOP)**: Detaillierte Anweisungen zu Aufgaben wie dem Ersetzen von Netzwerkgeräten und der Installation von Software.
+   - **Richtlinien**: Vorschläge für Handlungen, wenn keine SOPs vorhanden sind.
+
+2. **Helpdesk und Support-Prozesse**
+
+   - **Helpdesk-Team**: IT-Experten, die als zentrale Anlaufstelle für technische Probleme von Mitarbeitern und Kunden fungieren.
+   - **Kommunikationskanäle**: Nutzung von Chat, Telefon oder E-Mail zur Fehlerbehebung.
+   - **Ticket-System**: Verwaltung und Bearbeitung von Supportanfragen. Nutzer eröffnen Tickets, Techniker überprüfen und lösen diese, und eskalieren bei Bedarf an Experten.
+
+3. **Verhalten von Support-Technikern**
+   - **Empathie**: 
+    Techniker sollten stets rücksichtsvoll und verständnisvoll gegenüber den Nutzern sein, die möglicherweise gestresst sind.
+
+   - **Kein Herabsetzen der Nutzer**: Techniker dürfen Nutzer nicht kritisieren oder beschuldigen.
+
+4. **Effektive Kommunikation**
+
+   - **"Wissen, Verbindung, Verständnis"**: Eine Methode, um den Kunden besser zu verstehen:
+     - **Wissen**: Den Kunden persönlich ansprechen.
+     - **Verbindung**: Eine individuelle Beziehung aufbauen.
+     - **Verständnis**: Das technische Verständnis des Kunden ermitteln und auf seinem Niveau sprechen.
+   - **Aktives Zuhören**: Wichtig für das korrekte Verständnis der Probleme des Kunden.
+
+5. **Fehlerbehebung bei Hosts**
+
+   - Sammeln von Informationen über das Gerät, Betriebssystem, Netzwerkumgebung und Ergebnisse von Tests wie `ping` und `tracert`.
+   - Weitere Quellen: Fehlercodes, Ereignisprotokolle und Task-Manager-Daten.
+
+6. **Fehlerbehebung mit Cisco-Geräten**
+
+   - Verwenden von **IOS-Befehlen** und **Protokolldateien**:
+     - **ping** und **traceroute** zum Testen der Verbindung.
+     - **SSH** statt Telnet für sichere Remote-Verbindungen.
+     - Nützliche IOS-Anzeigen: `show ip interface brief`, `show ip route`.
+
+7. **Schritte nach der Fehlerbehebung**
+
+   - Nach Sammlung der Daten: Die Informationen analysieren und versuchen, das Problem zu lösen.
+   - Wenn das Problem nicht gelöst wird, eskaliere es an einen **Senior-Techniker**.
+
+---
