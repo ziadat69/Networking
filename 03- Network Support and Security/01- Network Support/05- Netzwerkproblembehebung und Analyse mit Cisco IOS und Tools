@@ -1,0 +1,20 @@
+Um Informationen zur Netzwerkproblemlösung zu sammeln, bieten Cisco IOS-Geräte verschiedene Anzeige-Befehle,
+die detaillierte Informationen bereitstellen können. 
+Cisco IOS unterteilt den Administratorzugriff in zwei privilegierte Ebenen: 
+den Benutzer EXEC-Modus, der ein niedrigeres Privileg hat, und den privilegierten EXEC-Modus, der vollen Zugriff bietet.
+Mit dem Befehl „enable“ können Sie in den Cisco Privileged EXEC-Modus wechseln. 
+Kontextabhängige IOS-Befehlsanweisungen helfen dabei, Befehle zu finden und Informationen zur Nutzung zu erhalten. 
+Diese kontextsensitiven Anweisungen können durch Eingabe von „?“ in der leeren Eingabeaufforderung oder nach einem Befehl
+aufgerufen werden.
+
+Packet Capture- und Protokollanalyse-Tools ermöglichen es, den Inhalt von Paketen zu überprüfen, 
+während sie über das Netzwerk fließen. Diese Software entschlüsselt die Protokollschichten, 
+die innerhalb der Pakete enthalten sind. Wireshark ist ein Beispiel für eine weit verbreitete Open-Source-Anwendung zur 
+Paket- und Protokollanalyse.
+
+Bandbreite und Durchsatz sind Eigenschaften des Netzwerkdatenflusses. Bandbreite ist die theoretische Menge an Daten,
+die von einem Gerät zum anderen in einem bestimmten Zeitraum übertragen werden können. 
+Bandbreite wird üblicherweise in Bits pro Sekunde gemessen.
+Der Durchsatz ist die tatsächliche Anzahl an Bits pro Sekunde, die über das Medium übertragen werden. 
+Der Durchsatz ist immer geringer als die Bandbreite aufgrund von Latenz und Verzögerung.
+Online-Speedtest-Tools und das iPerf-Tool für Windows ermöglichen es, die Produktivität bzw. den Durchsatz zu messen.
