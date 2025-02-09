@@ -1,0 +1,37 @@
+**Zugangskontrollen in der Cybersicherheit**
+
+1. > **Physische Zugangskontrollen**  
+   - Verhindern unbefugten Zugriff auf Netzwerke, Daten und Geräte.  
+   - Bestimmen, wer, wo und wann Personen Zugang zu einer Einrichtung haben.  
+   - Beispiele: Sicherheitswachen, Zaunanlagen, Bewegungssensoren, Geräteschlösser, verschlossene Türen mit Zugangskarten oder Kombinationen, Wachhunde, Videokameras und Alarmsysteme.
+
+2. > Logische Zugangskontrollen**  
+   - Hardware- und Softwarelösungen zur Verwaltung des Zugriffs auf Ressourcen und Systeme.  
+   - Beinhaltet Identifikation, Authentifizierung, Autorisierung und Abrechnung (AAA).  
+   - Beispiele: Verschlüsselung, Smartcards, Passwörter, Biometrie, Zugriffskontrolllisten (ACLs), Firewalls und Intrusion Detection Systeme.
+
+3. >  **Administrative Zugangskontrollen**  
+   - Richtlinien und Verfahren, die von Organisationen festgelegt werden, um unbefugten Zugriff zu kontrollieren.  
+   - Beispiele: Genehmigte Richtlinien, definierte Verfahren, Hintergrundüberprüfungen und Datenklassifikation.  
+
+4. > **AAA-Sicherheitsdienste**  
+
+   - **Authentifizierung**: Überprüfung der Identität des Benutzers, um unbefugten Zugriff zu verhindern.  
+   - **Autorisierung**: Bestimmt, welche Ressourcen Benutzer zugreifen können und welche Aktionen sie durchführen dürfen.  
+   - **Abrechnung**: Verfolgt, was Benutzer auf dem Netzwerk tun, wie z.B. auf welche Ressourcen sie zugreifen und was sie damit tun.
+
+5. > **Identifikation und Authentifizierung**  
+   - **Identifikation**: Umsetzung der Autorisierungsrichtlinien durch eindeutige Kennungen wie Benutzernamen, Passwörter oder biometrische Merkmale.  
+   - **Föderiertes Identitätsmanagement (FIM)**: Ermöglicht es Benutzern, dieselben Anmeldeinformationen über verschiedene Unternehmen hinweg zu verwenden, 
+       was jedoch ein Sicherheitsrisiko darstellen kann, falls gehackt.
+
+6. > **Passwortrichtlinien**  
+   - Stellen sicher, dass Passwörter die erforderlichen Längen- und Komplexitätsanforderungen erfüllen.  
+   - Passwörter sollten aus mindestens 8 bis 10 Zeichen bestehen und eine Mischung aus Groß- und Kleinbuchstaben, Zahlen und Symbolen enthalten.
+
+7. > **Multi-Faktor-Authentifizierung (MFA)**  
+   - Wird zunehmend genutzt, um Passwörter durch zusätzliche Identifikationsmethoden zu kombinieren, wodurch die Sicherheit erhöht wird.
+
+8. > >**Abrechnung**  
+   - Verfolgt Aktionen und erfasst diese für Berichterstattung, Audits oder Abrechnung.  
+   - Diese Daten werden genutzt, um die Nutzung des Netzwerks nachzuvollziehen und für Überwachungs- oder Abrechnungszwecke zu verwenden.
