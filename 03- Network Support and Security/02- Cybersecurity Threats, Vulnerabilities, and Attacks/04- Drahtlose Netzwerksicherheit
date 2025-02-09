@@ -1,0 +1,27 @@
+**Drahtlose Netzwerksicherheit - GitHub Zusammenfassung**
+
+-> Grayware:** Unerwünschte Anwendungen, die sich auf unangenehme oder unerwünschte Weise verhalten.
+
+-> SMiShing:** Gefälschte SMS-Nachrichten, die Benutzer auf betrügerische Websites oder Telefonnummern locken.
+
+-> Rogue Access Points:** Unbefugt installierte Zugangspunkte, die sich als legitime Zugangspunkte ausgeben und Benutzer täuschen können. 
+Sie können für MitM- und Evil-Twin-Angriffe verwendet werden.
+
+-> Drahtlose Signalstörungen:** Angreifer können drahtlose Netzwerke durch Signaljammern stören.  
+
+-> Bluetooth-Angriffe:** Bluejacking sendet unbefugte Nachrichten, während Bluesnarfing es Angreifern ermöglicht, Daten von mobilen Geräten zu stehlen.
+  
+**Sicherheitsprotokolle:**
+> **WEP (Wired Equivalent Privacy):** Ein älteres Protokoll, das keine Schlüsselverwaltung hatte und daher anfällig für Angriffe war.
+
+> **WPA (Wi-Fi Protected Access) & WPA2:** Weiterentwickelte Protokolle, die WEP ersetzen und die Sicherheit von drahtlosen Netzwerken verbessern.
+
+**Empfohlene Sicherheitsmaßnahmen:**
+
+> Verwendung von mindestens WPA2-Verschlüsselung.
+
+> Positionierung von Zugangspunkten außerhalb des Netzwerkperimeters.
+
+> Verwendung von Tools wie NetStumbler zur Erkennung von Rogue Access Points.
+
+> Nutzung eines Remote Access VPNs, wenn Mitarbeiter über öffentliche Wi-Fi-Netzwerke auf das Firmennetzwerk zugreifen.
