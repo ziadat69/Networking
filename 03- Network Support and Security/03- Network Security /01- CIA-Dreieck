@@ -1,0 +1,20 @@
+Cybersecurity Cube und das CIA-Dreieck
+Der Cybersecurity Cube bietet ein nützliches Modell für den Datenschutz. 
+
+Die erste Dimension des Würfels definiert die Ziele der Vertraulichkeit, 
+
+Integrität und Verfügbarkeit (CIA):
+
+    Vertraulichkeit stellt sicher, dass Informationen nur für autorisierte Personen zugänglich sind und verhindert die unbefugte Offenlegung.
+    Integrität bezieht sich auf die Genauigkeit, Konsistenz und Vertrauenswürdigkeit von Daten und stellt sicher, dass sie nicht von unbefugten Entitäten während der Übertragung, Speicherung oder Verarbeitung verändert werden.
+    Verfügbarkeit sorgt dafür, dass autorisierte Benutzer jederzeit auf Daten zugreifen können und schützt vor Unterbrechungen durch Cyberangriffe oder Systemfehler.
+
+Datenintegrität
+Datenintegrität gewährleistet, dass Daten genau und konsistent bleiben. Dies wird durch Methoden wie Hashing, Datenvalidierung, Konsistenzprüfungen und Zugriffskontrollmechanismen erreicht.
+
+Verfügbarkeit
+Verfügbarkeit stellt sicher, dass Daten für autorisierte Benutzer jederzeit zugänglich sind. Sie kann durch ordnungsgemäße Wartung der Geräte, regelmäßige Software- und Systemaktualisierungen, 
+Testen von Backups, Implementierung neuer Technologien, Überwachung der Netzwerkanaktivität und Analyse von Schwachstellen zur Erkennung potenzieller Bedrohungen aufrechterhalten werden.
+
+Das CIA-Dreieck bildet die Grundlage der Cybersicherheit und konzentriert sich darauf, 
+Daten durch Sicherstellung der Vertraulichkeit, Integrität und Verfügbarkeit zu schützen.
