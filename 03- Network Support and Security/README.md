@@ -14,7 +14,7 @@
     
 2. **Cybersecurity Threats, Vulnerabilities, and Attacks** :
 
-  **Common Threats**:
+  - **Common Threats**:
 - **Wichtige Bedrohungen für Netzwerksicherheit**  
   - Social Engineering, Malware und Denial-of-Service (DoS)-Angriffe  
   - Bedrohungen von internen und externen Angreifern  
@@ -41,3 +41,13 @@
 - **Schutz von Webanwendungen vor Angriffen**  
   - Angriffe wie Cross-Site Scripting (XSS), SQL-Injektionen und Remote Code Execution  
   - Wichtigkeit sicherer Programmierung und regelmäßiger Software-Updates zur Abwehr von Bedrohungen
+
+
+3. **Network Security**
+- **CIA-Dreieck**: Das CIA-Dreieck bildet die Grundlage der Cybersicherheit – Vertraulichkeit, Integrität und Verfügbarkeit von Daten.
+-  **Zugangskontrollen**: Maßnahmen zur Sicherstellung, dass nur autorisierte Benutzer auf Systeme und Daten zugreifen können.
+- **Sicherheitskonfiguration und Schutzmaßnahmen für Betriebssysteme**: Härtung von Betriebssystemen und Sicherheitskonfigurationen.
+- **Netzwerksicherheit und Schutzmaßnahmen**: Schutz von Netzwerken vor externen und internen Bedrohungen, einschließlich Firewalls und Intrusion Detection Systems.
+- **Firewalls und Antimalware-Schutz**: Schutz von Systemen vor Bedrohungen durch Malware und durch die Filterung von Datenverkehr.
+- **Sicherheitsmaßnahmen für Drahtlose Netzwerke**: Besondere Sicherheitsmaßnahmen zum Schutz von WLAN-Netzwerken, einschließlich Verschlüsselung und Authentifizierung.
+
