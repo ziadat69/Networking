@@ -22,9 +22,10 @@
 4. **Effektive Kommunikation**
 
    - **"Wissen, Verbindung, Verständnis"**: Eine Methode, um den Kunden besser zu verstehen:
-     - **Wissen**: Den Kunden persönlich ansprechen.
-     - **Verbindung**: Eine individuelle Beziehung aufbauen.
-     - **Verständnis**: Das technische Verständnis des Kunden ermitteln und auf seinem Niveau sprechen.
+
+  1   - **Wissen**: Den Kunden persönlich ansprechen.
+  2   - **Verbindung**: Eine individuelle Beziehung aufbauen.
+  3   - **Verständnis**: Das technische Verständnis des Kunden ermitteln und auf seinem Niveau sprechen.
    - **Aktives Zuhören**: Wichtig für das korrekte Verständnis der Probleme des Kunden.
 
 5. **Fehlerbehebung bei Hosts**
@@ -35,13 +36,19 @@
 6. **Fehlerbehebung mit Cisco-Geräten**
 
    - Verwenden von **IOS-Befehlen** und **Protokolldateien**:
-     - **ping** und **traceroute** zum Testen der Verbindung.
-     - **SSH** statt Telnet für sichere Remote-Verbindungen.
-     - Nützliche IOS-Anzeigen: `show ip interface brief`, `show ip route`.
+
+   >  - **ping** und **traceroute** zum Testen der Verbindung.
+
+   >  - **SSH** statt Telnet für sichere Remote-Verbindungen.
+
+     - Nützliche IOS-Anzeigen: 
+    
+   > `show ip interface brief`, `show ip route`.
 
 7. **Schritte nach der Fehlerbehebung**
 
    - Nach Sammlung der Daten: Die Informationen analysieren und versuchen, das Problem zu lösen.
+
    - Wenn das Problem nicht gelöst wird, eskaliere es an einen **Senior-Techniker**.
 
 ---
