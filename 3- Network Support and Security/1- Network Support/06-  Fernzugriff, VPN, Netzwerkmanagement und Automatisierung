@@ -5,16 +5,23 @@ Diese Anwendungen können Sicherheitslücken schaffen,
 weshalb ihre Nutzung in vielen Unternehmen eingeschränkt ist.
 
 2. **Protokolle für den Fernzugriff**:
-   - **Telnet** ist veraltet und unsicher, da es keine Verschlüsselung bietet.
-   - **SSH** bietet eine sichere Verbindung und sollte anstelle von Telnet verwendet werden.
-   - **RDP** ermöglicht den Zugriff auf grafische Benutzeroberflächen eines entfernten Systems und ist in Windows enthalten.
 
-3. **VPN (Virtuelle Private Netzwerke)** bieten sicheren Fernzugriff auf Netzwerke durch verschlüsselte Verbindungen. 
+>   - **Telnet** ist veraltet und unsicher, da es keine Verschlüsselung bietet.
+
+>   - **SSH** bietet eine sichere Verbindung und sollte anstelle von Telnet verwendet werden.
+
+>   - **RDP** ermöglicht den Zugriff auf grafische Benutzeroberflächen eines entfernten Systems und ist in Windows enthalten.
+
+
+
+3. **VPN (Virtuelle Private Netzwerke)** bieten sicheren Fernzugriff auf Netzwerke durch verschlüsselte Verbindungen.
+
 Es gibt **Site-to-Site-VPNs** für die Verbindung von Einrichtungen und **Remote-VPNs** für den Zugriff einzelner Benutzer auf Firmennetze.
 
 4. **Netzwerkmanagement** umfasst die Konfiguration, Überwachung und Verwaltung von Netzwerken. 
-Moderne Systeme nutzen Protokolle wie **SNMP** und **RMON** und bieten Funktionen wie maschinelles Lernen zur Optimierung der Netzwerkleistung.
-Es gibt Cloud- und On-Premises-Lösungen.
+                          Moderne Systeme nutzen Protokolle wie **SNMP** und **RMON** und bieten Funktionen wie maschinelles Lernen zur Optimierung 
+                          der Netzwerkleistung.
+                          Es gibt Cloud- und On-Premises-Lösungen.
 
 5. **Netzwerkautomatisierung** ermöglicht die Automatisierung von Aufgaben wie Konfiguration und Verwaltung von Geräten.
-Diese Prozesse können mit Skripten und Programmiersprachen wie **Python** effizient gestaltet werden.
+                               Diese Prozesse können mit Skripten und Programmiersprachen wie **Python** effizient gestaltet werden.
