@@ -1,15 +1,25 @@
 Um die Netzwerkkonfiguration eines Windows-Hosts zu überprüfen,
 gehen Sie zum Netzwerk- und Freigabecenter und überprüfen den Status der Verbindungen. 
-Sie können auch den Befehl ipconfig /all verwenden, um diese Informationen anzuzeigen.
-Nutzen Sie ping und Traceroute oder Tracert, um die Verbindung zu testen.
+Sie können auch den Befehl 
+
+> ipconfig /all verwenden, um diese Informationen anzuzeigen.
+
+Nutzen Sie 
+
+> ping und Traceroute oder Tracert, um die Verbindung zu testen.
 
 Auf einem Linux-Host können Sie aktive Verbindungen in der grafischen Benutzeroberfläche anzeigen oder den Befehl
 ifconfig im Terminal verwenden. Zusätzlich zu ping und traceroute stehen auch andere Befehlszeilentools wie speedtest und 
 ncat (nc) zur Verfügung, um das Netzwerk zu testen.
 
 In macOS öffnen Sie die Netzwerk-Einstellungen > Erweitert, um Informationen zur IP-Adresse anzuzeigen. 
-Der Befehl ifconfig kann ebenfalls im Terminal ausgeführt werden. 
-Weitere nützliche Befehle sind Networksetup -listallnetworkservices und networksetup -getinfo <Netzwerkservice>.
+Der Befehl 
+> ifconfig kann ebenfalls im Terminal ausgeführt werden. 
+
+Weitere nützliche Befehle sind Networksetup -listallnetworkservices und networksetup
+
+ > -getinfo <Netzwerkservice>.
+
 Die oben genannten Linux-Befehle sind auch in macOS verfügbar.
 Das macOS Wireless Diagnostics-Tool kann ebenfalls bei der Behebung von Verbindungsproblemen helfen.
 
