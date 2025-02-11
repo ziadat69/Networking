@@ -20,4 +20,6 @@ die von einem Gerät zum anderen in einem bestimmten Zeitraum übertragen werden
 Bandbreite wird üblicherweise in Bits pro Sekunde gemessen.
 Der Durchsatz ist die tatsächliche Anzahl an Bits pro Sekunde, die über das Medium übertragen werden. 
 Der Durchsatz ist immer geringer als die Bandbreite aufgrund von Latenz und Verzögerung.
-Online-Speedtest-Tools und das iPerf-Tool für Windows ermöglichen es, die Produktivität bzw. den Durchsatz zu messen.
+Online-Speedtest-Tools und das 
+
+> iPerf-Tool für Windows ermöglichen es, die Produktivität bzw. den Durchsatz zu messen.
