@@ -1,0 +1,13 @@
+Die physische Schicht besteht aus elektronischen Schaltungen, Medien und Steckverbindern,
+die von Ingenieuren entwickelt wurden. Die Standards der physischen Schicht betreffen drei Funktionsbereiche: 
+
+physische Komponenten, Kodierung und Signalisierung. Bandbreite ist die Kapazität, mit der ein Medium Daten übertragen kann. 
+Digitale Bandbreite misst die Menge an Daten, die in einer bestimmten Zeit von einem Ort zum anderen fließen können.
+Durchsatz ist die Messung der Übertragung von Bits über das Medium in einem bestimmten Zeitraum und ist in der Regel niedriger als die Bandbreite. 
+Latenz bezieht sich auf die Zeit, einschließlich Verzögerungen, die erforderlich ist, damit Daten von einem Punkt zu einem anderen reisen.
+Goodput ist die Messung der übertragbaren nutzbaren Daten in einem bestimmten Zeitraum. Die physische Schicht stellt die Darstellung und Gruppierung 
+von Bits für jede Art von Medium wie folgt bereit:
+
+    Kupferkabel – Die Signale sind Muster elektrischer Impulse.
+    Glasfaserkabel – Die Signale sind Lichtmuster.
+    Drahtlos – Die Signale sind Muster von Mikrowellenübertragungen.
