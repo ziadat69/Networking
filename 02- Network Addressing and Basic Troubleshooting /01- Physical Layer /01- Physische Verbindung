@@ -1,0 +1,7 @@
+Bevor Netzwerkkommunikationen stattfinden können, muss eine physische Verbindung zu einem lokalen Netzwerk hergestellt werden. 
+Eine physische Verbindung kann entweder über ein Kabel (verkabelte Verbindung) oder drahtlos (über Funkwellen) erfolgen.
+Netzwerkadapterkarten (NICs) verbinden ein Gerät mit dem Netzwerk. Ethernet-NICs werden für eine kabelgebundene Verbindung verwendet, 
+während WLAN-NICs (Wireless Local Area Network) für drahtlose Verbindungen zuständig sind. Die physische Schicht des OSI-Modells stellt die Mittel zur Verfügung,
+um die Bits, die ein Datenrahmen der Datenlink-Schicht ausmachen, über das Netzwerkmedium zu transportieren. Diese Schicht nimmt einen vollständigen Rahmen von der
+Datenlink-Schicht entgegen und codiert ihn als eine Reihe von Signalen, 
+die auf das lokale Medium übertragen werden. Die codierten Bits, die einen Rahmen ausmachen, werden entweder von einem Endgerät oder einem Zwischenmedium empfangen.
