@@ -1,0 +1,37 @@
+Netzwerke verwenden Kupferkabel, weil sie kostengünstig, einfach zu installieren und gegenüber elektrischem Strom wenig widerstandsfähig sind. 
+Allerdings ist Kupferkabel in Bezug auf die Entfernung und Signalstörungen begrenzt. Die Zeit- und Spannungswerte der elektrischen Impulse 
+sind ebenfalls anfällig für Störungen aus zwei Quellen: elektromagnetische Interferenz (EMI) und Übersprechen (Crosstalk)
+. Es gibt drei Arten von Kupferkabeln: UTP, STP und Koaxialkabel (Koax). 
+UTP hat eine äußere Ummantelung, um die Kupferdrähte vor physischem Schaden zu schützen,
+verdrillte Paare, um das Signal vor Störungen zu schützen, und farbcodierte Kunststoffisolierungen, die die Drähte elektrisch voneinander
+isolieren und jedes Paar kennzeichnen. 
+
+Das STP-Kabel verwendet vier Drahtpaare, die jeweils in eine Folienabschirmung gewickelt sind, 
+die dann in einen insgesamt metallischen Drahtgeflecht- oder Folienmantel eingewickelt wird. 
+
+Koaxialkabel verdankt seinen Namen der Tatsache, 
+dass zwei Leiter denselben Achsenpunkt teilen. Koax wird verwendet,
+um Antennen an drahtlose Geräte anzuschließen. Kabel-Internetprovider verwenden Koaxialkabel innerhalb der Häuser ihrer Kunden.
+
+______________________________________________________________________________________________________________________________________________________________
+
+UTP-Kabel bestehen aus vier Paaren farbcodierter Kupferdrähte, die miteinander verdrillt und da
+nn in einer flexiblen Kunststoffhülle eingeschlossen sind. UTP-Kabel verwenden keine Abschirmung, 
+um die Auswirkungen von EMI (elektromagnetische Interferenz) und RFI (Funkfrequenzstörungen) zu verhindern.
+Stattdessen haben Kabelentwickler andere Methoden gefunden, um die negativen Auswirkungen von Übersprechen zu begrenzen: 
+Stornierung und die Variation der Anzahl der Windungen pro Drahtpaar. UTP-Kabel entsprechen den gemeinsam von ANSI/TIA festgelegten Standards. 
+Die elektrischen Eigenschaften von Kupferkabeln werden vom Institute of Electrical and Electronics Engineers (IEEE) definiert. 
+UTP-Kabel werden normalerweise mit einem RJ-45-Stecker abgeschlossen. Die Hauptkabeltypen, die durch die Verwendung spezifischer Verkabelungskonventionen entstehen,
+sind Ethernet Straight-through und Ethernet Crossover. Cisco hat ein proprietäres UTP-Kabel namens "Rollover", das einen Arbeitsplatz mit einem Router-Konsole-Port verbindet.
+
+
+______________________________________________________________________________________________________________________________________________________________
+
+Glasfaserkabel überträgt Daten über größere Entfernungen und mit höheren Bandbreiten als jedes andere Netzwerkmedium. 
+Glasfaserkabel kann Signale mit weniger Dämpfung übertragen als Kupferdraht und ist vollständig immun gegenüber elektromagnetischer Interferenz (EMI) 
+und Funkfrequenzstörungen (RFI). Optische Fasern sind flexible, aber extrem dünne, transparente Stränge aus sehr reinem Glas, die kaum dicker sind als 
+ein menschliches Haar. Bits werden auf der Faser als Lichtimpulse codiert. Glasfaserkabel werden heute in vier Bereichen der Industrie eingesetzt:
+Unternehmensnetzwerke, FTTH (Fiber to the Home), Langstreckennetze und Unterseekabelnetzwerke. Es gibt vier Arten von Glasfaseranschlüssen: ST, SC, LC und 
+Duplex-Multimode-LC. Glasfaser-Patchkabel umfassen SC-SC Multimode, LC-LC Single-Mode, ST-LC Multimode und SC-ST Single-Mode. 
+In den meisten Unternehmensumgebungen wird Glasfaser hauptsächlich als Backbone-Verkabelung für hochfrequente Punkt-zu-Punkt-Verbindungen zwischen Datenverteilungszentren 
+und für die Vernetzung von Gebäuden in Mehrgebäudecampus-Netzen verwendet.
