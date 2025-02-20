@@ -1,0 +1,42 @@
+Klar, hier ist der Text in noch einfacheren Worten:
+
+### Wie ein Host Pakete sendet:
+
+Ein Host (also ein Gerät im Netzwerk) kann Daten an sich selbst, 
+an einen anderen Host im gleichen Netzwerk oder an einen entfernten Host senden. 
+Bei **IPv4** nutzt der Host seine **IP-Adresse**, die **Subnetzmaske** und die **Ziel-IP-Adresse**, um zu entscheiden, 
+ob der Zielhost im gleichen Netzwerk ist oder nicht. Bei **IPv6** teilt der Router allen Geräten im Netzwerk mit, 
+wie das Netzwerk aussieht, damit sie wissen, wie sie Pakete weiterleiten müssen.
+
+### Was ist ein Standardgateway?
+
+Das **Standardgateway** ist ein Gerät, meistens ein **Router**, das hilft, Daten an andere Netzwerke zu schicken.
+Im lokalen Netzwerk hat der Router eine IP-Adresse im gleichen Bereich wie die anderen Geräte im Netzwerk. 
+Der Router empfängt Daten aus dem lokalen Netzwerk und schickt sie an andere Netzwerke weiter. 
+Der Host weiß, an welches Gateway er Daten senden muss, entweder weil es automatisch über **DHCP** kommt oder manuell 
+eingestellt wurde. Bei **IPv6** gibt der Router auch die Standardgateway-Adresse bekannt oder der
+Host wird manuell konfiguriert. Auf einem Windows-Host kann man mit den Befehlen **Route print** oder 
+**netstat -r** die Routing-Tabelle anschauen.
+
+### Wie funktioniert Routing?
+
+Wenn ein Host ein Paket an einen anderen Host schickt, schaut er in seiner **Routing-Tabelle** nach,
+wie er das Paket weiterleiten muss. Wenn der Zielhost in einem anderen Netzwerk ist, schickt der Host das 
+Paket an das **Standardgateway**. Der Router, der das Paket empfängt, schaut auf die **Ziel-IP-Adresse** 
+des Pakets und entscheidet dann, wo es als nächstes hin soll. Der Router hat eine **Routing-Tabelle**, 
+in der alle bekannten Netzwerke und deren Ziele stehen.
+
+In der Routing-Tabelle gibt es drei Arten von Routen:
+1. **Direkt verbundene Netzwerke**: Netzwerke, mit denen der Router direkt verbunden ist.
+2. **Entfernte Netzwerke**: Netzwerke, die über andere Router erreichbar sind.
+3. **Standardroute**: Eine allgemeine Route, die für alle Netzwerke gilt, die nicht speziell aufgelistet sind.
+
+Router lernen entfernte Netzwerke entweder durch **dynamische Routing-Protokolle** oder manuell durch **statische Routen**. Statische Routen sind manuell eingetragene Routen, bei denen der Router weiß, wie er zu einem bestimmten Netzwerk kommt. **OSPF** und **EIGRP** sind Beispiele für dynamische Routing-Protokolle. Mit dem Befehl **show ip route** auf einem Cisco Router kann man die Routing-Tabelle anzeigen.
+
+Jede Route in der Tabelle hat einen **Code**, der zeigt, wie der Router die Route gelernt hat. Die wichtigsten Codes sind:
+
+- **L** - Die IP-Adresse einer lokalen Schnittstelle.
+- **C** - Ein direkt verbundenes Netzwerk.
+- **S** - Eine manuell konfigurierte statische Route.
+- **O** - OSPF (Open Shortest Path First).
+- **D** - EIGRP (Enhanced Interior Gateway Routing Protocol).
