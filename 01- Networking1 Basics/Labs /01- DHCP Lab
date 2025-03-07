@@ -1,0 +1,91 @@
+Packet Tracer - DHCP auf einem WLAN-Router konfigurieren
+
+Zielsetzung
+=   Verbindung von 3 PCs mit einem Wireless-Router
+
+=   Ändern der DHCP-Einstellungen auf einen spezifischen Netzwerkbereich
+
+=   Konfiguration der Clients, um ihre Adressen über DHCP abzurufen
+
+Hintergrund/Szenario
+Ein Heimanwender möchte einen Wireless-Router verwenden, um 3 PCs miteinander zu verbinden. Alle 3 PCs sollten ihre Adresse automatisch vom Wireless-Router abrufen.
+
+Anleitung
+Teil 1: Einrichtung der Netzwerktopologie
+a.     Fügen Sie drei generische PCs hinzu.
+
+b.     Verbinden Sie jeden PC mithilfe von Straight-Through-Kabeln mit einem Ethernet-Port am Wireless-Router.
+
+Teil 2: Ermitteln der Standard-DHCP-Einstellungen
+a.     Nachdem die zuvor gelben Kontrollleuchten zu grün wechseln, klicken Sie auf PC0. Klicken Sie auf die Registerkarte Desktop. Wählen Sie IP Configuration. Wählen Sie DHCP, um eine IP-Adresse vom DHCP Enabled Router (Router mit aktiviertem DHCP) abzurufen.
+
+Frage:
+Notieren Sie die IP-Adresse des Default-Gateways:
+
+b.     Schließen Sie das Fenster IP Configuration.
+
+c.     Öffnen Sie einen Webbrowser.
+
+d.     Geben Sie die zuvor ermittelte IP-Adresse des Default-Gateways in das URL-Feld ein. Wenn Sie dazu aufgefordert werden, geben Sie den Benutzernamen admin und das Kennwort admin ein.
+
+e.     Scrollen Sie durch die Seite „Basic Setup“ (Grundlegende Einrichtung), um die Standardeinstellungen einschließlich der Standard-IP-Adresse des Wireless-Routers anzuzeigen.
+
+f.      Achten Sie darauf, dass DHCP aktiviert ist und beachten Sie die Startadresse des DHCP-Bereichs sowie den Bereich der für Clients verfügbaren Adressen.
+
+Teil 3: Ändern Sie die Standard-IP-Adresse des Wireless-Routers.
+a.     Ändern Sie in den Router-IP-Einstellungen die IP-Adresse in: 192.168.5.1.
+
+b.     Scrollen Sie zum Ende der Seite, und klicken auf Save Settings.
+
+c.     Wenn Sie dies richtig ausgeführt haben, zeigt die Webseite eine Fehlermeldung an. Schließen Sie den Webbrowser.
+
+d.     Klicken Sie auf IP Configuration, um die zugewiesene IP-Adresse zu erneuern. Klicken Sie auf Static. Klicken Sie auf DHCP, um neue IP-Adressinformationen vom Wireless-Router abzurufen.
+
+e.     Öffnen Sie den Webbrowser und geben die IP-Adresse 192.168.5.1 in das URL-Feld ein. Wenn Sie dazu aufgefordert werden, geben Sie den Benutzernamen admin und das Kennwort admin ein.
+
+Teil 4: Ändern Sie den Standard-DHCP-Adressbereich.
+a.     Beachten Sie, dass die Start-IP-Adresse des DHCP-Servers mit der IP-Adresse des Routers identisch ist.
+
+b.     Ändern Sie die Start-IP-Adresse von 192.168.5.100 auf 192.168.5.126
+
+c.     Ändern Sie „Maximum Number of Users“ auf 75.
+
+d.     Scrollen Sie zum Ende der Seite, und klicken auf Save Settings. Schließen Sie den Webbrowser.
+
+e.     Klicken Sie auf IP Configuration, um die zugewiesene IP-Adresse zu erneuern. Klicken Sie auf Static. Klicken Sie auf DHCP, um neue IP-Adressinformationen vom Wireless-Router abzurufen.
+
+f.      Klicken Sie auf Command Prompt (Eingabeaufforderung). Geben Sie ipconfig ein.
+
+Frage:
+Notieren Sie die IP-Adresse von PC0:
+
+Teil 5: Aktivieren Sie DHCP auf den anderen PCs.
+a.     Klicken Sie auf PC1.
+
+b.     Wählen Sie die Registerkarte Desktop aus.
+
+c.     Wählen Sie IP Configuration(IP-Konfiguration).
+
+d.     Klicken Sie auf DHCP.
+
+Frage:
+Notieren Sie die IP-Adresse von PC1:
+
+e.     Schließen Sie das Konfigurationsfenster.
+
+f.      Aktivieren Sie DHCP auf PC2 mithilfe derselben Schritte wie für PC1.
+
+Teil 6: Überprüfung der Netzwerkverbindung
+a.     Klicken Sie auf PC2 und wählen die Registerkarte Desktop aus.
+
+b.     Klicken Sie auf Command Prompt.
+
+c.     Geben Sie ipconfig an der Eingabeaufforderung ein, um die IP-Konfiguration anzuzeigen.
+
+d.     Geben Sie an der Eingabeaufforderung ping 192.168.5.1 ein, um den WLAN-Router anzupingen.
+
+e.     Geben Sie an der Eingabeaufforderung ping 192.168.5.126 ein, um PC0 anzupingen.
+
+f.      Geben Sie an der Eingabeaufforderung ping 192.168.5.127 ein, um PC1 anzupingen.
+
+g.     Die Pings an alle Geräte sollten erfolgreich sein.
