@@ -1,0 +1,96 @@
+Packet Tracer - Untersuchung der NAT auf einem Wireless-Router
+
+Zielsetzung
+=   Untersuchung der NAT auf einem Wireless-Router
+
+=   Einrichtung von 4 PCs zur Verbindung mit einem Wireless-Router mithilfe von DHCP
+
+=   Untersuchung des Traffics durch das Netzwerk mithilfe der NAT
+
+Anleitung
+Teil 1: Untersuchung der Konfiguration zum Zugriff auf das externe Netzwerk
+a.     Fügen Sie einen PC hinzu und verbinden Sie ihn mithilfe von Straight-Through-Kabeln mit dem Wireless-Router. Warten Sie, bis alle Verbindungskontrollleuchten grün werden, bevor Sie zum nächsten Schritt gehen oder auf Fast Forward (Schneller Vorlauf) klicken.
+
+b.     Auf dem PC klicken Sie Desktop. Wählen Sie IP Configuration. Klicken Sie auf DHCP, um es jedem Gerät zu ermöglichen, über DHCP vom Wireless-Router eine IP-Adresse zu erhalten.
+
+c.     Beachten Sie die IP-Adresse des Default-Gateways. Schließen Sie das Fenster IP Configuration, wenn Sie fertig sind.
+
+d.     Navigieren Sie zum Webbrowser und geben Sie die IP-Adresse des Default-Gateways in das URL-Feld ein. Geben Sie den Usernamen admin und das Kennwort admin ein, wenn Sie danach gefragt werden.
+
+e.     Klicken Sie oben rechts auf die Menüoption Status. Wenn ausgewählt, zeigt dies die Untermenüseite des Routers an.
+
+f.      Scrollen Sie auf der Routerseite nach unten zur Option „Internet connection“. Die hier angezeigte IP-Adresse ist die vom ISP zugewiesene Adresse. Wenn keine IP-Adresse vorhanden ist (angezeigt wird 0.0.0.0), schließen Sie das Fenster, warten Sie einige Sekunden und versuchen es erneut. Der Wireless-Router ist gerade dabei, eine IP-Adresse vom ISP-DHCP-Server abzurufen.
+
+Die hier angezeigte Adresse ist die dem Internet-Port am Wireless-Router zugewiesene Adresse.
+
+Frage:
+Handelt es sich um eine öffentliche oder eine private Adresse?
+
+Teil 2: Die Konfigurationen für den Zugriff auf das interne Netz prüfen.
+a.     Klicken Sie in der Untermenüleiste „Status“ auf Local Network.
+
+b.     Scrollen Sie nach unten, um die Informationen zum lokalen Netzwerk zu untersuchen. Dies ist die dem internen Netzwerk zugewiesene Adresse.
+
+c.     Scrollen Sie weiter nach unten, um die DHCP-Serverinformationen sowie den Bereich der IP-Adressen, die verbundenen Hosts zugewiesen werden können, zu untersuchen.
+
+Frage:
+Handelt es sich um öffentliche oder private Adressen?
+
+d.     Schließen Sie das Fenster zur Konfiguration des Wireless-Routers.
+
+Teil 3: Verbinden Sie 3 PCs mit dem Wireless-Router.
+a.     Fügen Sie 3 weitere PCs hinzu und verbinden Sie die PCs mit einem Straight-Through Kabel mit dem Wireless-Router. Warten Sie, bis alle Verbindungskontrollleuchten grün werden, bevor Sie zum nächsten Schritt gehen oder auf Fast Forward klicken.
+
+b.     Klicken Sie auf jedem PC auf Desktop. Wählen Sie IP Configuration. Klicken Sie auf DHCP, um jedem Gerät zu ermöglichen, über das DHCP auf dem Wireless-Router eine IP-Adresse zu erhalten. Schließen Sie das Fenster IP Configuration, wenn Sie fertig sind.
+
+c.     Klicken Sie auf Command Prompt (Eingabeaufforderung), um die IP-Konfiguration jedes Geräts mithilfe des Befehls ipconfig /all zu überprüfen.
+
+Beachten Sie: Diese Geräte erhalten eine private Adresse. Private IP-Adressen werden im Internet nicht weitergeleitet, weshalb eine Netzwerkadressübersetzung (NAT) erfolgen muss.
+
+Teil 4: NAT-Translation auf dem Wireless-Router ansehen.
+a.     Starten Sie den Simulationsmodus, indem Sie unten rechts auf die Registerkarte Simulation klicken. Der Simulationsbutton ist neben dem Realtime-Bbutton und hat ein Stoppuhr-Symbol.
+
+b.     Erstellen Sie eine komplexe PDU im Simulationsmodus und beobachten den Netzwerkverkehr.
+
+1)    Klicken Sie im Simulationsbereich auf Show All/None (Alle/keine Anzeigen), um die sichtbaren Ereignisse auf „None“ (Keine) festzulegen. Klicken Sie nun auf Edit Filters (Filter bearbeiten) und aktivieren auf der Registerkarte Misc (Diverse) die Kontrollkästchen bei TCP und HTTP. Schließen Sie das Fenster, wenn Sie fertig sind.
+
+2)    Fügen Sie eine komplexe PDU hinzu, indem Sie das offene Kuvert im oberen Menü anklicken.
+
+3)    Klicken Sie auf einen der PCs, um diesen als Source (Sender) festzulegen.
+
+c.     Legen Sie die Einstellungen für die Complex PDU fest, indem Sie im Fenster „Complex PDU“ Folgendes ändern:
+
+1)    Unter PDU Settings > Select Applications sollte HTTP gesetzt sein.
+
+2)    Klicken Sie auf den Server ciscolearn.nat.com, um ihn als Zielgerät festzulegen.
+
+3)    Geben Sie bei „Source Port“ (Quellport) 1000 ein.
+
+4)    Klicken Sie unter „Simulation Settings“ (Simulationseinstellungen) auf Periodic (Periodisch). Geben Sie bei „Interval“ (Intervall) 120 Sekunden ein.
+
+5)    Klicken Sie im Fenster „Create Complex PDU“ (Complex PDU erstellen) auf Create PDU (PDU erstellen).
+
+d.     Doppelklicken Sie auf den Simulationsbereich, um ihn vom PT-Fenster zu lösen. So können Sie den Simulationsbereich verschieben, um die gesamte Netzwerktopologie anzuzeigen.
+
+e.     Beobachten Sie den Verkehrsfluss, indem Sie im Simulationsfenster auf Play klicken. Beschleunigen Sie die Animation, indem Sie den Wiedergabeschieberegler nach rechts schieben.
+
+Hinweis: Klicken Sie auf View Previous Events, wenn die Meldung Buffer Full (Puffer voll) angezeigt wird.
+
+Teil 5: Betrachten der Header-Informationen derjenigen Pakete, die das Netzwerk durchlaufen haben.
+a.     Untersuchen Sie die Header der zwischen einem PC und dem Webserver versendeten Pakete.
+
+1)    Doppelklicken Sie im Simulationsbereich auf die 3. Zeile von oben in der Ereignisliste. Dadurch wird im Arbeitsbereich ein Umschlag angezeigt, der für diese Zeile steht.
+
+2)    Klicken Sie das Kuvert im Arbeitsbereich Fenster an, um die Packetinformation und dessen Header zu sehen.
+
+b.     Klicken Sie auf die Registerkarte „Inbound PDU details“ (Details zu eingehenden PDU). Untersuchen Sie die Paketinformationen der Quell-IP-Adresse (SRC) und der Ziel-IP-Adresse.
+
+c.     Klicken Sie auf die Registerkarte „Outbound PDU details“ (Details zu ausgehenden PDU). Untersuchen Sie die Paketinformationen der Quell-IP-Adresse (SRC) und der Ziel-IP-Adresse.
+
+Achten Sie auf die Veränderung der SRC-IP-Adresse.
+
+d.     Klicken Sie auf die anderen Ereigniszeilen, um sich die Header während des gesamten Prozesses anzeigen zu lassen.
+
+e.     Wenn Sie fertig sind, klicken Sie auf „Check Results“, um Ihre Arbeit zu überprüfen.
+
+Ende des Dokuments
