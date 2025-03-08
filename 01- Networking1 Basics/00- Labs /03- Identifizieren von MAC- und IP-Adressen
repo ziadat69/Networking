@@ -1,0 +1,99 @@
+Teil 1: Sammeln von PDU-Informationen für eine lokale Netzwerkkommunikation
+
+Teil 2: Sammeln von PDU-Informationen für eine Remote-Netzwerkkommunikation
+
+Hintergrund
+
+Wenn Sie an einer Karriere in der Netzwerkadministration oder Netzwerksicherheit interessiert sind, ist es wichtig,
+die normalen Prozesse der Netzwerkkommunikation zu verstehen.
+In dieser Packet Tracer-Aktivität untersuchen Sie Ethernet-Frames und IP-Pakete an verschiedenen Punkten im Netzwerk, 
+während sie sich von der Quelle zum Ziel bewegen. Sie werden sich darauf konzentrieren, wie sich die MAC- und IP-Adressen je nach Ziel 
+(lokal oder remote) und dem Ort, an dem die PDUs erfasst werden, ändern.
+
+Packet Tracer hat einen Simulationsmodus, der es Ihnen ermöglicht, Details darüber zu untersuchen,
+wie sich PDUs in Netzwerken bewegen. Damit können Sie die Layer-2-MAC-Adressierung und die Layer-3-IPv4-Adressierung der PDUs an verschiedenen Standorten im Netzwerk überprüfen, während die PDUs von der Quelle zum Ziel fließen.
+
+Diese Aktivität ist für die Anzeige von PDUs auf ihrem Weg durch lokale und remote Netzwerke optimiert.
+Sie sammeln PDU-Informationen im PT-Simulationsmodus und beantworten eine Reihe von Fragen zu den gesammelten Daten.
+Es ist keine Gerätekonfiguration erforderlich.
+
+Anleitung
+
+Teil 1: Sammeln von PDU-Informationen für eine lokale Netzwerkkommunikation
+In diesem Teil werden Sie lernen, dass ein Gerät in einem lokalen Netzwerk kein Default-Gateway benötigt, 
+um mit einem anderen Gerät im selben lokalen Netzwerk zu kommunizieren.
+
+Hinweis: Lesen Sie die Reflexionsfragen in Teil 3, bevor Sie mit diesem Teil fortfahren.
+So erhalten Sie eine Vorstellung von der Art der Informationen, die Sie zusammenstellen müssen.
+Klicken Sie auf den Host 172.16.31.3 und öffnen Sie die Eingabeaufforderung.
+
+a.     Geben Sie den Befehl ping 172.16.31.2 ein. Dieser Befehl gibt eine Reihe von ICMP-Echo-Request-Paketen an das Ziel aus.
+Wenn die Pakete das Ziel erreichen, sendet es Echo-Reply-Nachrichtenpakete an die Quelle der Ping-Anfragen.
+
+b.     Klicken Sie auf die Schaltfläche Simulation, um in den Simulationsmodus zu wechseln. 
+Wiederholen Sie den Befehl ping 172.16.31.2. Neben 172.16.31.3 wird ein Umschlagsymbol für eine PDU angezeigt.
+
+c.     Klicken Sie auf die PDU und suchen Sie die folgenden Informationen auf den Registerkarten 
+OSI-Modell und Outbound PDU Details (Ausgehende PDU-Details). Die Registerkarte Outbound PDU Details zeigt vereinfachte Paket- und Frame-Header für die PDU.
+Beachten Sie die folgenden Details zur Adressierung der PDU.
+
+·         Am Gerät: 172.16.31.3
+
+·         Quell-MAC-Adresse: 0060.7036.2849
+
+·         Ziel-MAC-Adresse: 000C:85CC:1DA7
+
+·         Quell-IP-Adresse: 172.16.31.3
+
+·         Ziel-IP-Adresse: 172.16.31.2
+
+d.     Klicken Sie auf Capture / Forward (Erfassen / Weiterleiten) (der Pfeil nach rechts, gefolgt von einem vertikalen Balken) und die PDU wird zum nächsten
+Schritt auf ihrer
+Reise weitergeleitet. Verwenden Sie die Registerkarte OSI-Modell, um die gleichen Informationen wie in Schritt 1d zu sammeln. 
+Wiederholen Sie diesen Vorgang, bis die PDU ihr Ziel erreicht. Zeichnen Sie für jeden Schritt auf dem Weg zur Zustellung die Informationen für jede PDU in 
+einem Tabellenblatt auf, das ein Format wie die nachstehende Tabelle verwendet. Die Informationen für den ersten Schritt werden in der Tabelle angezeigt.
+
+e.     Sie werden feststellen, dass die Informationen für die eingehende PDU unverändert sind.
+
+Frage:
+Klicken Sie im PDU-Informationsfenster auf die Registerkarte für die ausgehende PDU. Wie unterscheidet sich die Adressierung und warum? Notieren Sie die Adressierung in Ihrer Tabelle.
+
+f.      Wechseln Sie zurück in den Realtime-Modus.
+
+
+Teil 2: Sammeln von PDU-Informationen für eine Remote-Netzwerkkommunikation
+Um mit remoten Netzen zu kommunizieren, ist ein Gateway-Gerät erforderlich. Das Gateway-Gerät verbindet zwei oder mehr Netzwerke miteinander. In diesem Teil untersuchen Sie den Prozess, der stattfindet, wenn ein Gerät mit einem anderen Gerät in einem Remote-Netzwerk kommuniziert. Achten Sie genau auf die verwendeten MAC-Adressen.
+
+Hinweis: Bewegen Sie die Maus über den Router. Es werden Informationen zur Adressierung der Router-Schnittstellen angezeigt. Verwenden Sie diese Adressen, wenn Sie den PDU-Fluss durch den Router beobachten.
+
+a.     Kehren Sie zur Eingabeaufforderung von 172.16.31.3 zurück.
+
+b.     Geben Sie den Befehl ping 10.10.10.2 ein. Bei den ersten Pings kann es zu einer Zeitüberschreitung kommen.
+
+c.     Wechseln Sie in den Modus Simulationund wiederholen Sie den Befehl ping 10.10.10.2. Eine PDU wird neben 172.16.31.3 angezeigt.
+
+d.     Klicken Sie auf die PDU und beachten Sie die folgende Informationsregisterkarte:
+
+·         Am Gerät: 172.16.31.3
+
+·         Quell-MAC-Adresse: 0060.7036.2849
+
+·         Ziel-MAC-Adresse: 00D0:BA8E:741A
+
+·         Quell-IP-Adresse: 172.16.31.3
+
+·         Ziel-IP-Adresse: 10.10.10.2
+
+Frage:
+Welches Gerät und welche Schnittstelle gehört zur angezeigten Ziel-MAC-Adresse?
+
+ 
+
+e.     
+Klicken Sie auf Capture / Forward (rechter Pfeil gefolgt von einem senkrechten Balken) um die PDU zum nächsten Gerät übertragen zu lassen. 
+Sammeln Sie die gleichen Informationen wie in Schritt 1d. Wiederholen Sie diesen Vorgang, bis die PDU ihr Ziel erreicht. Zeichnen Sie die PDU-Informationen,
+die Sie beim Ping von 172.16.31.5 nach 10.10.10.2 gesammelt haben, in einem Tabellenblatt auf, wobei Sie ein Format wie bei der unten gezeigte Beispieltabelle verwenden. 
+Geben Sie Details für die eingehenden und ausgehenden PDUs am Router ein.
+
+
+
