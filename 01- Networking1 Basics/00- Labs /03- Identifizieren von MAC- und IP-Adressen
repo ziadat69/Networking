@@ -97,3 +97,37 @@ Geben Sie Details für die eingehenden und ausgehenden PDUs am Router ein.
 
 
 
+Beantworten Sie die folgenden Fragen zu den gesammelten Daten:
+
+1.     Welche verschiedenen Arten von Kabeln/Medien wurden für den Anschluss von Geräten verwendet?
+
+2.     Haben die Leitungen/Medien den Transport der PDU in irgendeiner Weise beeinflusst?
+
+3.     Hat der Wireless Access Point etwas mit den empfangenen PDUs gemacht?
+
+4.     Wurde die PDU-Adressierung vom Access Point geändert?
+
+5.     Welches war die höchste OSI-Schicht, die der Access Point verwendete?
+
+6.     Auf welcher Ebene des OSI-Modells arbeiten Kabel und Access Points?
+
+7.     Wenn Sie die Registerkarte PDU Details betrachten, wird zuerst die Quell- oder die Zieladresse angezeigt?
+
+8.     Manchmal wurden PDUs mit einem roten X markiert, während andere mit einem grünen Häkchen versehen waren. Welche Bedeutung haben diese Markierungen?
+
+9.     Jedes Mal, wenn die PDU zwischen dem Netzwerk 10 und dem Netzwerk 172 gesendet wurde, gab es einen Punkt, an dem sich die MAC-Adressen plötzlich änderten. An welcher Stelle war das?
+
+10.  Welches Gerät verwendet MAC-Adressen, die mit 00D0:BA beginnen?
+
+11.  Zu welchen Geräten gehörten die anderen MAC-Adressen?
+
+12.  Haben sich die sendenden und empfangenden IPv4-Adressen in einer der PDUs geändert?
+
+13.  Wenn Sie der Antwort auf einen Ping folgen, der manchmal als Pong bezeichnet wird, was passiert mit den Quell- und Zieladressen?
+
+14.  Warum sind Ihrer Meinung nach die Schnittstellen des Routers Teil von zwei verschiedenen IP-Netzwerken?
+
+15.  Welche IP-Netzwerke sind mit dem Router verbunden?
+
+
+
