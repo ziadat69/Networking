@@ -1,0 +1,129 @@
+
+
+Lernziele
+Teil 1: Anschließen der Geräte
+
+Teil 2: Den Wireless-Router konfigurieren
+
+Teil 3: Konfigurieren der IP-Adressierung und Testen der Konnektivität
+
+Hintergrund/Szenario
+Ihr Freundin Natsumi hat gehört, dass Sie Networking studieren. Sie hat Sie gebeten, ihr zu helfen, ihr neues Zuhause an das Kabel-TV-Netz anzuschließen. Sie müssen die richtigen Kabel an die richtigen Geräte anschließen, die Geräte mit einem Home-Wireless-Router verbinden und den Router so konfigurieren, dass er den Netzwerk-Clients IP-Adressen zuweist. Natsumi möchte außerdem, dass Sie ein WLAN für ihr Heimnetzwerk einrichten, also werden Sie auch das konfigurieren. Sie sind zuversichtlich, dass dies ein einfacher Prozess sein wird und das Netzwerk in kürzester Zeit eingerichtet werden kann!
+
+Anleitung
+Teil 1: Anschließen der Geräte
+Der Arbeitsbereich zeigt das Innere des Hauses Ihrer Freundin. Scrollen Sie im Fenster, um ein Gefühl für den Grundriss des Hauses und die Lage der Geräte zu bekommen. In diesem Teil verbinden Sie alle gekennzeichneten Geräte.
+
+Schritt 1: Verbinden Sie die Koaxialkabel.
+Natsumis Kabelnetzbetreiber liefert Internet- und Videodienste über ein Koaxialkabel in ihr Haus. Das Kabel ist an eine Steckdose in ihrer Wohnung angeschlossen. Ein Splitter trennt die Internetdaten vom Videodienst. Dadurch können die beiden Services mit den entsprechenden Geräten verbunden werden. Die Internetverbindung wird an das Kabelmodem und die Videoverbindung an das Fernsehgerät angeschlossen.
+
+a.     Klicken Sie unter Network Components auf Connections (den Blitz).
+
+b.     Suchen Sie das Symbol für das Coaxial und klicken darauf. Es ist das blaue Zickzack-Symbol.
+
+c.     Klicken Sie auf Cable Splitter und wählen den Port Coaxial1 aus.
+
+d.     Klicken Sie auf Cable Modem und wählen Port 0 aus.
+
+e.     Wiederholen Sie die vorherigen Schritte, um Coaxial2 auf dem Cable Splitter mit Port 0 des TV zu verbinden.
+
+f.      Klicken Sie auf TV und dann unter Status auf ON. Wenn Ihre Verbindungen korrekt sind, sollte ein Bild angezeigt werden, das ein Fernsehprogramm darstellt.
+
+Schritt 2: Schließen Sie die Netzwerkkabel an.
+In Natsumis Haus stehen zwei PCs. Die Geräte sind nicht mit Wireless-LAN-Adaptern ausgestattet und werden daher mit Ethernet-Kabeln angeschlossen. Der Home Wireless Router bildet das Zentrum des Netzwerks. Er ermöglicht es Geräten, die im Heimnetzwerk konfiguriert sind, miteinander und mit dem Internet zu kommunizieren. Der Router enthält einen Netzwerk-Switch, der kabelgebundene Verbindungen für bis zu vier Hosts zulässt. An diese Ports werden Sie die PCs anschließen.
+
+Damit der Home-Wireless-Router über das Netzwerk des Kabel-TV-Anbieters auf das Internet zugreifen kann, muss das Kabelmodem mit dem Internet-Port des Home-Wireless-Routers verbunden sein. Dies geschieht mit einem Straight-Through-Kupferkabel.
+
+a.     Klicken Sie auf Connections und dann auf Copper Straight-Through-Kabel. Es ähnelt einer durchgezogenen schwarzen Linie.
+
+b.     Verbinden Sie Port 1 des Kabel-Modems mit dem Internet-Port des Home-Wireless-Routers.
+
+c.     Klicken Sie auf Office PC und verbinden Sie das Kabel mit dem Port FastEthernet0. Suchen Sie den Home Wireless Router und klicken darauf. Schließen Sie das andere Ende des Kabels an den Port GigabitEthernet 1 an, um die Verbindung herzustellen.
+
+d.     Wiederholen Sie die vorherigen Schritte, um den Bedroom PC mit dem GigabitEthernet 2-Port des Home-Wireless-Routers zu verbinden.
+
+Das kabelgebundene Heimnetzwerk ist jetzt über das Netzwerk des Kabelfernsehanbieters vollständig mit dem Internet verbunden.
+
+Teil 2: Den Wireless-Router konfigurieren
+Die meisten Wireless-Router für Privathaushalte werden über eine grafische Benutzeroberfläche (GUI) konfiguriert, auf die über den Webbrowser Ihres Computers zugegriffen wird. In diesem Teil greifen Sie über den Browser auf dem Office PC auf den Wireless-Router zu Hause zu und konfigurieren Natsumis Heimnetzwerk.
+
+Schritt 1: Greifen Sie auf die GUI des Home-Wireless-Routers zu.
+a.     Klicken Sie auf Office PC > Desktop und dann auf IP Configuration.
+
+b.     Klicken Sie auf DHCP. DHCP konfiguriert den Office PC automatisch so, dass er sich im selben IP-Netzwerk wie der Home-Wireless-Router befindet.
+
+c.     Nach einer kurzen Verzögerung sollten die Werte für die IP-Konfiguration automatisch aktualisiert werden. Die IPv4-Adresse sollte mit der Nummer 192 beginnen. Wenn nicht, klicken Sie auf Fast Forward Time, die sich direkt unter der Netzwerktopologie in der linken unteren Ecke befindet. Dadurch wird die Simulation von DHCP beschleunigt.
+
+d.     Notieren Sie sich die Adresse des Default Gateways. Das Default Gateway ist das Gerät, das Geräten im Heimnetzwerk Zugriff auf externe Netzwerke wie das Internet bietet. In diesem Fall ist die Default-Gateway-Adresse die Adresse des Home-Wireless-Routers.
+
+e.     Lassen Sie das Fenster Office PC geöffnet, schliessen Sie das Fenster IP-Configuration und klicken dann auf den Web Browser. Geben Sie die IP-Adresse des Home-Wireless-Routers (die Default-Gateway-Adresse) in das URL-Feld ein und klicken auf Go.
+
+f.      Neu installierte Home-Router werden mit Standardanmeldeinformationen konfiguriert. Geben Sie admin als Benutzernamen und Kennwort ein. Sie sollten jetzt die GUI für den Home-Wireless-Router sehen und bereit sein, Natsumis Netzwerk zu konfigurieren. Passen Sie die Fenstergröße nach Bedarf an, um mehr von der Oberfläche zu sehen.
+
+Hinweis: Standardkennwörter auf realen Geräten sollten sofort geändert werden, da sie weithin bekannt sind, vor allem Angreifern.
+
+Schritt 2: Konfigurieren Sie die Grundeinstellungen.
+In diesem Schritt konfigurieren Sie einen neuen Benutzernamen und ein Kennwort für den drahtlosen Router und begrenzen die Anzahl der IP-Adressen, die DHCP an die mit dem Netzwerk verbundenen Hosts vergibt.
+
+Natsumi hat nur einige wenige Geräte, mit denen sie das Netzwerk verbinden kann, außerdem werden wohl nicht viele Freunde bei ihr zu Besuch sein. Sie glaubt, dass sich nicht mehr als 10 Geräte gleichzeitig mit ihrem Netzwerk verbinden werden. Sie möchten die Anzahl der Benutzer auf 10 reduzieren. Ihre Freundin wohnt in einem dicht besiedelten Teil der Stadt, so dass möglicherweise viele Menschen ihr drahtloses Netzwerk sehen könnten.
+
+a.     Sie sehen derzeit Konfigurationsoptionen auf der Registerkarte Setup. Suchen Sie nach dem Abschnitt Network Setup. Hier können Sie die DHCP-Servereinstellungen des Routers konfigurieren. Suchen Sie das Feld Maximum Number of Users und geben 10 ein. Scrollen Sie zum Ende der Seite und klicken auf Save Settings. Sie müssen die Einstellungen auf jeder Seite der GUI speichern, die Sie ändern.
+
+Hinweis: Es ist möglich, dass Sie die Verbindung zum Router verlieren. Klicken Sie im Webbrowser auf Go, um die GUI-Seite neu zu laden. Möglicherweise müssen Sie den Webbrowser schließen, auf IP-Configuration klicken und zwischen DHCP und Static (Statisch) wechseln, um die IP-Adressierung für Office PC zu aktualisieren. Überprüfen Sie dann, ob der Office-PC über eine IP-Adresskonfiguration verfügt, die mit 192 beginnt. Öffnen Sie den Webbrowser erneut, geben die IP-Adresse des Routers ein und authentifizieren Sie sich erneut mit admin als Standardanmeldeinformationen.
+
+b.     Klicken Sie auf den Tab Administration. Hier können Sie das Standard-Admin-Kennwort ändern. Geben Sie MyPasswort1! als neues Passwort ein und bestätigen Sie es. Scrollen Sie zum Ende der Seite und klicken auf Save Settings.
+
+Sie werden aufgefordert, sich erneut anzumelden. Geben Sie als Benutzername admin und MyPassword1! als neues Kennwort ein und klicken auf Continue.
+
+Schritt 3: Konfigurieren Sie das Wireless-LAN.
+Jetzt können Sie Natsumis Wireless-Netzwerk so konfigurieren, dass sie ihre Wireless-Geräte über Wi-Fi mit dem Internet verbinden kann.
+
+a.     Scrollen Sie zurück zum oberen Rand des Fensters und klicken dann auf die Registerkarte Wireless.
+
+b.     Bei dem 2,4-GHz-Netzwerk klicken Sie auf Enable, um das Netzwerk-Funkmodul zu aktivieren.
+
+c.     Ändern Sie die Angabe unter Network Name (SSID) von Default in MyHome. Wenn Benutzer nach Wi-Fi-Netzwerken suchen, mit denen sie sich verbinden können, sehen sie diesen Netzwerknamen. Der Netzwerkname kann ausgeblendet werden, was es jedoch für Gäste etwas schwieriger macht, sich mit dem Netzwerk zu verbinden. Scrollen Sie zum Ende der Seite und klicken auf Save Settings.
+
+d.     Jetzt konfigurieren Sie die Sicherheit im MyHome-Netzwerk. Dadurch wird verhindert, dass sich Unbefugte mit dem Wireless-Netzwerk verbinden. Scrollen Sie zurück zum oberen Rand des Fensters und klicken Sie dann auf der Registerkarte Wireless auf Wireless Security.
+
+e.     Beachten Sie, dass die Sicherheit derzeit in allen drei Wireless-Netzwerken deaktiviert ist. Sie verwenden nur das 2,4-GHz-Netzwerk. Klicken Sie auf das Dropdown-Menü für das 2,4-GHz-Netzwerk und wählen WPA2 Personal aus. Dies ist die höchste Sicherheit, die dieser Router für Wireless-Netzwerke bietet.
+
+f.      Weitere Einstellungen werden angezeigt. WPA2 Personal erfordert eine Passphrase, die von jedem eingegeben werden muss, der sich mit dem Wireless-Netzwerk verbinden möchte. Geben Sie als Passphrase MyPassPhrase1! ein. Beachten Sie, dass die Großschreibung wichtig ist.
+
+g.     Scrollen Sie zum Ende der Seite und klicken Sie auf Save Settings. Schließen Sie dann den Webbrowser für den Office-PC.
+
+Teil 3: Konfigurieren der IP-Adressierung und Testen der Konnektivität
+Nachdem der Router jetzt konfiguriert ist, konfigurieren Sie in diesem Teil die IP-Adressierung für PCs und Laptops und überprüfen, ob sie eine Verbindung zum Internet herstellen können.
+
+Schritt 1: Verbinden Sie den Laptop erneut mit dem drahtlosen Netzwerk.
+a.     Klicken Sie im Wohnzimmer auf den Laptop und dann auf die Registerkarte Desktop > PC Wireless.
+
+b.     Klicken Sie auf die Registerkarte Connect. Nach einer kurzen Verzögerung sollte das zuvor konfigurierte Wireless-Netzwerk in der Liste der Wireless-Netzwerknamen angezeigt werden.
+
+c.     Klicken Sie auf den Namen des von Ihnen erstellten Netzwerks und dann auf die Schaltfläche Connect.
+
+d.     Geben Sie die Passphrase, die Sie zuvor für das Wireless-Netzwerk konfiguriert haben, in das Feld Pre-shared Key ein und klicken dann auf Connect.
+
+e.     Klicken Sie auf die Registerkarte Link Information. Sie sollten die Meldung sehen: Sie haben sich erfolgreich mit dem Access-Point verbunden.
+
+f.      Klicken Sie auf die Schaltfläche More Informationen, um Details zur Verbindung zu sehen. Wenn die IP-Adresse nicht mit 192 beginnt, klicken Sie mehrmals auf Fast Forward Time, um die Simulation zu beschleunigen.
+
+g.     Schließen Sie die App PC Wireless und öffnen den Webbrowser. Überprüfen Sie, ob der Laptop jetzt eine Verbindung zu skillsforall.srv herstellen kann und klicken auf Fast Forward Time, bis die Seite geladen wird. Dadurch wird überprüft, ob der Laptop mit dem Internet verbunden ist.
+
+Schritt 2: Testen Sie die Konnektivität auf dem Office-PC.
+Sie wissen, dass der Office-PC eine Verbindung zum Netzwerk herstellen kann, weil Sie ihn zur Konfiguration des Routers verwendet haben. Kann er allerdings auch auf das Internet zugreifen? Wenn ja, wissen Sie, dass das kabelgebundene Netzwerk ordnungsgemäß verbunden und konfiguriert ist.
+
+a.     Klicken Sie auf Office PC > Registerkarte Desktop > Web Browser.
+
+b.     Geben Sie skillsforall.srv ein und klicken auf Go. Nach einer kurzen Verzögerung sollte die Webseite angezeigt werden. Falls erforderlich, klicken Sie mehrmals auf Fast Forward Time, um die Konvergenz zu beschleunigen.
+
+Durch das Laden einer externen Website wird die Internetverbindung des Office-PCs überprüft.
+
+Schritt 3: Konfigurieren Sie den PC im Schlafzimmer.
+a.     Öffnen Sie auf dem Bedroom PC die IP-Konfiguration und setzen Sie sie auf DHCP. Überprüfen Sie, ob der Schlafzimmer-PC eine IP-Adresse erhalten hat, die mit 192 beginnt.
+
+b.     Schließen Sie das Fenster IP Configuration und öffnen den Webbrowser. Überprüfen Sie, ob der Bedroom PC jetzt eine Verbindung zu skillsforall.srv herstellen kann und klicken auf Fast Forward Time, bis die Seite geladen wird. Dadurch wird überprüft, ob der Schlafzimmer-PC über eine Internetverbindung verfügt.
+
+Damit ist das Anschließen von Netzwerkgeräten, das Konfigurieren des Routers und des drahtlosen LAN sowie das Konfigurieren von Hosts für die Verbindung mit dem Netzwerk abgeschlossen. Alle Geräte sollten mit dem Internet verbunden werden können. Ihre Arbeit ist erledigt und Natsumi hat angeboten, als Dank für Ihre Hilfe ein Abendessen für Sie zuzubereiten.
+
+Ende des Dokuments
