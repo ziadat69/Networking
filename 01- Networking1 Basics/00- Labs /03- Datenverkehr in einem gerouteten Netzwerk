@@ -1,0 +1,75 @@
+Zielsetzung
+
+Teil 1: Datenverkehr in einem nicht gerouteten LAN beobachten
+
+Teil 2: Neukonfiguration des Netzwerks für die Weiterleitung zwischen LANs
+
+Teil 3: Datenverkehr in einem gerouteten Netzwerk beobachten
+Hintergrund/Szenario
+
+Das Unternehmen, für das Sie arbeiten, wurde gebeten, ein neues Netzwerkdesign für XYZ LLC vorzuschlagen. XYZ ist ein Startup-Unternehmen, 
+das kürzlich mit seinen Produktangeboten Erfolge erzielt hat. Das Unternehmen wird expandieren,
+und sein Netzwerk muss mitwachsen. Derzeit ist das Netzwerk mit einem einzigen IP-Netzwerk für 
+Hosts in allen Abteilungen konfiguriert. Dieses Design ist ineffizient geworden und Netzwerkverzögerungen werden immer deutlicher. 
+Sie wurden gebeten, das Vertriebsteam bei der Vorbereitung des Angebots zu unterstützen. Das Vertriebsteam schlägt eine Lösung vor, 
+bei der die Netzwerkeffizienz durch die Implementierung von Routing zwischen separaten Abteilungsnetzwerken verbessert wird. 
+Sie arbeiten an einer Demonstration, wie die Verwendung mehrerer gerouteter Netzwerke in einem Unternehmen die Netzwerkeffizienz verbessern kann.
+Befolgen Sie die Anleitung, um die Demonstration durchzugehen und der Firma XYZ LLC ein neues Netzwerk vorzuschlagen.
+Anleitung
+Teil 1: Datenverkehr in einem nicht gerouteten LAN beobachten
+
+Das XYZ-Netzwerk besteht aus etwa 150 Geräten, die mit einem LAN verbunden sind. Das LAN ist in einem einzelnen IPv4-Netzwerk konfiguriert. Hosts in verschiedenen Abteilungen werden mit Switches verbunden, die dann mit dem Edge-Router verbunden werden. Der Router leitet nur Datenverkehr zwischen dem LAN und dem Internet weiter, dargestellt durch die ISP-Cloud. Da im LAN nur ein IP-Netzwerk verwendet wird, befinden sich alle Abteilungen im selben Netzwerk.
+
+Die Packet Tracer-Topologie ist vereinfacht. Es werden nur einige Abteilungen und Hosts angezeigt. Gehen Sie davon aus, dass das Verfahren, das Sie demonstrieren werden, in einem viel größeren Maßstab abläuft, als es im PT-Netz dargestellt ist.
+
+In diesem Teil verwenden Sie den Packet Tracer-Simulationsmodus, um zu beobachten, wie der Datenverkehr durch nicht geroutete LANs fließt.
+Schritt 1: Löschen Sie den ARP-Cache auf Host Sales 1.
+
+Bewegen Sie die Maus über den Host Sales 1, um seine IP-Adresse zu sehen. Notieren Sie sich diese.
+
+a.     Klicken Sie auf Sales 1 > Desktop > Command Prompt - und geben dann den Befehl arp -a ein. Im ARP-Cache sollten keine MAC-Adressen vorhanden sein. Wenn sich Einträge im ARP-Cache befinden, löschen Sie sie mit dem Befehl arp -d.
+Schritt 2: Teil 3: Datenverkehr in einem gerouteten Netzwerk beobachten
+
+a.     Klicken Sie auf die Schaltfläche Simulationsmodus in der rechten unteren Ecke des PT-Fensters, um vom Echtzeit- in den Simulationsmodus zu wechseln.
+
+b.     Öffnen Sie die Eingabeaufforderung für Sales 2 und geben Sie den Befehl ping gefolgt von der IP-Adresse von Sales 1 ein.
+
+c.     Verwenden Sie die Schaltfläche Capture then Forward (Erfassen, dann weiterleiten) (das Dreieck nach rechts, an dem ein vertikaler Balken angebracht ist) in der Play-Steuerung des Simulation Panels, um mit der Ausführung des Befehls ping zu beginnen. Neben Sales 2 wird ein farbiges Umschlagsymbol angezeigt. Dies stellt eine PDU dar. Klicken Sie auf die Schaltfläche Capture then Forward, um die PDU zum ersten Gerät auf ihrem Pfad zum Zielgerät zu verschieben. Klicken Sie auf den PDU-Umschlag, um den Inhalt zu überprüfen.
+
+
+
+Teil 2: Rekonfiguration des Netzes für das Routen zwischen LANs
+
+In diesem Teil demonstrieren Sie die Vorteile des Routings zwischen Abteilungsnetzwerken. Zunächst verkabeln Sie jeden Netzwerk-Switch direkt mit einer Router-Schnittstelle. Anschließend konfigurieren Sie die Hosts neu, um Adressen in zwei neuen IPv4-Netzwerken zu erhalten, die vom Router erstellt werden.
+Schritt 1: Ändern Sie die Geräteverbindungen.
+
+Die drei Switches sind über Straight-Through-Kupferkabel miteinander verbunden.
+
+a.     Um das Kabel, das den Accounting-Switch mit dem Finance-Switch verbindet, zu aktivieren, klicken Sie auf das grüne Dreieck auf der Seite des Accounting-Switches.
+
+b.     Ziehen Sie dieses Ende des Kabels zum Edge-Router und verbinden Sie es mit dem Port GigabitEthernet 1/0.
+
+c.     Wiederholen Sie diesen Schritt für die Verbindung zwischen Finance und Sales. Stellen Sie eine Verbindung zum verfügbaren GigabitEthernet-Port her.
+Schritt 2: Konfigurieren Sie die Hosts mit Adressen in den neuen LANs.
+
+Jede Schnittstelle des Edge-Routers wurde zuvor so konfiguriert, dass jede Abteilung ein eigenes IPv4-Netzwerk erhielt. Die Hosts erhalten ihre neuen IP-Adressen vom Router. Es wird jedoch einige Zeit dauern, bis die Hosts in den Netzwerken Finance und Sales ihre neuen IP-Adressen erhalten. (Die Hosts im Accounting-Netzwerk bleiben auf 192.168.1.0/24.)
+
+a.     Um das Abrufen neuer IP-Adressen zu beschleunigen, öffnen Sie auf jedem der vier Geräte in den Netzwerken Finance und Sales eine Eingabeaufforderung.
+
+b.     Geben Sie den Befehl ipconfig /renewein. Dadurch wird der Host gezwungen, eine neue IP-Adresse vom DHCP-Server anzufordern, der auf dem Edge-Router ausgeführt wird. Sie sollten eine Bestätigung der neuen IP-Adressierung sehen.
+
+eil 3: Beobachten Sie den Datenverkehrsfluss im gerouteten Netzwerk.
+
+In diesem Teil sehen Sie, wie der Datenverkehr jetzt durch ein geroutetes Netzwerk fließt.
+Schritt 1: Senden Sie einen Ping von Sales 1 an Sales 2.
+
+a.     Kehren Sie zur Eingabeaufforderung von Sales 2 zurück und stellen sicher, dass der ARP-Cache leer ist. Ist dies nicht der Fall, löschen Sie alle Einträge.
+
+b.     Wechseln Sie in den Simulations-Modus.
+
+c.     Senden Sie einen Ping von Sales 2 an Sales 1.
+
+d.     Verwenden Sie die Schaltfläche Capture then Forward, um die PDUs durch das Netzwerk zu schicken. Beobachten Sie diesmal, wie die ARP-Anforderungsnachricht durch das Netzwerk fließt.
+
+
+
