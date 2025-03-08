@@ -1,0 +1,69 @@
+Packet Tracer - Beobachtung von Webanfragen
+
+Zielsetzung
+Sehen Sie sich den Traffic zwischen Client und Server an, der von einem PC an einen Webserver gesendet wird, wenn Webdienste angefordert werden.
+
+Anleitung
+Teil 1: Überprüfen Sie die Verbindung mit dem Webserver.
+a.     Klicken Sie auf External Client und greifen Sie in der Registerkarte Desktopauf die Eingabeaufforderung zu.
+
+b.     Verwenden Sie den Ping-Befehl, um die URL ciscolearn.web.com zu erreichen.
+
+PC> ping ciscolearn.web.com
+
+Beachten Sie, dass die IP-Adresse in der Ping-Ausgabe enthalten ist. Diese Adresse wird vom DNS-Server abgerufen und in den Domainnamen ciscolearn.web.com aufgelöst. Sämtlicher Traffic durch ein Netzwerk nutzt Quell- und Ziel-IP-Adressinformationen.
+
+c.     Schließen Sie das Fenster der Eingabeaufforderung, aber lassen Sie das Desktopfenster „External Client“ geöffnet.
+
+Teil 2: Verbinden Sie sich mit dem Webserver.
+a.     Greifen sie vom Desktopfenster aus auf den Webbrowser zu.
+
+b.     Geben Sie im URL-Block ciscolearn.web.com ein.
+
+Achten Sie darauf, die angezeigte Webseite zu lesen. Lassen Sie diese Seite offen.
+
+c.     Minimieren Sie das Fenster „External Client“, aber schließen Sie es nicht.
+
+Teil 3: Sehen Sie sich den HTML-Code an.
+a.     Klicken Sie in der Topologie „Logical“ auf den Server ciscolearn.web.com.
+
+b.     Klicken Sie auf die Registerkarte Services (Dienste) und dann auf die Registerkarte HTTP. Klicken Sie anschließend neben der Datei index.html auf (edit) (bearbeiten).
+
+c.     Sehen Sie sich den HTML-Markup-Code auf dem Server an, der die im Webbrowser angezeigte Seite auf dem externen Client erzeugt. Dazu müssen Sie möglicherweise das Fenster „External Client“ wieder maximieren, falls es beim Öffnen des Serverfensters verkleinert wurde.
+
+d.     Schließen Sie das Fenster „External Client“ und das Webserver-Fenster.
+
+Teil 4: Beobachten Sie den Traffic zwischen dem Client und dem Webserver.
+a.     Starten Sie den Simulationsmodus, indem Sie unten rechts auf die Registerkarte Simulation klicken.
+
+b.     Doppelklicken Sie auf den Simulationsbereich, um ihn vom PT-Fenster zu lösen. So können Sie den Simulationsbereich verschieben, um sich die gesamte Netzwerktopologie anzeigen zu lassen.
+
+c.     Zeigen Sie den Traffic an, in dem Sie im Simulationsmodus eine Complex PDU erstellen.
+
+1)    Wählen Sie im Simulationsbereich Edit Filters (Filter bearbeiten) aus.
+
+2)    Klicken Sie auf die Registerkarte Misc (Diverse), um sicherzustellen, dass nur die Kontrollkästchen bei TCP und HTTP aktiviert sind.
+
+3)    Fügen Sie eine Complex PDU hinzu, indem Sie auf den offenen Umschlag über dem Symbol für den Simulationsmodus klicken.
+
+4)    Klicken Sie auf den External Client, um ihn als Quelle auszuwählen. Das Fenster Create Complex PDU (Complex PDU erstellen) wird angezeigt.
+
+d.     Legen Sie die Einstellungen für Create Complex PDU fest, indem Sie im Fenster „Complex PDU“ Folgendes ändern:
+
+1)    Unter „PDU Settings“ (PDU-Einstellungen) sollte „Select Application“ (Anwendung auswählen) auf HTTP festgelegt sein.
+
+2)    Klicken Sie auf den Server ciscolearn.web.com, um ihn als Zielgerät festzulegen. Die IP-Adresse des Webservers wird im Zielfeld im Fenster „Complex PDU“ angezeigt.
+
+3)    Geben Sie bei „Starting Source Port“ (Start-Quellport) 1000 ein.
+
+4)    Wählen Sie unter „Simulation Settings“ „Periodic Interval“ aus und geben 120 Sekunden ein.
+
+e.     Erstellen Sie die PDU, indem Sie im Fenster Create Complex PDU auf Create PDU (PDU erstellen) klicken.
+
+1)    Beobachten Sie den auftretenden Verkehr, indem Sie im Simulationsfenster auf Playklicken. Beschleunigen Sie die Animation mit dem Wiedergabeschieberegler.
+
+Wenn das Fenster Puffer voll angezeigt wird, klicken Sie auf View Previous Events, um das Fenster zu schließen.
+
+2)    Scrollen Sie durch die Ereignisliste. Beachten Sie die Anzahl der Pakete, die sich von der Quelle zum Ziel bewegt haben. HTTP ist ein TCP-Protokoll, das das Herstellen einer Verbindung sowie das Quittieren des Paketempfangs erfordert, was die Menge an zusätzlichem Traffic beträchtlich erhöht.
+
+Ende des Dokuments
