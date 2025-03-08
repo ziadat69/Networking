@@ -1,0 +1,189 @@
+
+
+Zielsetzung
+=   Laden Sie eine Datei auf den FTP-Server hoch.
+
+=   Laden Sie eine Datei vom FTP-Server herunter.
+
+Hintergrund/Szenario
+File Transfer Protocol (FTP) ist eine häufig verwendete Anwendung zur Übertragung von Dateien zwischen Clients und Servern im Netzwerk. Der Server ist für die Ausführung des Services konfiguriert, über den Clients eine Verbindung herstellen, sich anmelden und Dateien übertragen können. FTP verwendet Port 21 als Serverport, um die Verbindung herzustellen. FTP verwendet dann Port 20 für die Datenübertragung.
+
+In dieser Aktivität laden Sie eine Datei auf einen FTP-Server hoch. Außerdem laden Sie eine Datei von einem FTP-Server herunter.
+
+Anleitung
+Teil 1: Eine Datei auf einen FTP-Server hochladen.
+In diesem Teil finden Sie die Datei sampleFile.txt, laden sie diese auf einen FTP-Server hoch.
+
+Schritt 1: Suchen Sie die Datei.
+a.     Klicken Sie auf PC-A.
+
+b.     Klicken Sie auf den Desktop
+
+c.     Klicken Sie auf Command Prompt (Eingabeaufforderung).
+
+d.     Klicken Sie bei der Eingabeaufforderung auf ?, um die verfügbaren Befehle aufzulisten.
+
+e.     Geben Sie den Befehl dir ein, um die Dateien auf dem PC anzuzeigen. Beachten Sie, dass sich die Datei sampleFile.txt im Verzeichnis C:\ befindet.
+
+C:\> dir
+
+Volume in Laufwerk C hat keine Bezeichnung.
+
+Die Seriennummer des Datenträgers lautet 5E12-4AF3
+
+Verzeichnis von C:\
+
+ 
+
+12/31/1969 17:0 PM 26 sampleFile.txt
+
+26 Byte 1 Datei(en)
+
+Schritt 2: Verbindung zu dem FTP-Server herstellen.
+a.     FTP an den FTP-Server unter 209.165.200.226 oder ftp.pka.
+
+C:\> ftp 209.165.200.226
+
+Es wird versucht, eine Verbindung herzustellen ... 209.165.200.226
+
+Verbunden mit 209.165.200.226
+
+b.     Geben Sie den Benutzernamen student und das Kennwort class ein, um Zugriff zu erhalten.
+
+220- „Willkommen am PT FTP-Server“
+
+Benutzername: student
+
+331- Benutzername ok, Kennwort erforderlich
+
+Kennwort:
+
+230- Angemeldet
+
+(Passiver Modus an)
+
+Schritt 3: Eine Datei auf einen FTP-Server hochladen
+a.     Geben Sie ein ? ein, um die im FTP-Client verfügbaren Befehle anzuzeigen.
+
+ftp> ?
+
+?
+
+cd
+
+delete
+
+dir
+
+get
+
+help
+
+passive
+
+put
+
+pwt
+
+quit
+
+rename
+
+ftp>
+
+b.     Geben Sie dir ein, um die auf dem Server verfügbaren Dateien anzuzeigen.
+
+ftp> dir
+
+ 
+
+Auflistung /ftp-Verzeichnis aus 192.168.1.3:
+
+0 : asa842-k8.bin 5571584
+
+1 : asa923-k8.bin 30468096
+
+2 : c1841-advipservicesk9-mz.124-15.T1.bin 33591768
+
+3 : c1841-ipbase-mz.123-14.T7.bin 13832032
+
+<output omitted>
+
+c.     Geben Sie put sampleFile.txt ein, um die Datei an den Server zu senden.
+
+ftp> put sampleFile.txt
+
+ 
+
+Schreiben der Datei sampleFile.txt in 209.165.200.226:
+
+File transfer in progress...
+
+ 
+
+[Transfer complete - 26 bytes]
+
+ 
+
+26 bytes copied in 0.08 secs (325 bytes/sec)
+
+ftp>
+
+d.     Verwenden Sie den Befehl dir erneut, um den Inhalt des FTP-Servers aufzulisten und zu überprüfen, ob die Datei auf den FTP-Server hochgeladen wurde.
+
+Teil 2: Herunterladen einer Datei vom FTP-Server
+Sie können auch eine Datei von einem FTP-Server herunterladen. In diesem Teil benennen Sie die Datei sampleFile.txt um und laden diese vom FTP-Server herunter.
+
+Schritt 1: Umbenennen einer Datei auf einem FTP-Server
+a.     An der Eingabeaufforderung ftp> nennen Sie die Datei sampleFile.txt in sampleFile_FTP.txt um.
+
+ftp> rename sampleFile.txt sampleFile_FTP.txt
+
+ 
+
+Renaming sampleFile.txt
+
+ftp>
+
+[OK Datei erfolgreich umbenannt von sampleFile.txt in sampleFile_FTP.txt]
+
+ftp>
+
+b.     Geben Sie an der Eingabeaufforderung ftp> dir ein, um zu überprüfen, ob die Datei umbenannt wurde.
+
+Schritt 2: Herunterladen der Datei vom FTP-Server
+a.     Geben Sie den Befehl get sampleFile_FTP.txt ein, um die Datei vom Server abzurufen.
+
+ftp> get sampleFile_FTP.txt
+
+ 
+
+Lesen der Datei sampleFile_FTP.txt aus 209.165.200.226:
+
+File transfer in progress...
+
+ 
+
+[Transfer complete - 26 bytes]
+
+ 
+
+26 bytes copied in 0.013 secs (2000 bytes/sec)
+
+ftp>
+
+b.     Wenn Sie fertig sind, geben Sie quit ein, um den FTP-Client zu beenden.
+
+c.     Lassen Sie sich den Inhalt des Verzeichnisses auf dem PC erneut anzeigen, um die Image-Datei vom FTP-Server zu sehen.
+
+Schritt 3: Löschen Sie die Datei vom FTP-Server.
+a.     Melden Sie sich erneut beim FTP-Server an, um die Datei sampleFile_FTP.txt zu löschen.
+
+b.     Geben Sie den Befehl ein, um die Datei sampleFile_FTP.txt vom Server zu löschen.
+
+Frage:
+Mit welchem Befehl haben Sie die Datei vom FTP-Server gelöscht?
+
+c.     Wenn Sie fertig sind, geben Sie quit ein, um den FTP-Client zu beenden.
+
+Ende des Dokuments
